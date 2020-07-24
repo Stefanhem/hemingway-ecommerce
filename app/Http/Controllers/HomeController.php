@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function show()
     {
-        $products = Product::all();
+        $products = Product::take(3)->get();
         return view('welcome', ['topProducts' => $products]);
     }
 }

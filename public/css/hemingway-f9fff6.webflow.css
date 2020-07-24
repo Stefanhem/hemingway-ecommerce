@@ -527,6 +527,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 10px;
   padding-top: 16px;
   padding-bottom: 24px;
   padding-left: 24px;
@@ -5902,6 +5903,8 @@ h2 {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
 }
 
 .div-block-19 {
@@ -5937,6 +5940,7 @@ h2 {
 
 .order-items {
   margin-bottom: -20px;
+  padding-bottom: 5px;
 }
 
 .line-item {

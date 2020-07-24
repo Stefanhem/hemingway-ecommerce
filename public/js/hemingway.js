@@ -5,4 +5,12 @@ $(document).ready(function(){
     $(".close-button ").click(function() {
         $(".cart-wrapper").css({opacity: 0, display: "none"});
     });
+    $(".remove-cart-product").click(function() {
+        const cartItemId = $(this).parent().parent().attr('id');
+        $('#' + cartItemId).hide();
+    });
+    $(".remove-checkout-product").click(function() {
+        const cartItemId = $(this).parent().parent().attr('id');
+        $('#' + cartItemId).hide();
+    });
 });

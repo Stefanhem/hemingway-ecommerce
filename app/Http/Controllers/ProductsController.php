@@ -15,7 +15,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return Product::all();
+        return Product::take(3)->get();
     }
 
     /**
@@ -88,10 +88,22 @@ class ProductsController extends Controller
     public function addCart(int $id, Request $request)
     {
         $product = Product::find($id);
+        $price = $request->get('quantity') * $product->price;
+
         Session::push('products', [
+            'id' => !empty(Session::get('products')) ? count(Session::get('products')) : 0,
             'product' => $product,
-            'quantity' => $request->get('quantity')
+            'quantity' => $request->get('quantity'),
+            'price' => $price
         ]);
+
+        $cartProducts = Session::get('products');
+
+        $cartSum = array_sum(array_map(function ($cartProduct) {
+            return $cartProduct['product']->price * $cartProduct['quantity'];
+        }, $cartProducts));
+
+        Session::put('cartSum', $cartSum);
         return back();
     }
 }
