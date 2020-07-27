@@ -17,6 +17,7 @@ class CreateProductColorsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('idProduct');
             $table->unsignedBigInteger('idColor');
+            $table->string('imagePath');
             $table->timestamps();
         });
     }

@@ -3,10 +3,9 @@
     <div class="proizvod-template">
         <div class="proizvod-fotka-div">
             <div class="div-block-16">
-                <div class="male-fotke"></div>
-                <div class="male-fotke"></div>
-                <div class="male-fotke"></div>
-                <div class="male-fotke"></div>
+                @foreach($productColors as $productColor)
+                    <img src="{{asset($productColor->imagePath)}}" class="male-fotke"/>
+                @endforeach
             </div>
             <div class="fotka-ikonice">
                 <img class="fotka" src="{{asset($product->mainImage)}}"/>
@@ -22,7 +21,7 @@
             <div class="text-block-19">Izaberi boju</div>
             <div class="boje-izbor">
                 @foreach($productColors as $productColor)
-                    <div class="kruzici-boja" style="background-color:{{$productColor->color->hexCode}}" data-value="{{$productColor->color->name}}"></div>
+                    <div class="kruzici-boja" style="background-color:{{$productColor->color->hexCode}}" data-value="{{$productColor->color->name}}" data-image="{{asset($productColor->imagePath)}}"></div>
                 @endforeach
             </div>
             {{ Form::open(['url' => '/add-cart/' . $product->id, 'method' => 'POST']) }}
