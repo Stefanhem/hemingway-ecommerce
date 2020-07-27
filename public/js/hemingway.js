@@ -27,4 +27,10 @@ $(document).ready(function(){
             }
         })
     });
+    $(".kruzici-boja").click(function () {
+        const value = $(this).data('value');
+        $(".kruzici-boja").css({border: '0px'});
+        $(this).css({border: '3px solid #ccc'});
+        document.getElementById('color').value = value;
+    });
 });

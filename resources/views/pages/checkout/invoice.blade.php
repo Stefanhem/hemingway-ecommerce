@@ -64,7 +64,7 @@
                                 <div class="div-block-19">
                                     <div class="text-block-23">{{$cartProduct['product']->name}}</div>
                                     <div>Količina: {{$cartProduct['quantity']}} </div>
-                                    <div>Boja: Braon</div>
+                                    <div>Boja: {{$cartProduct['color']}}</div>
                                 </div>
                                 <div>
                                     <p>{{$cartProduct['price']}} RSD </p>

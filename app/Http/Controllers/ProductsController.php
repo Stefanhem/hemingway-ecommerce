@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\ProductColor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -48,7 +49,8 @@ class ProductsController extends Controller
      */
     public function show(Product $product)
     {
-        return view('pages.products.product-page', ['product' => $product]);
+        $colors = ProductColor::with('color')->where('idProduct', $product->id)->get();
+        return view('pages.products.product-page', ['product' => $product, 'productColors' => $colors]);
     }
 
     /**
@@ -94,7 +96,8 @@ class ProductsController extends Controller
             'id' => !empty(Session::get('products')) ? count(Session::get('products')) : 0,
             'product' => $product,
             'quantity' => $request->get('quantity'),
-            'price' => $price
+            'price' => $price,
+            'color' => $request->get('color')
         ]);
 
         $cartProducts = Session::get('products');

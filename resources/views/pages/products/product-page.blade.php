@@ -21,12 +21,12 @@
             <div class="text-block-18">{{$product->price . ' RSD'}}</div>
             <div class="text-block-19">Izaberi boju</div>
             <div class="boje-izbor">
-                <div class="kruzici-boja"></div>
-                <div class="kruzici-boja _22"></div>
-                <div class="kruzici-boja _23"></div>
-                <div class="kruzici-boja _24"></div>
+                @foreach($productColors as $productColor)
+                    <div class="kruzici-boja" style="background-color:{{$productColor->color->hexCode}}" data-value="{{$productColor->color->name}}"></div>
+                @endforeach
             </div>
             {{ Form::open(['url' => '/add-cart/' . $product->id, 'method' => 'POST']) }}
+            <input type="hidden" id="color" name="color" value="">
             <label for="quantity" class="field-label-5">Kolicina</label>
             <input type="number" id="quantity" name="quantity" min="1" class="div-block-17" value="1">
             @if($product->quantityInStock == 0)

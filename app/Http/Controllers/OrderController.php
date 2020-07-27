@@ -28,7 +28,8 @@ class OrderController extends Controller
             $orderProducts[] = [
                 'idOrder' => $newOrder->id,
                 'idProduct' => $product['product']->id,
-                'quantity' => $product['quantity']
+                'quantity' => $product['quantity'],
+                'color' => $product['color']
             ];
         }
         OrderProduct::insert($orderProducts);
