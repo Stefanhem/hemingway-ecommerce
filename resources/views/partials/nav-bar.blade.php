@@ -34,27 +34,14 @@
                                 <script type="text/x-wf-template" id="wf-template-71136eaa-6d80-8362-d58b-0c82ac714b1e"></script>
                                 <div class="order-items">
                                     @if(!empty(\Illuminate\Support\Facades\Session::get('products')) && count(\Illuminate\Support\Facades\Session::get('products')) > 0)
-                                        @foreach(\Illuminate\Support\Facades\Session::get('products') as $cartProduct)
-                                            <div id="cart-product-{{$cartProduct['id']}}" class="order-item" style="color: black">
-                                                <img src="{{asset($cartProduct['product']->mainImage)}}" width="80" alt="">
-                                                <div class="div-block-19">
-                                                    <div class="text-block-23">{{$cartProduct['product']->name}}</div>
-                                                    <div>Količina: {{$cartProduct['quantity']}} </div>
-                                                    <div>Boja: Braon</div>
-                                                </div>
-                                                <div>
-                                                    <p>{{$cartProduct['price']}} RSD </p>
-                                                    <a href="#" class="remove-cart-product">Obrisi</a>
-                                                </div>
-                                            </div>
-                                        @endforeach
+                                        @each('partials.cart-product', \Illuminate\Support\Facades\Session::get('products'), 'cartProduct')
                                     @endif
                                 </div>
                                 @if(!empty(\Illuminate\Support\Facades\Session::get('cartSum')))
                                     <div class="w-commerce-commercecartfooter">
                                         <div class="w-commerce-commercecartlineitem">
                                             <div class="text-block-12">Ukupno</div>
-                                            <div class="w-commerce-commercecartordervalue text-block-13">{{\Illuminate\Support\Facades\Session::get('cartSum')}} RSD</div>
+                                            <div class="w-commerce-commercecartordervalue text-block-13" id="totalAmount">{{\Illuminate\Support\Facades\Session::get('cartSum')}} RSD</div>
                                         </div>
                                         <div><a href="/checkout" value="Continue to Checkout" data-node-type="cart-checkout-button" class="w-commerce-commercecartcheckoutbutton" data-loading-text="Hang Tight...">Continue to Checkout</a></div>
                                     </div>

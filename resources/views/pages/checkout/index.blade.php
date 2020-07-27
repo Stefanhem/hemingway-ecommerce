@@ -47,20 +47,7 @@
                             <div class="block-content">
                                 <div class="order-items">
                                     @if(!empty(\Illuminate\Support\Facades\Session::get('products')) && count(\Illuminate\Support\Facades\Session::get('products')) > 0)
-                                        @foreach(\Illuminate\Support\Facades\Session::get('products') as $cartProduct)
-                                            <div id="checkout-product-{{$cartProduct['id']}}" class="order-item" style="color: black">
-                                                <img src="{{asset($cartProduct['product']->mainImage)}}" width="80" alt="">
-                                                <div class="div-block-19">
-                                                    <div class="text-block-23">{{$cartProduct['product']->name}}</div>
-                                                    <div>Količina: {{$cartProduct['quantity']}} </div>
-                                                    <div>Boja: Braon</div>
-                                                </div>
-                                                <div>
-                                                    <p>{{$cartProduct['price']}} RSD </p>
-                                                    <a href="#" class="remove-checkout-product">Obrisi</a>
-                                                </div>
-                                            </div>
-                                        @endforeach
+                                        @each('partials.cart-product', \Illuminate\Support\Facades\Session::get('products'), 'cartProduct')
                                     @endif
                                 </div>
                             </div>
@@ -74,7 +61,7 @@
                             <div class="block-content">
                                 <div class="line-item">
                                     <div>Međuzbir</div>
-                                    <div>{{\Illuminate\Support\Facades\Session::get('cartSum')}} RSD</div>
+                                    <div id="middleSum">{{\Illuminate\Support\Facades\Session::get('cartSum')}} RSD</div>
                                 </div>
                                 <div class="line-item">
                                     <div>Poštarina</div>
@@ -82,7 +69,7 @@
                                 </div>
                                 <div class="line-item last">
                                     <div>Ukupno</div>
-                                    <div>{{\Illuminate\Support\Facades\Session::get('cartSum')}} RSD</div>
+                                    <div id="sum">{{\Illuminate\Support\Facades\Session::get('cartSum')}} RSD</div>
                                 </div>
                             </div>
                             <div class="block-content"><label class="w-commerce-commercecheckoutdiscountslabel">PROMO Kod</label>

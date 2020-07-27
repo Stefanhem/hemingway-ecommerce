@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Session;
 
 class OrderController extends Controller
 {
+    const PAYMENT_METHOD = 'Placanje pouzećem';
+
     public function checkout()
     {
         return view('pages.checkout.index', Session::get('products'));
@@ -18,6 +20,7 @@ class OrderController extends Controller
     {
         $order = $request->all();
         $order['price'] = Session::get('cartSum');
+        $products = Session::get('products');
         $newOrder = Order::create($order);
 
         $orderProducts = [];
@@ -29,5 +32,19 @@ class OrderController extends Controller
             ];
         }
         OrderProduct::insert($orderProducts);
+
+        Session::remove('products');
+        Session::remove('cartSum');
+
+        return view('pages.checkout.page-invoice', [
+            'data' => [
+                'name' => $newOrder->name,
+                'email' => $newOrder->email,
+                'paymentMethod' => self::PAYMENT_METHOD,
+                'address' => $newOrder->address . ', ' . $newOrder->city . ' ' . $newOrder->zipCode . ', ' . $newOrder->country,
+                'products' => $products,
+                'sum' => $newOrder->price
+            ]
+        ]);
     }
 }

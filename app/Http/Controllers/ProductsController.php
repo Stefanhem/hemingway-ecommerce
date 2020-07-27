@@ -106,4 +106,29 @@ class ProductsController extends Controller
         Session::put('cartSum', $cartSum);
         return back();
     }
+
+    public function removeFromCart(int $id)
+    {
+        // get all session products
+        $products = Session::get('products');
+
+        // find index of the one we are removing
+        $inx = array_search($id, array_map(function ($product) {
+            return $product['id'];
+        }, $products));
+        // remove it
+        unset($products[$inx]);
+        // put back the new session products
+        Session::put('products', $products);
+        // calculate the new sum
+        $cartSum = array_sum(array_map(function ($cartProduct) {
+            return $cartProduct['product']->price * $cartProduct['quantity'];
+        }, $products));
+        // put it in the new session
+        Session::put('cartSum', $cartSum);
+        // return it so we can update it live
+        return [
+            'amount' => $cartSum
+        ];
+    }
 }

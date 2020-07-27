@@ -27,3 +27,4 @@ Route::resource('products', 'ProductsController');
 Route::post('/add-cart/{id}', 'ProductsController@addCart');
 Route::get('/checkout', 'OrderController@checkout');
 Route::post('/order', 'OrderController@store');
+Route::post('/remove-cart-item/{id}', 'ProductsController@removeFromCart');
