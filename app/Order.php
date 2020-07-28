@@ -8,4 +8,9 @@ class Order extends Model
 {
     protected $hidden = ['created_at', 'updated_at'];
     protected $fillable = ['email', 'name', 'phoneNumber', 'address', 'country', 'city', 'zipCode', 'price'];
+
+    public function products()
+    {
+        return $this-> (Product::class, OrderProduct::class, 'idOrder', 'idProduct', 'id', 'id');
+    }
 }

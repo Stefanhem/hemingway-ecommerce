@@ -29,3 +29,6 @@ Route::get('/checkout', 'OrderController@checkout');
 Route::post('/order', 'OrderController@store');
 Route::post('/remove-cart-item/{id}', 'ProductsController@removeFromCart');
 Route::post('/contact-form', 'StaticPagesController@contactFormEmail');
+
+Route::get('/home', 'AdminController@home');
+Route::get('/orders/{id}', 'OrderController@show');
