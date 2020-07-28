@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMailable;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class StaticPagesController extends Controller
 {
@@ -19,5 +21,11 @@ class StaticPagesController extends Controller
     public function legal()
     {
         return view('pages.footer.legal');
+    }
+
+    public function contactFormEmail(Request $request)
+    {
+        Mail::send(new ContactMailable($request->all()));
+        return redirect('/');
     }
 }
