@@ -20,6 +20,15 @@ class OrderController extends Controller
     {
         $order = Order::with('products')->where('id', $id)->first();
         dd($order->products);
+        $orderProducts = array_map(function ($orderProduct) {
+            return [
+                'quantity' => $orderProduct->quantity,
+                'color' => $orderProduct->color,
+                'product' => $orderProduct->product
+            ];
+        }, $order->products);
+
+        dd($orderProducts);
         return view('admin.pages.order', [
             'data' => [
                 'name' => $order->name,

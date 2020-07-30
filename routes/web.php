@@ -30,5 +30,5 @@ Route::post('/order', 'OrderController@store');
 Route::post('/remove-cart-item/{id}', 'ProductsController@removeFromCart');
 Route::post('/contact-form', 'StaticPagesController@contactFormEmail');
 
-Route::get('/home', 'AdminController@home');
-Route::get('/orders/{id}', 'OrderController@show');
+Route::get('/home', 'AdminController@home')->middleware('auth');
+Route::get('/orders/{id}', 'OrderController@show')->middleware('auth');
