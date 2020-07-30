@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\ProductColor;
+use App\ProductType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -38,7 +39,8 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        return Product::create($request->all());
+        $product = Product::create($request->all());
+        return redirect('/products/' . $product->id);
     }
 
     /**
@@ -133,5 +135,15 @@ class ProductsController extends Controller
         return [
             'amount' => $cartSum
         ];
+    }
+
+    public function adminProducts()
+    {
+        $types = ProductType::all();
+        return view('admin.pages.products', [
+            'data' => [
+                'types' => $types
+            ]
+        ]);
     }
 }

@@ -32,3 +32,6 @@ Route::post('/contact-form', 'StaticPagesController@contactFormEmail');
 
 Route::get('/home', 'AdminController@home')->middleware('auth');
 Route::get('/orders/{id}', 'OrderController@show')->middleware('auth');
+
+Route::get('/admin/products', 'ProductsController@adminProducts')->middleware('auth');
+Route::post('/admin/product', 'productsController@store')->middleware('auth');
