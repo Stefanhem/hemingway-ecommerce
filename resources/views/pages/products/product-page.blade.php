@@ -18,12 +18,14 @@
         <div class="opis-proizvoda-div">
             <h1 class="heading proizvod-head page">{{$product->name}}</h1>
             <div class="text-block-18">{{$product->price . ' RSD'}}</div>
+            @if($productColors->count() > 0)
             <div class="text-block-19">Izaberi boju</div>
             <div class="boje-izbor">
                 @foreach($productColors as $productColor)
                     <div class="kruzici-boja" style="background-color:{{$productColor->color->hexCode}}" data-value="{{$productColor->color->name}}" data-image="{{asset($productColor->imagePath)}}"></div>
                 @endforeach
             </div>
+            @endif
             {{ Form::open(['url' => '/add-cart/' . $product->id, 'method' => 'POST']) }}
             <input type="hidden" id="color" name="color" value="">
             <label for="quantity" class="field-label-5">Kolicina</label>
@@ -36,7 +38,13 @@
                 <input type="submit" data-loading-text="Adding to cart..." value="Dodaj u korpu" class="button-4 w-button">
             @endif
             {{ Form::close() }}
-        </div></div>
+            @if (!empty(Auth::user()))
+                <div class="text-block-19" style="margin-bottom: 20px">Admin Tools</div>
+                <a class="button-5 w-button" href="/admin/products/{{$product->id}}" style="margin-bottom: 20px">Edit Product</a>
+                <a class="button-5 w-button" href="/admin/products/color/{{$product->id}}" style="margin-bottom: 20px">Add new Color</a>
+            @endif
+        </div>
+    </div>
     <div class="opis-proizvoda">
         <h1 class="heading opis-proizvoda">Opis proizvoda</h1>
         <p class="paragraph-3">{{$product->description}}</p>

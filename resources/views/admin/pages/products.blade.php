@@ -64,7 +64,7 @@
           <div class="mb-3">
             <label for="name">Main product image</label>
             <div class="custom-file">
-              <input type="file" class="custom-file-input" id="mainImage" name="mainImage">
+              <input type="file" class="custom-file-input" id="mainImage" name="image">
               <label class="custom-file-label" for="customFile">Choose file</label>
             </div>
           </div>

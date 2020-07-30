@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Color;
+use App\Http\Requests\ProductRequest;
 use App\Product;
 use App\ProductColor;
 use App\ProductType;
@@ -35,14 +37,27 @@ class ProductsController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
-        $product = Product::create($request->all());
+        $inPublicPath = 'images/products/';
+        $data = $request->all();
+        $image = $request->file('image');
+        $format = $image->getClientOriginalExtension();
+        $imageName = $this->generateNameOfImage($format);
+
+        $image->move(public_path($inPublicPath), $imageName);
+
+        $data['mainImage'] = $inPublicPath . $imageName;
+        $product = Product::create($data);
         return redirect('/products/' . $product->id);
     }
 
+    protected function generateNameOfImage(string $format = 'jpg'): string
+    {
+        return time() . '.' . $format;
+    }
     /**
      * Display the specified resource.
      *
@@ -137,6 +152,42 @@ class ProductsController extends Controller
         ];
     }
 
+    public function productColor(int $id)
+    {
+        $product = Product::find($id);
+        $colors = Color::all();
+        return view('admin.pages.product-color', ['product' => $product, 'colors' => $colors]);
+    }
+
+    public function storeProductColor(Request $request)
+    {
+        $inPublicPath = 'images/products/';
+        $data = $request->all();
+        $image = $request->file('image');
+        $format = $image->getClientOriginalExtension();
+        $imageName = $this->generateNameOfImage($format);
+
+        $image->move(public_path($inPublicPath), $imageName);
+
+        $data['imagePath'] = $inPublicPath . $imageName;
+        ProductColor::create($data);
+
+
+        return redirect('/products/' . $data['idProduct']);
+    }
+
+    public function colors()
+    {
+        $colors = Color::all();
+        return view('admin.pages.color', ['colors' => $colors]);
+    }
+
+    public function storeNewColor(Request $request)
+    {
+        Color::create($request->all());
+        return redirect('/home');
+    }
+
     public function adminProducts()
     {
         $types = ProductType::all();
@@ -146,4 +197,5 @@ class ProductsController extends Controller
             ]
         ]);
     }
+
 }

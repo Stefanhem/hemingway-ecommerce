@@ -34,4 +34,8 @@ Route::get('/home', 'AdminController@home')->middleware('auth');
 Route::get('/orders/{id}', 'OrderController@show')->middleware('auth');
 
 Route::get('/admin/products', 'ProductsController@adminProducts')->middleware('auth');
-Route::post('/admin/product', 'productsController@store')->middleware('auth');
+Route::post('/admin/product', 'ProductsController@store')->middleware('auth');
+Route::post('/admin/products/color', 'ProductsController@storeProductColor')->middleware('auth');
+Route::get('/admin/products/color/{id}', 'ProductsController@productColor')->middleware('auth');
+Route::get('/admin/color', 'ProductsController@colors')->middleware('auth');
+Route::post('/admin/color', 'ProductsController@storeNewColor')->middleware('auth');
