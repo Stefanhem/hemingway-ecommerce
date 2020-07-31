@@ -14,7 +14,7 @@ class AddColorOrderTable extends Migration
     public function up()
     {
         Schema::table('order_products', function (Blueprint $table) {
-           $table->string('color');
+           $table->string('color')->nullable();
         });
     }
 

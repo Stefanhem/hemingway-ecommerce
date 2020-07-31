@@ -19,23 +19,26 @@ class OrderController extends Controller
     public function show(int $id)
     {
         $order = Order::with('products')->where('id', $id)->first();
-        dd($order->products);
-        $orderProducts = array_map(function ($orderProduct) {
-            return [
-                'quantity' => $orderProduct->quantity,
-                'color' => $orderProduct->color,
-                'product' => $orderProduct->product
-            ];
-        }, $order->products);
 
-        dd($orderProducts);
+        $id = 0;
+        $orderProducts = [];
+        foreach ($order->products as $product) {
+            $orderProducts[] = [
+                'id' => $id++,
+                'quantity' => $product->quantity,
+                'price' => $product->quantity * $product->product->price,
+                'color' => $product->color,
+                'product' => $product->product
+            ];
+        }
+
         return view('admin.pages.order', [
             'data' => [
                 'name' => $order->name,
                 'email' => $order->email,
                 'paymentMethod' => self::PAYMENT_METHOD,
                 'address' => $order->address . ', ' . $order->city . ' ' . $order->zipCode . ', ' . $order->country,
-                'products' => $order->products,
+                'products' => $orderProducts,
                 'sum' => $order->price
             ]
         ]);

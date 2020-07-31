@@ -18,6 +18,27 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.pagination {
+    display: inline-block !important;
+}
+
+.pagination a {
+    color: black !important;
+    border: 1px solid #1b1e21;
+    margin-right: 5px;
+    float: left !important;
+    padding: 8px 16px !important;
+    text-decoration: none !important;
+}
+
+.pagination a.active {
+    background-color: #4CAF50 !important;
+    color: white !important;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd !important;}
+
 .w-icon-slider-right:before {
   content: "\e600";
 }

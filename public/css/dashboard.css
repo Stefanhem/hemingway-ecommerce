@@ -106,6 +106,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width: 940px;
+    width: 600px;
 }
 .w-container:before,
 .w-container:after {
@@ -242,6 +243,7 @@ body {
 .order-items {
     margin-bottom: -20px;
     padding-bottom: 5px;
+    width: auto;
 }
 .w-commerce-commercelayoutsidebar {
     -webkit-flex-basis: 320px;

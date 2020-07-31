@@ -56,7 +56,6 @@
                 <fieldset class="w-commerce-commercecheckoutblockcontent">
                     <div class="order-items">
                         @foreach($data['products'] as $cartProduct)
-                            {{dd($cartProduct)}}
                             <div id="checkout-product-{{$cartProduct['id']}}" class="order-item" style="color: black">
                                 <img src="{{asset($cartProduct['product']->mainImage)}}" width="80" alt="">
                                 <div class="div-block-19">

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Color;
+use App\Http\Requests\ColorRequest;
+use App\Http\Requests\ProductColorRequest;
 use App\Http\Requests\ProductRequest;
 use App\Product;
 use App\ProductColor;
@@ -10,10 +12,15 @@ use App\ProductType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
+/**
+ * Class ProductsController
+ * @package App\Http\Controllers
+ */
 class ProductsController extends Controller
 {
+    protected const PRODUCTS_PER_PAGE = 6;
     /**
-     * Display a listing of the resource.
+     * Display top 3 products on the front page
      *
      * @return Product[]|\Illuminate\Database\Eloquent\Collection
      */
@@ -23,14 +30,34 @@ class ProductsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Route for diff pages of product types
      *
+     * @param Product $model
      * @param Request $request
-     * @return void
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function create()
+    public function getProductsByType(Product $model, Request $request)
     {
+        $type = null;
+        $typeModel = null;
+        if ($request->has('type')) {
+            $type = $request->get('type');
+            $typeModel = ProductType::where('id', $type)->first();
+            $model = $model->where('idType', $type);
+        }
+        if (empty($typeModel) && !empty($type)) {
+            $products = [];
+            $productsCount = 0;
+        } else {
+            $productsCount = $model->count();
+            if ($request->has('page') && $request->get('page') > 1) {
+                $model->skip(self::PRODUCTS_PER_PAGE * ((int)$request->get('page') - 1));
+            }
+            $products = $model->take(self::PRODUCTS_PER_PAGE)->get();
+        }
 
+
+        return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => (int)$productsCount / 6, 'type' => $type, 'typeName' => !empty($typeModel) ? $typeModel->name : '']);
     }
 
     /**
@@ -54,6 +81,10 @@ class ProductsController extends Controller
         return redirect('/products/' . $product->id);
     }
 
+    /**
+     * @param string $format
+     * @return string
+     */
     protected function generateNameOfImage(string $format = 'jpg'): string
     {
         return time() . '.' . $format;
@@ -71,39 +102,12 @@ class ProductsController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Add a product to the card
      *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function edit(Product $product)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Product $product)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Product $product)
-    {
-        //
-    }
-
     public function addCart(int $id, Request $request)
     {
         $product = Product::find($id);
@@ -127,6 +131,12 @@ class ProductsController extends Controller
         return back();
     }
 
+    /**
+     * Remove product from the cart
+     *
+     * @param int $id
+     * @return array
+     */
     public function removeFromCart(int $id)
     {
         // get all session products
@@ -152,6 +162,12 @@ class ProductsController extends Controller
         ];
     }
 
+    /**
+     * Index page for adding colors of products
+     *
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function productColor(int $id)
     {
         $product = Product::find($id);
@@ -159,7 +175,13 @@ class ProductsController extends Controller
         return view('admin.pages.product-color', ['product' => $product, 'colors' => $colors]);
     }
 
-    public function storeProductColor(Request $request)
+    /**
+     * Save a new Color of a Product
+     *
+     * @param ProductColorRequest $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function storeProductColor(ProductColorRequest $request)
     {
         $inPublicPath = 'images/products/';
         $data = $request->all();
@@ -172,22 +194,37 @@ class ProductsController extends Controller
         $data['imagePath'] = $inPublicPath . $imageName;
         ProductColor::create($data);
 
-
         return redirect('/products/' . $data['idProduct']);
     }
 
+    /**
+     * Index page of Colors
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function colors()
     {
         $colors = Color::all();
         return view('admin.pages.color', ['colors' => $colors]);
     }
 
-    public function storeNewColor(Request $request)
+    /**
+     * Add new Color
+     *
+     * @param ColorRequest $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function storeNewColor(ColorRequest $request)
     {
         Color::create($request->all());
         return redirect('/home');
     }
 
+    /**
+     * Add new products index page
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function adminProducts()
     {
         $types = ProductType::all();

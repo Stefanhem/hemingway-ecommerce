@@ -3,7 +3,7 @@
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link active" href="/home">
-                    Dashboard <span class="sr-only">(current)</span>
+                    Dashboard
                 </a>
             </li>
             <li class="nav-item">

@@ -65,7 +65,26 @@
                     <div class="text-block">Koža</div>
                     <div class="icon w-icon-dropdown-toggle"></div>
                 </div>
-                <nav class="dropdown-list w-dropdown-list"><a href="#" class="dropdown-link-2 w-dropdown-link"><strong>Novčanici</strong></a><a href="#" class="dropdown-link w-dropdown-link"><span>Torbe</span></a><a href="#" class="dropdown-link w-dropdown-link"><span><strong>Wellness</strong></span></a><a href="#" class="dropdown-link w-dropdown-link">Office</a><a href="#" class="dropdown-link-3 w-dropdown-link">Moto Oprema</a><a href="#" class="dropdown-link-3 w-dropdown-link"><strong>Sve ostalo</strong></a></nav>
+                <nav class="dropdown-list w-dropdown-list">
+                    <a href="/products/types?type=1" class="dropdown-link-2 w-dropdown-link">
+                        <strong>Novčanici</strong>
+                    </a>
+                    <a href="/products/types?type=2" class="dropdown-link w-dropdown-link">
+                        <span>Torbe</span>
+                    </a>
+                    <a href="/products/types?type=3" class="dropdown-link w-dropdown-link">
+                        <span><strong>Wellness</strong></span>
+                    </a>
+                    <a href="/products/types?type=4" class="dropdown-link w-dropdown-link">
+                        Office
+                    </a>
+                    <a href="/products/types?type=5" class="dropdown-link-3 w-dropdown-link">
+                        Moto Oprema
+                    </a>
+                    <a href="/products/types?type=6" class="dropdown-link-3 w-dropdown-link">
+                        <strong>Sve ostalo</strong>
+                    </a>
+                </nav>
             </div>
             <a href="#" class="link-block w-inline-block">
                 <div class="text-block">Kravate &amp; Aksesoari</div>

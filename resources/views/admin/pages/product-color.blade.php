@@ -7,7 +7,7 @@
                 {{ Form::open(['url' => '/admin/products/color', 'method' => 'POST', 'class' => 'needs-validation', 'files' => true]) }}
                 <div class="row">
                     <div class="col-md-5 mb-3">
-                        <label for="type">Type of product</label>
+                        <label for="type">Color of this product</label>
                         <select class="custom-select d-block w-100" id="type" name="idColor" required>
                             <option value="">Choose...</option>
                             @foreach($colors as $color)

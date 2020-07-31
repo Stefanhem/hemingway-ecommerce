@@ -22,7 +22,7 @@ Route::get('/about-us', 'StaticPagesController@about');
 Route::get('/contact', 'StaticPagesController@contact');
 Route::get('/legal', 'StaticPagesController@legal');
 
-
+Route::get('/products/types', 'ProductsController@getProductsByType');
 Route::resource('products', 'ProductsController');
 Route::post('/add-cart/{id}', 'ProductsController@addCart');
 Route::get('/checkout', 'OrderController@checkout');

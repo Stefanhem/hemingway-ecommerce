@@ -73,6 +73,15 @@
       <hr class="mb-4">
       <button class="btn btn-primary btn-lg btn-block" type="submit">Insert product</button>
       {{Form::close()}}
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     </div>
   </div>
 </main>

@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44ab796d-5644-4daa-ab6c-a2070184ceec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/color.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/product-color.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/products/products-list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Color.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Color.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ProductColor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ProductColor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_27_184752_add_color_order_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_27_184752_add_color_order_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/webflow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/product-color.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/product-color.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/order-invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/order-invoice.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,7 +219,9 @@
       <workItem from="1595870863824" duration="5992000" />
       <workItem from="1595954597876" duration="10402000" />
       <workItem from="1596052177780" duration="1871000" />
-      <workItem from="1596129715409" duration="6574000" />
+      <workItem from="1596129715409" duration="6599000" />
+      <workItem from="1596208918886" duration="8037000" />
+      <workItem from="1596225116778" duration="3453000" />
     </task>
     <servers />
   </component>
@@ -224,13 +229,25 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="707" y="343" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596229388365">
+      <screen x="0" y="0" width="1851" height="1080" />
+    </state>
+    <state x="707" y="343" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1851.1080@0.0.1851.1080" timestamp="1596229388365" />
+    <state x="730" y="257" key="#com.intellij.ide.util.MemberChooser" timestamp="1596223683037">
+      <screen x="0" y="0" width="1851" height="1080" />
+    </state>
+    <state x="730" y="257" key="#com.intellij.ide.util.MemberChooser/0.0.1851.1080@0.0.1851.1080" timestamp="1596223683037" />
+    <state x="605" y="277" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1596225037469">
+      <screen x="0" y="0" width="1851" height="1080" />
+    </state>
+    <state x="605" y="277" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1851.1080@0.0.1851.1080" timestamp="1596225037469" />
     <state x="705" y="296" key="FileChooserDialogImpl" timestamp="1595626479787">
       <screen x="0" y="0" width="1851" height="1080" />
     </state>
     <state x="705" y="296" key="FileChooserDialogImpl/0.0.1851.1080@0.0.1851.1080" timestamp="1595626479787" />
-    <state x="588" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1595627598980">
+    <state x="588" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1596215124458">
       <screen x="0" y="0" width="1851" height="1080" />
     </state>
-    <state x="588" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1851.1080@0.0.1851.1080" timestamp="1595627598980" />
+    <state x="588" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1851.1080@0.0.1851.1080" timestamp="1596215124458" />
   </component>
 </project>
