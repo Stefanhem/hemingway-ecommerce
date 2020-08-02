@@ -1,7 +1,7 @@
 <div data-w-id="5f4f9947-30e8-ea30-25f1-fb4b88672c5a" class="nav"><a href="/" aria-current="page" class="home-link w-inline-block w--current"><img src="{{asset("images/Hemingway.svg")}}" width="64.5" alt="" class="image"></a>
     <div class="bottom-nav">
         <div class="nav-containe">
-            <div data-hover="" data-delay="0" class="dropdown w-dropdown">
+            <div style="display: none" data-hover="" data-delay="0" class="dropdown w-dropdown">
                 <div class="dropdown-toggle w-dropdown-toggle">
                     <div class="text-block">Sr</div>
                     <div class="icon w-icon-dropdown-toggle"></div>
@@ -92,7 +92,7 @@
             <a href="#" class="link-block w-inline-block">
                 <div class="text-block">Muška Pećina</div>
             </a>
-            <a href="#Special-offer" class="link-block w-inline-block">
+            <a href="/products/special-offer" class="link-block w-inline-block">
                 <div class="text-block">Specialna Ponuda</div>
             </a>
         </div>

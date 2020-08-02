@@ -6,6 +6,7 @@ use App\Color;
 use App\Http\Requests\ColorRequest;
 use App\Http\Requests\ProductColorRequest;
 use App\Http\Requests\ProductRequest;
+use App\Http\Requests\ProductUpdateRequest;
 use App\Product;
 use App\ProductColor;
 use App\ProductType;
@@ -18,7 +19,11 @@ use Illuminate\Support\Facades\Session;
  */
 class ProductsController extends Controller
 {
+    /**
+     * Limit products per page in lists
+     */
     protected const PRODUCTS_PER_PAGE = 6;
+
     /**
      * Display top 3 products on the front page
      *
@@ -50,38 +55,60 @@ class ProductsController extends Controller
             $productsCount = 0;
         } else {
             $productsCount = $model->count();
-            if ($request->has('page') && $request->get('page') > 1) {
-                $model->skip(self::PRODUCTS_PER_PAGE * ((int)$request->get('page') - 1));
-            }
-            $products = $model->take(self::PRODUCTS_PER_PAGE)->get();
+            $products = $this->paginateQuery($model, $request);
         }
-
-
         return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => (int)$productsCount / 6, 'type' => $type, 'typeName' => !empty($typeModel) ? $typeModel->name : '']);
     }
 
+    /**
+     * @param Product $model
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getSpecialOfferProducts(Product $model, Request $request)
+    {
+        $model = $model->where('isOnSpecialOffer', 1);
+        $productsCount = $model->count();
+
+        $products = $this->paginateQuery($model, $request);
+        return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => (int)$productsCount / 6, 'typeName' => 'Specialna ponuda']);
+    }
+
+    /**
+     * @param Product $model
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function search(Product $model, Request $request)
     {
-        $products = [];
-        $productsCount = 0;
         if (!$request->has('name')) {
             return view('pages.products.products-list', ['chunks' => collect([]), 'count' => 0, 'typeName' => 'No results for your search']);
-        }
-        if ($request->has('page') && $request->get('page') > 1) {
-            $model->skip(self::PRODUCTS_PER_PAGE * ((int)$request->get('page') - 1));
         }
         $name = $request->get('name');
         $model = $model->where('name', 'like', '%' . $name . '%');
         $productsCount = $model->count();
-        $products = $model->take(self::PRODUCTS_PER_PAGE)->get();
+        $products = $this->paginateQuery($model, $request);
 
         return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => (int)$productsCount / 6, 'typeName' => !empty($typeModel) ? $typeModel->name : '']);
     }
 
     /**
+     * @param $model
+     * @param Request $request
+     * @return iterable|null
+     */
+    protected function paginateQuery($model, Request $request): ?iterable
+    {
+        if ($request->has('page') && $request->get('page') > 1) {
+            $model->skip(self::PRODUCTS_PER_PAGE * ((int)$request->get('page') - 1));
+        }
+        return $model->take(self::PRODUCTS_PER_PAGE)->get();
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function store(ProductRequest $request)
@@ -107,16 +134,18 @@ class ProductsController extends Controller
     {
         return time() . '.' . $format;
     }
+
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param \App\Product $product
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show(Product $product)
     {
         $colors = ProductColor::with('color')->where('idProduct', $product->id)->get();
-        return view('pages.products.product-page', ['product' => $product, 'productColors' => $colors]);
+        $sameTypeProducts = Product::where('idType', $product->idType)->take(3)->get();
+        return view('pages.products.product-page', ['product' => $product, 'productColors' => $colors, 'sameTypeProducts' => $sameTypeProducts]);
     }
 
     /**
@@ -251,5 +280,50 @@ class ProductsController extends Controller
                 'types' => $types
             ]
         ]);
+    }
+
+    /**
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function adminEditProduct(int $id)
+    {
+        $product = Product::find($id);
+        $types = ProductType::all();
+        return view('admin.pages.edit-product', ['product' => $product, 'types' => $types]);
+    }
+
+    /**
+     * @param ProductUpdateRequest $request
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function adminUpdateProduct(ProductUpdateRequest $request, int $id)
+    {
+        $product = Product::find($id);
+        $data = $request->all();
+
+        if (!empty($data['image'])) {
+            $inPublicPath = 'images/products/';
+            $image = $request->file('image');
+            $format = $image->getClientOriginalExtension();
+            $imageName = $this->generateNameOfImage($format);
+            $image->move(public_path($inPublicPath), $imageName);
+            $data['mainImage'] = $inPublicPath . $imageName;
+        }
+        $product->fill($data);
+        $product->save();
+        return redirect('/products/' . $id);
+    }
+
+    /**
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function adminDeleteProducts(int $id)
+    {
+        Product::where('id', $id)->delete();
+
+        return redirect('/home');
     }
 }

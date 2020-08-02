@@ -20,6 +20,39 @@
 <div class="proizvodi special-section">
     <h1 class="heading">Special offer</h1>
     <div class="proizvodi-div">
+        @if($specialOfferProducts->count() > 0)
+            @foreach($specialOfferProducts as $specialOfferProduct)
+                <div class="proizvod-div">
+                    <img class="fotka-proizvoda" src="{{asset($specialOfferProduct->mainImage)}}"></img>
+                    <h1 class="naziv-proizvoda-mali-div">{{$specialOfferProduct->name}}</h1>
+                    <div class="cena-dugme">
+                        <div class="text-block-21">{{$specialOfferProduct->price . ' RSD'}}</div>
+                        @if($specialOfferProduct->quantityInStock == 0)
+                            <div class="w-commerce-commerceaddtocartoutofstock">
+                                <div>This product is out of stock.</div>
+                            </div>
+                        @else
+                            <a href="/products/{{$specialOfferProduct->id}}" class="button-5 w-button add-cart">Pogledaj proizvod</a>
+                        @endif
+                    </div>
+                </div>
+            @endforeach
+        @else
+            <div class="w-dyn-empty">
+                <div>No items found.</div>
+            </div>
+        @endif
+    </div>
+</div>
+<div class="ostali-proizvodi">
+    <a href="/products/types" class="link-block-4 w-inline-block">
+        <div class="text-block-8 white">Pogledaj ostale proizvode</div>
+        <div class="div-block-9"><img src="images/Asset-15.svg" alt="" class="image-9 white"></div>
+    </a>
+</div>
+<div id="Proizvodi" class="proizvodi">
+    <h1 class="heading">Hemingway proizvodi</h1>
+    <div class="proizvodi-div">
         @if($topProducts->count() > 0)
             @foreach($topProducts as $topProduct)
                 <div class="proizvod-div">
@@ -45,41 +78,7 @@
     </div>
 </div>
 <div class="ostali-proizvodi">
-    <a href="#" class="link-block-4 w-inline-block">
-        <div class="text-block-8 white">Pogledaj ostale proizvode</div>
-        <div class="div-block-9"><img src="images/Asset-15.svg" alt="" class="image-9 white"></div>
-    </a>
-</div>
-<div id="Proizvodi" class="proizvodi">
-    <h1 class="heading">Hemingway proizvodi</h1>
-    <div class="collection-list-wrapper-3 w-dyn-list">
-        <div role="list" class="collection-list-2 w-dyn-items w-row">
-            <div role="listitem" class="w-dyn-item w-col w-col-4">
-                <div class="product-div"><a href="#" class="product-link w-inline-block"></a>
-                    <div class="picture-div other-products"></div>
-                    <div class="product-name"></div>
-                    <div class="cena-korpa">
-                        <div class="cena"></div>
-                        <div class="add-to-cart">
-                            <form data-node-type="commerce-add-to-cart-form" class="w-commerce-commerceaddtocartform default-state"><label for="quantity-4920f6fba008bc0641b7ae42ff3a50b-2" class="field-label">Quantity</label><input type="number" id="quantity-4920f6fba008bc0641b7ae42ff3a50b0" name="commerce-add-to-cart-quantity-input" min="1" class="w-commerce-commerceaddtocartquantityinput quantity" value="1"><input type="submit" data-loading-text="Adding to cart..." value="Dodaj u korpu" class="w-commerce-commerceaddtocartbutton korpa-dugme"><a href="checkout.html" data-node-type="commerce-buy-now-button" class="w-commerce-commercebuynowbutton buy-now-button">Buy now</a></form>
-                            <div style="display:none" class="w-commerce-commerceaddtocartoutofstock">
-                                <div>This product is out of stock.</div>
-                            </div>
-                            <div data-node-type="commerce-add-to-cart-error" style="display:none" class="w-commerce-commerceaddtocarterror">
-                                <div class=".w-add-to-cart-error-msg" data-w-add-to-cart-quantity-error="Product is not available in this quantity." data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart." data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item." data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site.">Product is not available in this quantity.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="w-dyn-empty">
-            <div>No items found.</div>
-        </div>
-    </div>
-</div>
-<div class="ostali-proizvodi">
-    <a href="#" class="link-block-4 darker w-inline-block">
+    <a href="/products/types" class="link-block-4 darker w-inline-block">
         <div class="text-block-8">Pogledaj ostale proizvode</div>
         <div class="div-block-9"><img src="images/Asset-15.svg" alt="" class="image-9"></div>
     </a>

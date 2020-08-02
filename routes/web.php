@@ -22,6 +22,7 @@ Route::get('/about-us', 'StaticPagesController@about');
 Route::get('/contact', 'StaticPagesController@contact');
 Route::get('/legal', 'StaticPagesController@legal');
 
+Route::get('/products/special-offer', 'ProductsController@getSpecialOfferProducts');
 Route::get('/products/types', 'ProductsController@getProductsByType');
 Route::resource('products', 'ProductsController');
 Route::post('/add-cart/{id}', 'ProductsController@addCart');
@@ -29,15 +30,18 @@ Route::get('/checkout', 'OrderController@checkout');
 Route::post('/order', 'OrderController@store');
 Route::post('/remove-cart-item/{id}', 'ProductsController@removeFromCart');
 Route::post('/contact-form', 'StaticPagesController@contactFormEmail');
+Route::get('/search', 'ProductsController@search');
 
 Route::get('/home', 'AdminController@home')->middleware('auth');
 Route::get('/orders/{id}', 'OrderController@show')->middleware('auth');
 
 Route::get('/admin/products', 'ProductsController@adminProducts')->middleware('auth');
+Route::delete('/admin/products/delete/{id}', 'ProductsController@adminDeleteProducts')->middleware('auth');
+Route::get('/admin/products/update/{id}', 'ProductsController@adminEditProduct')->middleware('auth');
+Route::post('/admin/products/update/{id}', 'ProductsController@adminUpdateProduct')->middleware('auth');
 Route::post('/admin/product', 'ProductsController@store')->middleware('auth');
 Route::post('/admin/products/color', 'ProductsController@storeProductColor')->middleware('auth');
 Route::get('/admin/products/color/{id}', 'ProductsController@productColor')->middleware('auth');
 Route::get('/admin/color', 'ProductsController@colors')->middleware('auth');
 Route::post('/admin/color', 'ProductsController@storeNewColor')->middleware('auth');
 
-Route::get('/search', 'ProductsController@search');

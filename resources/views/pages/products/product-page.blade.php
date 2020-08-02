@@ -28,6 +28,7 @@
             @endif
             {{ Form::open(['url' => '/add-cart/' . $product->id, 'method' => 'POST']) }}
             <input type="hidden" id="color" name="color" value="">
+            <input type="hidden" id="idProduct" name="idProduct" value="{{$product->id}}">
             <label for="quantity" class="field-label-5">Kolicina</label>
             <input type="number" id="quantity" name="quantity" min="1" class="div-block-17" value="1">
             @if($product->quantityInStock == 0)
@@ -40,7 +41,10 @@
             {{ Form::close() }}
             @if (!empty(Auth::user()))
                 <div class="text-block-19" style="margin-bottom: 20px">Admin Tools</div>
-                <a class="button-5 w-button" href="/admin/products/{{$product->id}}" style="margin-bottom: 20px">Edit Product</a>
+                <a class="button-5 w-button" href="/admin/products/update/{{$product->id}}" style="margin-bottom: 20px">Edit Product</a>
+                {{ Form::open(['url' => '/admin/products/delete/' . $product->id, 'method' => 'DELETE']) }}
+                <input type="submit" value="Delete product" class="button-5 w-button" style="margin-bottom: 20px">
+                {{ Form::close() }}
                 <a class="button-5 w-button" href="/admin/products/color/{{$product->id}}" style="margin-bottom: 20px">Add new Color</a>
             @endif
         </div>
@@ -66,24 +70,28 @@
     <div class="proizvodi">
         <h1 class="heading">Proizvodi</h1>
         <div class="proizvodi-div">
-            <div class="proizvod-div">
-                <div class="fotka-proizvoda"></div>
-                <h1 class="naziv-proizvoda-mali-div">Kozna futrola<br>za naocare</h1>
-                <div class="cena-dugme">
-                    <div class="text-block-21">2500 RSD</div><a href="#" class="button-5 w-button">Dodaj u korpu</a></div>
-            </div>
-            <div class="proizvod-div">
-                <div class="fotka-proizvoda"></div>
-                <h1 class="naziv-proizvoda-mali-div">Kozna futrola<br>za naocare</h1>
-                <div class="cena-dugme">
-                    <div class="text-block-21">2500 RSD</div><a href="#" class="button-5 w-button">Dodaj u korpu</a></div>
-            </div>
-            <div class="proizvod-div">
-                <div class="fotka-proizvoda"></div>
-                <h1 class="naziv-proizvoda-mali-div">Kozna futrola<br>za naocare</h1>
-                <div class="cena-dugme">
-                    <div class="text-block-21">2500 RSD</div><a href="#" class="button-5 w-button">Dodaj u korpu</a></div>
-            </div>
+            @if($sameTypeProducts->count() > 0)
+                @foreach($sameTypeProducts as $sameTypeProduct)
+                    <div class="proizvod-div">
+                        <img class="fotka-proizvoda" src="{{asset($sameTypeProduct->mainImage)}}"></img>
+                        <h1 class="naziv-proizvoda-mali-div">{{$sameTypeProduct->name}}</h1>
+                        <div class="cena-dugme">
+                            <div class="text-block-21">{{$sameTypeProduct->price . ' RSD'}}</div>
+                            @if($sameTypeProduct->quantityInStock == 0)
+                                <div class="w-commerce-commerceaddtocartoutofstock">
+                                    <div>This product is out of stock.</div>
+                                </div>
+                            @else
+                                <a href="/products/{{$sameTypeProduct->id}}" class="button-5 w-button add-cart">Pogledaj proizvod</a>
+                            @endif
+                        </div>
+                    </div>
+                @endforeach
+            @else
+                <div class="w-dyn-empty">
+                    <div>No items found.</div>
+                </div>
+            @endif
         </div>
     </div>
 @endsection

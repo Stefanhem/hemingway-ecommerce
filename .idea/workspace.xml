@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44ab796d-5644-4daa-ab6c-a2070184ceec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ProductUpdateRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/edit-product.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/products/products-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/products/products-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/webflow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/checkout/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/checkout/invoice.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/cart-product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/cart-product.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,20 +162,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images/products" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Projekti\hemingway\public\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projekti\hemingway\app\Http\Requests" />
       <recent name="C:\Projekti\hemingway\public\images\products" />
       <recent name="C:\Projekti\hemingway\public\css" />
       <recent name="C:\Projekti\hemingway\public\images" />
       <recent name="C:\Projekti\hemingway\public\fonts" />
-      <recent name="C:\Projekti\hemingway\public\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projekti\hemingway\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -212,7 +221,7 @@
       <workItem from="1596129715409" duration="6599000" />
       <workItem from="1596208918886" duration="8037000" />
       <workItem from="1596225116778" duration="4305000" />
-      <workItem from="1596368597222" duration="2769000" />
+      <workItem from="1596368597222" duration="10850000" />
     </task>
     <servers />
   </component>
@@ -224,10 +233,10 @@
       <screen x="0" y="0" width="1851" height="1080" />
     </state>
     <state x="707" y="343" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1851.1080@0.0.1851.1080" timestamp="1596229388365" />
-    <state x="730" y="257" key="#com.intellij.ide.util.MemberChooser" timestamp="1596223683037">
+    <state x="730" y="257" key="#com.intellij.ide.util.MemberChooser" timestamp="1596397210291">
       <screen x="0" y="0" width="1851" height="1080" />
     </state>
-    <state x="730" y="257" key="#com.intellij.ide.util.MemberChooser/0.0.1851.1080@0.0.1851.1080" timestamp="1596223683037" />
+    <state x="730" y="257" key="#com.intellij.ide.util.MemberChooser/0.0.1851.1080@0.0.1851.1080" timestamp="1596397210291" />
     <state x="605" y="277" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1596225037469">
       <screen x="0" y="0" width="1851" height="1080" />
     </state>

@@ -18,17 +18,18 @@ class OrderController extends Controller
 
     public function show(int $id)
     {
-        $order = Order::with('products')->where('id', $id)->first();
+        $order = Order::where('id', $id)->first();
 
         $id = 0;
         $orderProducts = [];
         foreach ($order->products as $product) {
+            $prod = $product->product()->withTrashed()->first();
             $orderProducts[] = [
                 'id' => $id++,
                 'quantity' => $product->quantity,
-                'price' => $product->quantity * $product->product->price,
+                'price' => $product->quantity * $prod->price,
                 'color' => $product->color,
-                'product' => $product->product
+                'product' => $prod
             ];
         }
 
@@ -47,6 +48,10 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         $order = $request->all();
+        if (!Session::has('products')) {
+            return redirect('/');
+        }
+
         $order['price'] = Session::get('cartSum');
         $products = Session::get('products');
         $newOrder = Order::create($order);

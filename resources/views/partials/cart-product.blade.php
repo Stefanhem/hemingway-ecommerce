@@ -3,7 +3,9 @@
     <div class="div-block-19">
         <div class="text-block-23">{{$cartProduct['product']->name}}</div>
         <div>Količina: {{$cartProduct['quantity']}} </div>
+        @if(isset($cartProduct['color']))
         <div>Boja: {{$cartProduct['color']}}</div>
+        @endif
     </div>
     <div style="min-width: 75px">
         <p>{{$cartProduct['price']}} RSD </p>

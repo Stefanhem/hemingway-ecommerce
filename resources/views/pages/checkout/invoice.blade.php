@@ -1,8 +1,8 @@
 <div class="w-commerce-commerceorderconfirmationcontainer" style="padding-top: 20vh">
+    <div class="w-form-done">
+        <div>Thank you! Your submission has been received!</div>
+    </div>
     <div class="w-commerce-commercelayoutcontainer w-container">
-        <div class="w-form-done">
-            <div>Thank you! Your submission has been received!</div>
-        </div>
         <div class="w-commerce-commercelayoutmain">
             <div class="w-commerce-commercecheckoutcustomerinfosummarywrapper">
                 <div class="w-commerce-commercecheckoutsummaryblockheader">
