@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44ab796d-5644-4daa-ab6c-a2070184ceec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/products/products-list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_27_184752_add_color_order_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_27_184752_add_color_order_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/webflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/webflow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/product-color.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/product-color.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/order-invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/order-invoice.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/products/products-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/products/products-list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -168,15 +158,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projekti\hemingway\public\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Projekti\hemingway\public\images\products" />
       <recent name="C:\Projekti\hemingway\public\css" />
       <recent name="C:\Projekti\hemingway\public\images" />
       <recent name="C:\Projekti\hemingway\public\fonts" />
       <recent name="C:\Projekti\hemingway\public\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Projekti\hemingway\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -221,7 +211,8 @@
       <workItem from="1596052177780" duration="1871000" />
       <workItem from="1596129715409" duration="6599000" />
       <workItem from="1596208918886" duration="8037000" />
-      <workItem from="1596225116778" duration="3453000" />
+      <workItem from="1596225116778" duration="4305000" />
+      <workItem from="1596368597222" duration="2769000" />
     </task>
     <servers />
   </component>

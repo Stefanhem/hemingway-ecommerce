@@ -60,6 +60,24 @@ class ProductsController extends Controller
         return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => (int)$productsCount / 6, 'type' => $type, 'typeName' => !empty($typeModel) ? $typeModel->name : '']);
     }
 
+    public function search(Product $model, Request $request)
+    {
+        $products = [];
+        $productsCount = 0;
+        if (!$request->has('name')) {
+            return view('pages.products.products-list', ['chunks' => collect([]), 'count' => 0, 'typeName' => 'No results for your search']);
+        }
+        if ($request->has('page') && $request->get('page') > 1) {
+            $model->skip(self::PRODUCTS_PER_PAGE * ((int)$request->get('page') - 1));
+        }
+        $name = $request->get('name');
+        $model = $model->where('name', 'like', '%' . $name . '%');
+        $productsCount = $model->count();
+        $products = $model->take(self::PRODUCTS_PER_PAGE)->get();
+
+        return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => (int)$productsCount / 6, 'typeName' => !empty($typeModel) ? $typeModel->name : '']);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -234,5 +252,4 @@ class ProductsController extends Controller
             ]
         ]);
     }
-
 }

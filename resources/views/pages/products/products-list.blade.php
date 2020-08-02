@@ -1,7 +1,9 @@
 @extends('layouts.app')
 @section('content')
     <div class="proizvodi special-section" style="padding-top: 15vh">
-        <h1 class="heading">{{$typeName}}</h1>
+        @if (isset($typeName))
+            <h1 class="heading">{{$typeName}}</h1>
+        @endif
             @if($chunks->count() > 0)
                 @foreach($chunks as $chunk)
                 <div class="proizvodi-div">
