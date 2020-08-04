@@ -18,7 +18,7 @@
     <div class="blokovi-sekcija-tri-bloka"><a href="#" class="link-4">Contact</a><a href="/contact" class="link-tri-bloka w-inline-block"></a></div>
 </div>
 <div class="proizvodi special-section">
-    <h1 class="heading">Special offer</h1>
+    <h1 class="heading">Specijalna ponuda</h1>
     <div class="proizvodi-div">
         @if($specialOfferProducts->count() > 0)
             @foreach($specialOfferProducts as $specialOfferProduct)
@@ -51,7 +51,7 @@
     </a>
 </div>
 <div id="Proizvodi" class="proizvodi">
-    <h1 class="heading">Hemingway proizvodi</h1>
+    <h1 class="heading">Bestsellers</h1>
     <div class="proizvodi-div">
         @if($topProducts->count() > 0)
             @foreach($topProducts as $topProduct)

@@ -2,23 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44ab796d-5644-4daa-ab6c-a2070184ceec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/placanje.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/podaci.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/pokloni.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/politika-privatnosti.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/pomoc.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/poslovi.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/prava.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/predlozi.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/uslovi-koriscenja.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StaticPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StaticPagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/hemingway-f9fff6.webflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/hemingway-f9fff6.webflow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/webflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/webflow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/checkout/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/checkout/invoice.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/about-us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ProductTypesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ProductTypesSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/hemingway.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/hemingway.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/checkout/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/checkout/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/pomoc.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/pomoc.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +221,8 @@
       <workItem from="1596368597222" duration="10850000" />
       <workItem from="1596465534788" duration="1025000" />
       <workItem from="1596474249058" duration="2080000" />
-      <workItem from="1596531346595" duration="4194000" />
+      <workItem from="1596531346595" duration="6694000" />
+      <workItem from="1596568868077" duration="3741000" />
     </task>
     <servers />
   </component>

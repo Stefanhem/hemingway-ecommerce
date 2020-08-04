@@ -12,11 +12,11 @@
                             </div>
                             <div class="block-content">
                                 <label for="email">Email*</label>
-                                <input type="email" class="text-field-3 w-input" maxlength="256" name="email"  id="email" required="" value="vlado.plavsa.96@gmail.com">
+                                <input type="email" class="text-field-3 w-input" maxlength="256" name="email"  id="email" required="">
                                 <label for="name">Ime i prezime*</label>
-                                <input type="text" class="text-field-3 w-input" maxlength="256" name="name" id="name" required="" value="Vladimir Plavsic">
+                                <input type="text" class="text-field-3 w-input" maxlength="256" name="name" id="name" required="">
                                 <label for="phoneNumber">Broj telefona*</label>
-                                <input type="tel" class="text-field-3 w-input" maxlength="256" name="phoneNumber" id="phoneNumber" required="" value="0644558107"></div>
+                                <input type="tel" class="text-field-3 w-input" maxlength="256" name="phoneNumber" id="phoneNumber" required=""></div>
                         </div>
                         <div class="customer-info-div">
                             <div class="block-header">
@@ -25,17 +25,17 @@
                             </div>
                             <div class="block-content">
                                 <label for="address">Adresa*</label>
-                                <input type="text" class="text-field-3 w-input" maxlength="256" name="address" id="address" required="" value="Brace Jovanovic 27">
+                                <input type="text" class="text-field-3 w-input" maxlength="256" name="address" id="address" required="">
                                 <label for="country">Država*</label>
-                                <input type="text" class="text-field-3 w-input" maxlength="256" name="country" id="country" required="" value="Srbija">
+                                <input type="text" class="text-field-3 w-input" maxlength="256" name="country" id="country" required="">
                                 <div class="row">
                                     <div class="collumn">
                                         <label for="city">Grad*</label>
-                                        <input type="tel" class="text-field-3 w-input" maxlength="256" name="city" id="city" required="" value="Kraljevo">
+                                        <input type="tel" class="text-field-3 w-input" maxlength="256" name="city" id="city" required="">
                                     </div>
                                     <div class="collumn">
                                         <label for="zipCode">Poštanski broj*</label>
-                                        <input type="tel" class="text-field-3 w-input" maxlength="256" name="zipCode" id="zipCode" required="" value="36000">
+                                        <input type="tel" class="text-field-3 w-input" maxlength="256" name="zipCode" id="zipCode" required="">
                                     </div>
                                 </div>
                             </div>
@@ -72,9 +72,9 @@
                                     <div id="sum">{{\Illuminate\Support\Facades\Session::get('cartSum')}} RSD</div>
                                 </div>
                             </div>
-                            <div class="block-content"><label class="w-commerce-commercecheckoutdiscountslabel">PROMO Kod</label>
+                            <!--<div class="block-content"><label class="w-commerce-commercecheckoutdiscountslabel">PROMO Kod</label>
                                 <div class="div-block-20"><input type="text" maxlength="256" name="Promo-code" data-name="Promo-code" id="Promo-code" class="text-field-4 w-input"></div>
-                            </div>
+                            </div>-->
                         </div><button type="submit" class="button-6 w-button">Naruči pouzećem</button>
                     </div>
                 </div>

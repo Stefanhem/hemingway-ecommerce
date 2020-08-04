@@ -18,8 +18,8 @@ class ProductTypesSeeder extends Seeder
             'Office',
             'Moto oprema',
             'Sve ostalo',
-            'Kravate',
-            'Aksesoari',
+            'Kravate & Aksesoari',
+            'Muška Pećina'
         ];
 
         foreach($types as $type) {

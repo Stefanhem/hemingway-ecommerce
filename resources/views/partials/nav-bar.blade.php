@@ -86,14 +86,14 @@
                     </a>
                 </nav>
             </div>
-            <a href="#" class="link-block w-inline-block">
+            <a href="/products/types?type=7" class="link-block w-inline-block">
                 <div class="text-block">Kravate &amp; Aksesoari</div>
             </a>
-            <a href="#" class="link-block w-inline-block">
+            <a href="/products/types?type=8" class="link-block w-inline-block">
                 <div class="text-block">Muška Pećina</div>
             </a>
             <a href="/products/special-offer" class="link-block w-inline-block">
-                <div class="text-block">Specialna Ponuda</div>
+                <div class="text-block">Specijalna Ponuda</div>
             </a>
         </div>
     </div>

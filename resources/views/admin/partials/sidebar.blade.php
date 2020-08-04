@@ -7,16 +7,6 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Orders
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    See All Products
-                </a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="/admin/products">
                     Insert new Products
                 </a>

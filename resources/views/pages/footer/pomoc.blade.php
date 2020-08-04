@@ -84,8 +84,7 @@
         </p>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>14. Koja su moja prava po pitanju garancije, reklamacija i povrata robe?</strong><br/>
-            -Kompletan odgovor na ovo pitanje možete pronaći na stranici koja se nalazi na sledećem linku. (i kad se
-            klikne da vodi na stranicu GARANCIJA, REKLAMACIJE I PRAVA POTROŠAČA)
+            -Kompletan odgovor na ovo pitanje možete pronaći na stranici koja se nalazi na sledećem <a href="/prava-potrosaca">linku</a>.
         </p>
     </div>
 @endsection

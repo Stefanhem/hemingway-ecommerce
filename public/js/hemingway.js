@@ -6,10 +6,12 @@ $(document).ready(function(){
         $(".cart-wrapper").css({opacity: 0, display: "none"});
     });
     $(".remove-cart-product").click(function() {
+        console.log('123');
         const cartItemId = $(this).parent().parent().attr('id');
         const id = cartItemId.replace('cart-product-', '');
         $('#' + cartItemId).hide();
         $.post('/remove-cart-item/' + id, {}, function (data, error) {
+            console.log(data);
             if (data.amount || data.amount === 0) {
                 $('#totalAmount').text(data.amount + ' RSD');
             }
