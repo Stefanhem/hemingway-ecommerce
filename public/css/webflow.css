@@ -327,7 +327,7 @@ input[type="reset"] {
   margin: 0 0 15px;
 }
 .w-form-done {
-  display: block;
+  display: none;
   padding: 20px;
   text-align: center;
   background-color: #dddddd;

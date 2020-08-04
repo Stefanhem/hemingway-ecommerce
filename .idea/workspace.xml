@@ -2,19 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44ab796d-5644-4daa-ab6c-a2070184ceec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ProductUpdateRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/edit-product.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/placanje.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/podaci.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/pokloni.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/politika-privatnosti.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/pomoc.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/poslovi.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/prava.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/predlozi.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/uslovi-koriscenja.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StaticPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StaticPagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/hemingway-f9fff6.webflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/hemingway-f9fff6.webflow.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/webflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/webflow.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/checkout/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/checkout/invoice.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/cart-product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/cart-product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/about-us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,17 +165,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pages/footer" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projekti\hemingway\resources\views\pages\footer" />
       <recent name="C:\Projekti\hemingway\app\Http\Requests" />
       <recent name="C:\Projekti\hemingway\public\images\products" />
       <recent name="C:\Projekti\hemingway\public\css" />
       <recent name="C:\Projekti\hemingway\public\images" />
-      <recent name="C:\Projekti\hemingway\public\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projekti\hemingway\public\css" />
@@ -222,6 +225,9 @@
       <workItem from="1596208918886" duration="8037000" />
       <workItem from="1596225116778" duration="4305000" />
       <workItem from="1596368597222" duration="10850000" />
+      <workItem from="1596465534788" duration="1025000" />
+      <workItem from="1596474249058" duration="2080000" />
+      <workItem from="1596531346595" duration="4194000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,5 @@
 <div class="w-commerce-commerceorderconfirmationcontainer" style="padding-top: 20vh">
-    <div class="w-form-done">
+    <div class="w-form-done" style="display:block">
         <div>Thank you! Your submission has been received!</div>
     </div>
     <div class="w-commerce-commercelayoutcontainer w-container">

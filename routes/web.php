@@ -21,6 +21,15 @@ Auth::routes();
 Route::get('/about-us', 'StaticPagesController@about');
 Route::get('/contact', 'StaticPagesController@contact');
 Route::get('/legal', 'StaticPagesController@legal');
+Route::get('/pokloni', 'StaticPagesController@pokloni');
+Route::get('/poslovi', 'StaticPagesController@poslovi');
+Route::get('/predlozi', 'StaticPagesController@predlozi');
+Route::get('/podaci', 'StaticPagesController@podaci');
+Route::get('/pomoc', 'StaticPagesController@pomoc');
+Route::get('/placanje', 'StaticPagesController@placanje');
+Route::get('/prava-potrosaca', 'StaticPagesController@prava');
+Route::get('/politika-privatnosti', 'StaticPagesController@politika');
+Route::get('/uslovi-koriscenja', 'StaticPagesController@uslovi');
 
 Route::get('/products/special-offer', 'ProductsController@getSpecialOfferProducts');
 Route::get('/products/types', 'ProductsController@getProductsByType');
