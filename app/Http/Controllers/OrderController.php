@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use App\OrderProduct;
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -64,6 +65,8 @@ class OrderController extends Controller
                 'quantity' => $product['quantity'],
                 'color' => $product['color']
             ];
+            $product['product']->quantityInStock = $product['product']->quantityInStock - $product['quantity'];
+            $product['product']->save();
         }
         OrderProduct::insert($orderProducts);
 

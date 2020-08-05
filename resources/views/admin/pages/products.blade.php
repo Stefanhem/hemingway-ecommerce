@@ -14,10 +14,21 @@
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="col-md-5 mb-3">
           <label for="price">Price</label>
           <input type="number" class="form-control" name="price" required />
+          <div class="invalid-feedback">
+            Please select a valid price.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-5 mb-3">
+          <label for="price">Price on special offer</label>
+          <input type="number" class="form-control" name="priceOnSpecialOffer" required />
           <div class="invalid-feedback">
             Please select a valid price.
           </div>
@@ -73,15 +84,15 @@
       <hr class="mb-4">
       <button class="btn btn-primary btn-lg btn-block" type="submit">Insert product</button>
       {{Form::close()}}
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+      @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+          @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+      @endif
     </div>
   </div>
 </main>

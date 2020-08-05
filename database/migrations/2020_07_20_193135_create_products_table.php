@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->integer('quantityInStock');
             $table->string('mainImage');
             $table->unsignedBigInteger('idType');
-            $table->string('description');
+            $table->string('description', 500);
             $table->timestamps();
             $table->foreign('idType')->references('id')->on('product_types');
         });
