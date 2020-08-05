@@ -31,11 +31,13 @@
             @endforeach
         </div>
         @endif
+
         {{ Form::open(['url' => '/add-cart/' . $product->id, 'method' => 'POST']) }}
         <input type="hidden" id="color" name="color" value="">
         <input type="hidden" id="idProduct" name="idProduct" value="{{$product->id}}">
-        <label for="quantity" class="field-label-5">Kolicina</label>
-        <input type="number" id="quantity" name="quantity" min="1" max="{{$product->quantityInStock}}" class="div-block-17" value="1">
+        <label for="quantity" class="field-label-5" style="margin-top:15px">Kolicina</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="{{$product->quantityInStock}}" style="margin-top:10px !important" class="div-block-17" value="1">
+        <div class="text-block-19" style="margin:30px 0 20px 0">Dimenzije: <span class="text-block-18">{{$product->dimensions}}</span></div>
         @if($product->quantityInStock <= 3 && $product->quantityInStock > 0)
             <div class="w-commerce-commerceaddtocartoutofstock">
                 <div>Samo jos {{$product->quantityInStock}} proizvoda na stanju!</div>
