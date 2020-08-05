@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="contact-section legal-notice">
-        <h1 class="heading contact-heading">Garancije i reklamacije</h1>
+        <h1 class="heading contact-heading">Garancija i reklamacije</h1>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             Hemingway posvećuje veliku pažnju kvalitetu svojih proizvoda, te se u procesu proizvodnje koriste samo
             najkvalitetnije sirovine, materijali i alati. Svaki proizvod je više puta pregledan i testiran, a finalna provera vrši
@@ -55,7 +55,7 @@
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
 
             Prava potrošača su regulisana Zakonom o zaštiti potrošača. Kompletan Zakon možete naći na sledećem
-            <a href="https://www.paragraf.rs/propisi/zakon_o_zastiti_potrosaca.html"> linku</a>
+            <a href="https://www.paragraf.rs/propisi/zakon_o_zastiti_potrosaca.html"> linku.</a>
         </p>
 
     </div>
