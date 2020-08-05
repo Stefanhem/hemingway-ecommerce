@@ -12,7 +12,7 @@
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>1. Koji su načini plaćanja robe?</strong><br/>
             -Za narudžbine sa teritorije Republike Srbije moguće je platiti: 1) Pouzećem; 2) Uplatnicom ili nalogom za
-            prenos; 3) Paypal-om. Iz inostranstva načini plaćanja su: 1) Devizna uplata na račun; 2) Paypal.<br/>
+            prenos.<br/>
         </p>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>2. Da li je moguće plaćanje platnim karticama?</strong><br/>
@@ -26,8 +26,8 @@
         </p>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>4. Ko plaća troškove dostave?</strong><br/>
-            -Ukoliko je adresa isporuke u Srbiji, dostava je besplatna za sve narudžbine ukupne vrednosti veće od
-            4.000,00 dinara, ili za proizvode kod kojih stoji posebna naznaka ‘’Besplatna dostava’’. U svim ostalim
+            -Ukoliko je adresa isporuke u Srbiji, dostava je besplatna za sve narudžbine ukupne vrednosti
+            3.990,00 dinara i veće, ili za proizvode kod kojih stoji posebna naznaka ‘’Besplatna dostava’’. U svim ostalim
             slučajevima kupac plaća troškove dostave kuriru, gotovinski, u trenutku isporuke.
             -Ako je adresa isporuke u inostranstvu, dostava je besplatna za sve narudžbine ukupne vrednosti veće od
             80,00 evra. U svim ostalim slučajevima troškove dostave plaća kupac i to prilikom naručivanja proizvoda (iznos
@@ -55,14 +55,13 @@
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>9. Za koje vreme ću dobiti naručene proizvode?</strong><br/>
             -Ukoliko je adresa dostave u Srbiji, maksimalni rok za slanje paketa je 5 radnih dana od trenutka prijema
-            potvrde narudžbine. Shodno tome, rok za dostavu je 7 radnih dana.
-            Međutim, kako se uvek trudimo da period čekanja isporuke bude što manji, neki uobičajeni rok za dostavu je
-            3 dana.
+            potvrde narudžbine. Shodno tome, rok za dostavu je 6 radnih dana.
+            Međutim, kako se uvek trudimo da period čekanja isporuke bude što manji, neki <strong>uobičajeni rok za dostavu je
+            3 dana.</strong>
         </p>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>10. Da li je plaćanje moguće izvršiti sa računa firme?</strong><br/>
-            -Moguće je, a primer popunjenog naloga za prenos ćete videti ako izaberete ovaj način plaćanja. Pored toga,
-            uvek nas možete kontaktirati za bilo kakvu asistenciju po ovom pitanju.
+            -Moguće je, a za instrukcije plaćanja i predračun kontaktirajtenas na neki od navedenih načina.
         </p>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>11. Ukoliko sam greškom naručio proizvod, da li mogu da otkažem narudžbinu?<br/></strong>
