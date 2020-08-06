@@ -323,11 +323,32 @@ input[type="reset"] {
   cursor: pointer;
   -webkit-appearance: button;
 }
+
+.pagination {
+    display: inline-block !important;
+}
+
+.pagination a {
+    color: black !important;
+    border: 1px solid #1b1e21;
+    margin-right: 5px;
+    float: left !important;
+    padding: 8px 16px !important;
+    text-decoration: none !important;
+}
+
+.pagination a.active {
+    background-color: #4CAF50 !important;
+    color: white !important;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd !important;}
+
 .w-form {
   margin: 0 0 15px;
 }
 .w-form-done {
-  display: none;
+  display: block;
   padding: 20px;
   text-align: center;
   background-color: #dddddd;
