@@ -19,7 +19,8 @@ class ProductTypesSeeder extends Seeder
             'Moto oprema',
             'Sve ostalo',
             'Kravate & Aksesoari',
-            'Muška Pećina'
+            'Muška Pećina',
+            'Special Offer'
         ];
 
         foreach($types as $type) {

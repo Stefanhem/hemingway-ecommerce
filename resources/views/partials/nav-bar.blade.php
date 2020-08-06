@@ -1,4 +1,7 @@
-<div data-w-id="5f4f9947-30e8-ea30-25f1-fb4b88672c5a" class="nav"><a href="/" aria-current="page" class="home-link w-inline-block w--current"><img src="{{asset("images/Hemingway.svg")}}" width="64.5" alt="" class="image"></a>
+<div data-w-id="5f4f9947-30e8-ea30-25f1-fb4b88672c5a" class="nav">
+    <a href="/" aria-current="page" class="home-link w-inline-block w--current">
+        <img src="{{asset("images/Hemingway.svg")}}" width="64.5" alt="" class="image">
+    </a>
     <div class="bottom-nav">
         <div class="nav-containe">
             <div style="display: none" data-hover="" data-delay="0" class="dropdown w-dropdown">

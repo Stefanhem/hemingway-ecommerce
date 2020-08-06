@@ -67,7 +67,7 @@ class ProductsController extends Controller
      */
     public function getSpecialOfferProducts(Product $model, Request $request)
     {
-        $model = $model->where('isOnSpecialOffer', 1);
+        $model = $model->where('isOnSpecialOffer', 1)->orWhere('idType', Product::TYPE_SPECIAL_OFFER);
         $productsCount = $model->count();
 
         $products = $this->paginateQuery($model, $request);
@@ -144,7 +144,7 @@ class ProductsController extends Controller
     public function show(Product $product)
     {
         $colors = ProductColor::with('color')->where('idProduct', $product->id)->get();
-        $sameTypeProducts = Product::where('idType', $product->idType)->take(3)->get();
+        $sameTypeProducts = Product::whereIn('idType', Product::$SIMMILAR_PRODUCTS[$product->idType])->take(3)->get();
         return view('pages.products.product-page', ['product' => $product, 'productColors' => $colors, 'sameTypeProducts' => $sameTypeProducts]);
     }
 
