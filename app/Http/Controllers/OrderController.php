@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\OrderCreateCustomerMailable;
 use App\Order;
 use App\OrderProduct;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
 class OrderController extends Controller
@@ -70,18 +72,23 @@ class OrderController extends Controller
         }
         OrderProduct::insert($orderProducts);
 
+        $data = [
+            'id' => $newOrder->id,
+            'date' => (new \DateTime())->format('d.m.Y'),
+            'name' => $newOrder->name,
+            'email' => $newOrder->email,
+            'paymentMethod' => self::PAYMENT_METHOD,
+            'address' => $newOrder->address . ', ' . $newOrder->city . ' ' . $newOrder->zipCode . ', ' . $newOrder->country,
+            'products' => $products,
+            'sum' => $newOrder->price
+        ];
+        Mail::send(new OrderCreateCustomerMailable($data));
+
         Session::remove('products');
         Session::remove('cartSum');
 
         return view('pages.checkout.page-invoice', [
-            'data' => [
-                'name' => $newOrder->name,
-                'email' => $newOrder->email,
-                'paymentMethod' => self::PAYMENT_METHOD,
-                'address' => $newOrder->address . ', ' . $newOrder->city . ' ' . $newOrder->zipCode . ', ' . $newOrder->country,
-                'products' => $products,
-                'sum' => $newOrder->price
-            ]
+            'data' => $data
         ]);
     }
 }

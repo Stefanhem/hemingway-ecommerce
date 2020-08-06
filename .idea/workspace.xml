@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44ab796d-5644-4daa-ab6c-a2070184ceec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/mails/order-create-customer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/hemingway-f9fff6.webflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/hemingway-f9fff6.webflow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/webflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/webflow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,10 +239,10 @@
       <screen x="0" y="0" width="1851" height="1080" />
     </state>
     <state x="705" y="296" key="FileChooserDialogImpl/0.0.1851.1080@0.0.1851.1080" timestamp="1595626479787" />
-    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1596742577732">
+    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1596751260546">
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
     <state x="588" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1851.1080@0.0.1851.1080" timestamp="1596215124458" />
-    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1596742577732" />
+    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1596751260546" />
   </component>
 </project>
