@@ -19,7 +19,7 @@
             Datum {{$data['date']}}
         </strong>
     </p>
-    <table style="border-collapse: collapse;border: 1px solid black;">
+    <table style="border-collapse: collapse;border: 1px solid black; width:50%">
         <tr style="border: 1px solid black;">
             <td style="border: 1px solid black;">Proizvod</td>
             <td style="border: 1px solid black;">Količina</td>

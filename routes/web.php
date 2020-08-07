@@ -53,4 +53,6 @@ Route::post('/admin/products/color', 'ProductsController@storeProductColor')->mi
 Route::get('/admin/products/color/{id}', 'ProductsController@productColor')->middleware('auth');
 Route::get('/admin/color', 'ProductsController@colors')->middleware('auth');
 Route::post('/admin/color', 'ProductsController@storeNewColor')->middleware('auth');
+Route::get('/admin/announcement', 'AdminController@announcement')->middleware('auth');
+Route::post('/admin/announcement', 'AdminController@saveAnnouncement')->middleware('auth');
 

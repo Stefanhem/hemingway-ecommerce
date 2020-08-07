@@ -7,6 +7,11 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/admin/announcement">
+                    Set Announcement
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/admin/products">
                     Insert new Products
                 </a>
