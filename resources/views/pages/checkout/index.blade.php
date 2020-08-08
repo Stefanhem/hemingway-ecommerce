@@ -89,7 +89,7 @@
                             <div class="div-block-20"><input type="text" maxlength="256" name="Promo-code" data-name="Promo-code" id="Promo-code" class="text-field-4 w-input"></div>
                         </div>-->
                     </div>
-                    <button type="submit" name='action' value='on-delivery' class="button-6 w-button">Plaćanje pouzećem</button>
+                    <button type="submit" name='action' value='on-delivery' class="w-commerce-commerceaddtocartbutton add-to-cart-button" style="margin-bottom: 10px">Plaćanje pouzećem</button>
                     <button type="submit" name='action' value='post-payment' class="button-6 w-button">Plaćanje uplatnicom</button>
                 </div>
             </div>

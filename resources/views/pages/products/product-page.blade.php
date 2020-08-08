@@ -2,17 +2,20 @@
 @section('content')
     <div class="proizvod-template">
         <div class="proizvod-fotka-div">
-            <div class="div-block-16">
-                @foreach($productColors as $productColor)
-                    <img src="{{asset($productColor->imagePath)}}" class="male-fotke"/>
-                @endforeach
-            </div>
+            @if($productColors->count() > 0)
+                <div class="div-block-16">
+                    @foreach($productColors as $productColor)
+                        <img src="{{asset($productColor->imagePath)}}" class="male-fotke"/>
+                    @endforeach
+                </div>
+            @endif
             <div class="fotka-ikonice">
                 <img class="fotka" src="{{asset($product->mainImage)}}"/>
                 <div class="ikonice">
                     @if ($labels->count() > 0)
                         @foreach($labels as $label)
-                            <div><img src="{{asset($label->label->image)}}" title="{{$label->label->name}}" alt="{{$label->label->name}}" class="image-14"></div>
+                            <div><img src="{{asset($label->label->image)}}" title="{{$label->label->name}}"
+                                      alt="{{$label->label->name}}" class="image-14"></div>
                         @endforeach
                     @endif
                 </div>
