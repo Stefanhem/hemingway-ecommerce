@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Config;
 use App\Label;
 use App\Order;
+use App\Product;
+use App\ProductColor;
 use App\ProductLabel;
 use Illuminate\Http\Request;
 
@@ -86,13 +88,9 @@ class AdminController extends Controller
         } else {
             ProductLabel::where('idProduct', $id)->delete();
         }
-
-        $labels = Label::all();
-        $checkedLabels = ProductLabel::where('idProduct', $id)->get();
-        return view('admin.pages.product-label', [
-            'labels' => $labels,
-            'checkedLabels' => !empty($checkedLabels) ? $checkedLabels->pluck('idLabel')->toArray() : [],
-            'idProduct' => $id
-        ]);
+        $product = Product::find($id);
+        $colors = ProductColor::with('color')->where('idProduct', $product->id)->get();
+        $sameTypeProducts = Product::whereIn('idType', Product::$SIMMILAR_PRODUCTS[$product->idType])->take(3)->get();
+        return view('pages.products.product-page', ['product' => $product, 'productColors' => $colors, 'sameTypeProducts' => $sameTypeProducts, 'labels' => isset($product->labels) ? $product->labels : collect()]);
     }
 }

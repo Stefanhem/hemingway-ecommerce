@@ -45,12 +45,14 @@ class OrderController extends Controller
 
         return view('admin.pages.order', [
             'data' => [
+                'id' => $order->id,
                 'name' => $order->name,
                 'email' => $order->email,
                 'paymentMethod' => self::PAYMENT_METHOD_TEXT[$order->idPaymentMethod],
                 'address' => $order->address . ', ' . $order->city . ' ' . $order->zipCode . ', ' . $order->country,
                 'products' => $orderProducts,
-                'sum' => $order->price
+                'sum' => $order->price,
+                'status' => $order->status
             ]
         ]);
     }
@@ -111,5 +113,13 @@ class OrderController extends Controller
         Session::remove('cartSum');
 
         return $data;
+    }
+
+    public function setOrderStatus(int $id, Request $request)
+    {
+        $status = $request->get('status');
+        Order::where('id', $id)->update(['status' => $status]);
+
+        return $this->show($id);
     }
 }

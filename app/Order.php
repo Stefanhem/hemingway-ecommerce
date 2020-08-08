@@ -12,6 +12,11 @@ class Order extends Model
     protected $hidden = ['created_at', 'updated_at'];
     protected $fillable = ['email', 'name', 'phoneNumber', 'address', 'country', 'city', 'zipCode', 'price', 'idPaymentMethod'];
 
+    const
+        STATUS_PENDING = 1,
+        STATUS_CONFIRMED = 2,
+        STATUS_DENIED = 3;
+
     public function products()
     {
         return $this->hasMany(OrderProduct::class, 'idOrder');

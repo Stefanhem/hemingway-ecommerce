@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
+    use SoftDeletes;
+
     const
         TYPE_NOVCANICI = 1,
         TYPE_TORBE = 2,
@@ -30,9 +32,8 @@ class Product extends Model
         self::TYPE_SPECIAL_OFFER => [self::TYPE_SPECIAL_OFFER]
     ];
 
-    use SoftDeletes;
     protected $hidden = ['created_at', 'updated_at'];
-    protected $fillable = ['name', 'idType', 'price', 'quantityInStock', 'mainImage', 'description', 'isOnSpecialOffer', 'priceOnSpecialOffer', 'dimensions'];
+    protected $fillable = ['name', 'idType', 'price', 'quantityInStock', 'mainImage', 'description', 'isOnSpecialOffer', 'priceOnSpecialOffer', 'dimensions', 'code'];
 
     public function labels()
     {

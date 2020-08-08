@@ -1,5 +1,18 @@
 <div class="w-commerce-commerceorderconfirmationcontainer" style="padding-top: 5vh">
     <div class="w-commerce-commercelayoutcontainer w-container">
+        @if ($data['status'] == \App\Order::STATUS_PENDING)
+            <div style="padding:0px;width: 100%;margin-bottom: 10px" class="w-commerce-commercecheckoutrow">
+                {{ Form::open(['url' => '/admin/order/'. $data['id'] .'/status', 'method' => 'POST', 'class' => "w-commerce-commercecheckoutcolumn"]) }}
+                <input type="hidden" name="status" value="{{\App\Order::STATUS_CONFIRMED}}">
+                <button type="submit" class="btn btn-success">Confirm Order</button>
+                {{ Form::close() }}
+
+                {{ Form::open(['url' => '/admin/order/'. $data['id'] .'/status', 'method' => 'POST', 'class' => "w-commerce-commercecheckoutcolumn"]) }}
+                <input type="hidden" name="status" value="{{\App\Order::STATUS_DENIED}}">
+                <button type="submit" class="btn btn-danger">Deny Order</button>
+                {{ Form::close() }}
+            </div>
+        @endif
         <div class="w-commerce-commercelayoutmain">
             <div class="w-commerce-commercecheckoutcustomerinfosummarywrapper">
                 <div class="w-commerce-commercecheckoutsummaryblockheader">
@@ -30,7 +43,8 @@
                 <fieldset class="w-commerce-commercecheckoutblockcontent">
                     <div class="w-commerce-commercecheckoutrow">
                         <div class="w-commerce-commercecheckoutcolumn">
-                            <div class="w-commerce-commercecheckoutsummaryitem"><label class="w-commerce-commercecheckoutsummarylabel">Payment Info</label>
+                            <div class="w-commerce-commercecheckoutsummaryitem"><label
+                                    class="w-commerce-commercecheckoutsummarylabel">Payment Info</label>
                                 <div class="w-commerce-commercecheckoutsummaryflexboxdiv">
                                     <div class="w-commerce-commercecheckoutsummarytextspacingondiv"></div>
                                     <div class="w-commerce-commercecheckoutsummarytextspacingondiv"></div>
@@ -80,8 +94,11 @@
                         <div>Subtotal</div>
                         <div>{{$data['sum']}} RSD</div>
                     </div>
-                    <script type="text/x-wf-template" id="wf-template-5f083a9f233b5f765850315000000000006b">%3Cdiv%20class%3D%22w-commerce-commercecheckoutordersummaryextraitemslistitem%22%3E%3Cdiv%3E%3C%2Fdiv%3E%3Cdiv%3E%3C%2Fdiv%3E%3C%2Fdiv%3E</script>
-                    <div class="w-commerce-commercecheckoutordersummaryextraitemslist" data-wf-collection="database.commerceOrder.extraItems" data-wf-template-id="wf-template-5f083a9f233b5f765850315000000000006b">
+                    <script type="text/x-wf-template"
+                            id="wf-template-5f083a9f233b5f765850315000000000006b">%3Cdiv%20class%3D%22w-commerce-commercecheckoutordersummaryextraitemslistitem%22%3E%3Cdiv%3E%3C%2Fdiv%3E%3Cdiv%3E%3C%2Fdiv%3E%3C%2Fdiv%3E</script>
+                    <div class="w-commerce-commercecheckoutordersummaryextraitemslist"
+                         data-wf-collection="database.commerceOrder.extraItems"
+                         data-wf-template-id="wf-template-5f083a9f233b5f765850315000000000006b">
                         <div class="w-commerce-commercecheckoutordersummaryextraitemslistitem">
                             <div></div>
                             <div></div>

@@ -22,7 +22,7 @@
             <h1 class="heading proizvod-head page">{{$product->name}}</h1>
             @if($product->isOnSpecialOffer)
                 <div class="text-block-18"><strike>{{$product->price . ' RSD' }}</strike></div>
-                <div class="text-block-18">{{$product->priceOnSpecialOffer . ' RSD' }}</div>
+                <div class="text-block-18" style="margin-top: 10px">{{$product->priceOnSpecialOffer . ' RSD' }}</div>
             @else
                 <div class="text-block-18">{{$product->price . ' RSD' }}</div>
             @endif
@@ -64,13 +64,19 @@
             <!-- ShareThis END -->
             @if (!empty(Auth::user()))
                 <div class="text-block-19" style="margin-bottom: 20px">Admin Tools</div>
-                <a class="button-5 w-button" href="/admin/products/update/{{$product->id}}" style="margin-bottom: 20px">Edit
-                    Product</a>
+                <a class="button-5 w-button" href="/admin/products/update/{{$product->id}}" style="margin-bottom: 20px">
+                    Edit Product
+                </a>
+                <a class="button-5 w-button" href="/admin/products/{{$product->id}}/labels" style="margin-bottom: 20px">
+                    Edit Labels
+                </a>
                 {{ Form::open(['url' => '/admin/products/delete/' . $product->id, 'method' => 'DELETE']) }}
                 <input type="submit" value="Delete product" class="button-5 w-button" style="margin-bottom: 20px">
                 {{ Form::close() }}
-                <a class="button-5 w-button" href="/admin/products/color/{{$product->id}}" style="margin-bottom: 20px">Add
-                    new Color</a>
+                <a class="button-5 w-button" href="/admin/products/color/{{$product->id}}" style="margin-bottom: 20px">
+                    Add new Color
+                </a>
+
             @endif
         </div>
     </div>
