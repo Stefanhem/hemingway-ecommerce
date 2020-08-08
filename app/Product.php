@@ -33,4 +33,9 @@ class Product extends Model
     use SoftDeletes;
     protected $hidden = ['created_at', 'updated_at'];
     protected $fillable = ['name', 'idType', 'price', 'quantityInStock', 'mainImage', 'description', 'isOnSpecialOffer', 'priceOnSpecialOffer', 'dimensions'];
+
+    public function labels()
+    {
+        return $this->hasMany(ProductLabel::class, 'idProduct');
+    }
 }

@@ -85,19 +85,15 @@
                                 <div>{{\Illuminate\Support\Facades\Session::get('cartSum')}} RSD</div>
                             </div>
                         </div>
-                        <div class="block-content"><label class="w-commerce-commercecheckoutdiscountslabel">PROMO Kod</label>
+                        <!--<div class="block-content"><label class="w-commerce-commercecheckoutdiscountslabel">PROMO Kod</label>
                             <div class="div-block-20"><input type="text" maxlength="256" name="Promo-code" data-name="Promo-code" id="Promo-code" class="text-field-4 w-input"></div>
-                        </div>
-                    </div><button type="submit" class="button-6 w-button">Naruči pouzećem</button>
+                        </div>-->
+                    </div>
+                    <button type="submit" name='action' value='on-delivery' class="button-6 w-button">Plaćanje pouzećem</button>
+                    <button type="submit" name='action' value='post-payment' class="button-6 w-button">Plaćanje uplatnicom</button>
                 </div>
             </div>
             {{ Form::close() }}
-            <div class="w-form-done">
-                <div>Thank you! Your submission has been received!</div>
-            </div>
-            <div class="w-form-fail">
-                <div>Oops! Something went wrong while submitting the form.</div>
-            </div>
         </div>
     </div>
 @endsection

@@ -7,7 +7,17 @@
             <div class="div-block-3">
                 <p class="paragraph">Ručno pravljeni proizvodi<br>od najfinije kože</p>
             </div>
-            <div class="social-div"><a href="#" class="w-inline-block"><img src="images/face.svg" alt="" class="image-5"></a><a href="#" class="w-inline-block"><img src="{{asset("images/twitter.svg")}}" alt="" class="image-5"></a><a href="#" class="w-inline-block"><img src="images/instagram.svg" alt="" class="image-5"></a></div>
+            <div class="social-div">
+                <a href="https://www.facebook.com/hemingway.leather" class="w-inline-block">
+                    <img src={{asset("images/face.svg")}} alt="" class="image-5">
+                </a>
+                <a href="https://twitter.com/Hemingway_GS" class="w-inline-block">
+                    <img src="{{asset("images/twitter.svg")}}" alt="" class="image-5">
+                </a>
+                <a href="https://www.instagram.com/hemingway_leather" class="w-inline-block">
+                    <img src="{{asset("images/instagram.svg")}}" alt="" class="image-5">
+                </a>
+            </div>
         </div>
         <div class="div-block-4"><a href="#Proizvodi" class="link-block-2 w-inline-block"><img src="{{asset("images/button-down.svg")}}" alt="" class="image-6"></a><a href="#Proizvodi" class="link">Shop</a></div>
     </div>

@@ -5,12 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44ab796d-5644-4daa-ab6c-a2070184ceec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/announcement.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Entities/Orders/OnDeliveryOrder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Entities/Orders/PostPaymentOrder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/labels/best-seller.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/labels/free-delivery.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/uplatnica.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/product-label.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mails/order-create-customer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mails/order-create-customer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ProductLabel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ProductLabel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/checkout/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/checkout/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/checkout/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/checkout/invoice.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,20 +167,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pages/footer" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projekti\hemingway\public\images" />
+      <recent name="C:\Projekti\hemingway\public\images\labels" />
       <recent name="C:\Projekti\hemingway\resources\views\pages\footer" />
       <recent name="C:\Projekti\hemingway\app\Http\Requests" />
       <recent name="C:\Projekti\hemingway\public\images\products" />
-      <recent name="C:\Projekti\hemingway\public\css" />
-      <recent name="C:\Projekti\hemingway\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projekti\hemingway\app\Entities" />
+      <recent name="C:\Projekti\hemingway\app" />
+      <recent name="C:\Projekti\hemingway\app\Http\Orders" />
       <recent name="C:\Projekti\hemingway\public\css" />
     </key>
   </component>
@@ -210,7 +226,8 @@
       <workItem from="1596531346595" duration="6694000" />
       <workItem from="1596568868077" duration="3741000" />
       <workItem from="1596818506960" duration="48000" />
-      <workItem from="1596818701913" duration="2519000" />
+      <workItem from="1596818701913" duration="3452000" />
+      <workItem from="1596883223793" duration="8271000" />
     </task>
     <servers />
   </component>
@@ -218,31 +235,48 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="381" y="195" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596826730787">
+      <screen x="0" y="0" width="1855" height="1080" />
+    </state>
+    <state x="381" y="195" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1855.1080@0.0.1855.1080" timestamp="1596826730787" />
     <state x="707" y="343" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596229388365">
       <screen x="0" y="0" width="1851" height="1080" />
     </state>
     <state x="707" y="343" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1851.1080@0.0.1851.1080" timestamp="1596229388365" />
-    <state x="730" y="257" key="#com.intellij.ide.util.MemberChooser" timestamp="1596397210291">
-      <screen x="0" y="0" width="1851" height="1080" />
+    <state x="732" y="257" key="#com.intellij.ide.util.MemberChooser" timestamp="1596889885231">
+      <screen x="0" y="0" width="1855" height="1080" />
     </state>
     <state x="730" y="257" key="#com.intellij.ide.util.MemberChooser/0.0.1851.1080@0.0.1851.1080" timestamp="1596397210291" />
+    <state x="732" y="257" key="#com.intellij.ide.util.MemberChooser/0.0.1855.1080@0.0.1855.1080" timestamp="1596889885231" />
     <state x="606" y="277" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1596818524378">
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
     <state x="605" y="277" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1851.1080@0.0.1851.1080" timestamp="1596225037469" />
     <state x="606" y="277" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1855.1080@0.0.1855.1080" timestamp="1596818524378" />
+    <state x="657" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596894532680">
+      <screen x="0" y="0" width="1855" height="1080" />
+    </state>
+    <state x="657" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1855.1080@0.0.1855.1080" timestamp="1596894532680" />
     <state x="705" y="296" key="FileChooserDialogImpl" timestamp="1595626479787">
       <screen x="0" y="0" width="1851" height="1080" />
     </state>
     <state x="705" y="296" key="FileChooserDialogImpl/0.0.1851.1080@0.0.1851.1080" timestamp="1595626479787" />
-    <state x="428" y="185" key="SettingsEditor" timestamp="1596818812544">
+    <state x="728" y="263" key="NewPhpClassDialog" timestamp="1596891763198">
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
-    <state x="428" y="185" key="SettingsEditor/0.0.1855.1080@0.0.1855.1080" timestamp="1596818812544" />
-    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1596826241475">
+    <state x="728" y="263" key="NewPhpClassDialog/0.0.1855.1080@0.0.1855.1080" timestamp="1596891763198" />
+    <state x="428" y="185" key="SettingsEditor" timestamp="1596891923133">
+      <screen x="0" y="0" width="1855" height="1080" />
+    </state>
+    <state x="428" y="185" key="SettingsEditor/0.0.1855.1080@0.0.1855.1080" timestamp="1596891923133" />
+    <state x="41" y="0" width="1441" height="1067" key="dock-window-1" timestamp="1596892723416">
+      <screen x="0" y="0" width="1855" height="1080" />
+    </state>
+    <state x="41" y="0" width="1441" height="1067" key="dock-window-1/0.0.1855.1080@0.0.1855.1080" timestamp="1596892723416" />
+    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1596892859482">
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
     <state x="588" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1851.1080@0.0.1851.1080" timestamp="1596215124458" />
-    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1596826241475" />
+    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1596892859482" />
   </component>
 </project>

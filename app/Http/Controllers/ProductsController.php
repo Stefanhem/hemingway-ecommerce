@@ -71,7 +71,7 @@ class ProductsController extends Controller
         $productsCount = $model->count();
 
         $products = $this->paginateQuery($model, $request);
-        return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => (int)$productsCount / self::PRODUCTS_PER_PAGE, 'typeName' => 'Specialna ponuda']);
+        return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => (int)$productsCount / self::PRODUCTS_PER_PAGE, 'typeName' => 'Specijalna ponuda']);
     }
 
     /**
@@ -145,7 +145,7 @@ class ProductsController extends Controller
     {
         $colors = ProductColor::with('color')->where('idProduct', $product->id)->get();
         $sameTypeProducts = Product::whereIn('idType', Product::$SIMMILAR_PRODUCTS[$product->idType])->take(3)->get();
-        return view('pages.products.product-page', ['product' => $product, 'productColors' => $colors, 'sameTypeProducts' => $sameTypeProducts]);
+        return view('pages.products.product-page', ['product' => $product, 'productColors' => $colors, 'sameTypeProducts' => $sameTypeProducts, 'labels' => isset($product->labels) ? $product->labels : collect()]);
     }
 
     /**

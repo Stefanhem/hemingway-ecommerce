@@ -55,4 +55,5 @@ Route::get('/admin/color', 'ProductsController@colors')->middleware('auth');
 Route::post('/admin/color', 'ProductsController@storeNewColor')->middleware('auth');
 Route::get('/admin/announcement', 'AdminController@announcement')->middleware('auth');
 Route::post('/admin/announcement', 'AdminController@saveAnnouncement')->middleware('auth');
-
+Route::get('/admin/products/{id}/labels', 'AdminController@labels')->middleware('auth');
+Route::post('/admin/products/{id}/labels', 'AdminController@storeLabels')->middleware('auth');
