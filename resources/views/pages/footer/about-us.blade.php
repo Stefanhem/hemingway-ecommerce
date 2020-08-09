@@ -4,7 +4,7 @@
         <img src="../images/hem.svg" alt="" class="image-4">
         <div class="about-picture"></div>
         <div class="about-text">
-            <h2 class="heading-2">About us</h2>
+            <h2 class="heading-2">O nama</h2>
             <p class="body-paragraph">Želja za stvaranjem i osećaj potrebe da se tržištu ponudi nešto novo i drugačije, ali uz to i određeni stil života,
                 mogao bi biti taj zvaničan odgovor na pitanje ‘’Kako je nastao Hemingway?’’. Ali kao što svaki film ima sate i
                 sate snimanja koje na kraju niko nikada ne vidi, tako i u ovoj priči postoji još nešto.

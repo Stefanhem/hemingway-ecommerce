@@ -24,7 +24,7 @@
                     <div>This product is out of stock.</div>
                 </div>
                 @else
-                <a href="/products/{{$product->id}}" class="button-5 w-button add-cart">Pogledaj proizvod</a>
+                <a href="/products/{{$product->id}}" class="button-5 w-button add-cart">Detaljnije</a>
                 @endif
             </div>
         </div>

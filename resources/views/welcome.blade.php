@@ -8,24 +8,24 @@
                 <p class="paragraph">Ručno pravljeni proizvodi<br>od najfinije kože</p>
             </div>
             <div class="social-div">
-                <a href="https://www.facebook.com/hemingway.leather" class="w-inline-block">
+                <a href="https://www.facebook.com/hemingway.leather" target="_blank" class="w-inline-block">
                     <img src={{asset("images/face.svg")}} alt="" class="image-5">
                 </a>
-                <a href="https://twitter.com/Hemingway_GS" class="w-inline-block">
+                <a href="https://twitter.com/Hemingway_GS" target="_blank" class="w-inline-block">
                     <img src="{{asset("images/twitter.svg")}}" alt="" class="image-5">
                 </a>
-                <a href="https://www.instagram.com/hemingway_leather" class="w-inline-block">
+                <a href="https://www.instagram.com/hemingway_leather" target="_blank"h class="w-inline-block">
                     <img src="{{asset("images/instagram.svg")}}" alt="" class="image-5">
                 </a>
             </div>
         </div>
-        <div class="div-block-4"><a href="#Proizvodi" class="link-block-2 w-inline-block"><img src="{{asset("images/button-down.svg")}}" alt="" class="image-6"></a><a href="#Proizvodi" class="link">Shop</a></div>
+        <div class="div-block-4"><a href="#Proizvodi" class="link-block-2 w-inline-block"><img src="{{asset("images/button-down.svg")}}" alt="" class="image-6"></a></div>
     </div>
 </div>
 <div class="tri-bloka">
     <div class="blokovi-sekcija-tri-bloka"><a href="#" class="link-4">O nama</a><a href="/about-us" class="link-tri-bloka w-inline-block"></a></div>
-    <div class="blokovi-sekcija-tri-bloka"><a href="#" class="link-4">Proizvodi</a><a href="#Proizvodi" class="link-tri-bloka w-inline-block"></a></div>
-    <div class="blokovi-sekcija-tri-bloka"><a href="#" class="link-4">Contact</a><a href="/contact" class="link-tri-bloka w-inline-block"></a></div>
+    <div class="blokovi-sekcija-tri-bloka"><a href="#" class="link-4">Korporativni pokloni</a><a href="/pokloni" class="link-tri-bloka w-inline-block"></a></div>
+    <div class="blokovi-sekcija-tri-bloka"><a href="#" class="link-4">Kontakt</a><a href="/contact" class="link-tri-bloka w-inline-block"></a></div>
 </div>
 <div class="proizvodi special-section">
     <h1 class="heading">Specijalna ponuda</h1>
@@ -42,7 +42,7 @@
                                 <div>This product is out of stock.</div>
                             </div>
                         @else
-                            <a href="/products/{{$specialOfferProduct->id}}" class="button-5 w-button add-cart">Pogledaj proizvod</a>
+                            <a href="/products/{{$specialOfferProduct->id}}" class="button-5 w-button add-cart">Detaljnije</a>
                         @endif
                     </div>
                 </div>
@@ -55,7 +55,7 @@
     </div>
 </div>
 <div class="ostali-proizvodi">
-    <a href="/products/types" class="link-block-4 w-inline-block">
+    <a href="/products/special-offer" class="link-block-4 w-inline-block">
         <div class="text-block-8 white">Pogledaj ostale proizvode</div>
         <div class="div-block-9"><img src="images/Asset-15.svg" alt="" class="image-9 white"></div>
     </a>
@@ -86,11 +86,5 @@
             </div>
         @endif
     </div>
-</div>
-<div class="ostali-proizvodi">
-    <a href="/products/types" class="link-block-4 darker w-inline-block">
-        <div class="text-block-8">Pogledaj ostale proizvode</div>
-        <div class="div-block-9"><img src="images/Asset-15.svg" alt="" class="image-9"></div>
-    </a>
 </div>
 @endsection

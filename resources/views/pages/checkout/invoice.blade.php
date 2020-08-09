@@ -1,9 +1,14 @@
 <div class="w-commerce-commerceorderconfirmationcontainer" style="padding-top: 20vh">
-    <div class="w-form-done" style="display:block">
-        <div>Vaša narudžbina je uspešno kreirana! Uskoro ćete dobiti email potvrde porudžbine!</div>
-    </div>
     @if($data['idPaymentMethod'] == \App\Entities\Payments\PaymentMethod::POST_PAYMENT)
-        <img src="{{asset('/images/uplatnica.jpg')}}" style="width: 60%; display: block;margin-right: auto;margin-left: auto;"/>
+        <div class="w-form-done" style="display:block">
+            <div>Hvala na izvršenoj narudžbini! Da bi ista bila potvrđena potrebno je da u roku od 2 dana izvršite uplatu prema instrukcijama sa slike.</div>
+        </div>
+        <img src="{{asset('/images/uplatnica.jpg')}}"
+             style="width: 60%; display: block;margin-right: auto;margin-left: auto;"/>
+    @else
+        <div class="w-form-done" style="display:block">
+            <div>Vaša narudžbina je uspešno kreirana! Uskoro ćete dobiti email potvrde porudžbine!</div>
+        </div>
     @endif
     <div class="w-commerce-commercelayoutcontainer w-container">
         <div class="w-commerce-commercelayoutmain">

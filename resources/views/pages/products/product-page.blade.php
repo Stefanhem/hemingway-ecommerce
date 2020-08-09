@@ -111,7 +111,7 @@
         </div>
     </div>
     <div class="proizvodi">
-        <h1 class="heading">Proizvodi</h1>
+        <h1 class="heading">Predloženi proizvodi</h1>
         <div class="proizvodi-div">
             @if($sameTypeProducts->count() > 0)
                 @foreach($sameTypeProducts as $sameTypeProduct)
@@ -125,8 +125,7 @@
                                     <div>This product is out of stock.</div>
                                 </div>
                             @else
-                                <a href="/products/{{$sameTypeProduct->id}}" class="button-5 w-button add-cart">Pogledaj
-                                    proizvod</a>
+                                <a href="/products/{{$sameTypeProduct->id}}" class="button-5 w-button add-cart">Detaljnije</a>
                             @endif
                         </div>
                     </div>

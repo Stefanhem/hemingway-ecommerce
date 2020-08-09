@@ -16,7 +16,7 @@
             Kao brend koji svoje proizvode nudi isključivo preko interneta, jedan od naših poslovnih ciljeva je pojava u
             maloprodajnim objektima širom Balkana. Ako predstavljate kompaniju koja bi volela da vidi neke naše kolekcije
             u svojim prodavnicama i smatrate da bi partnerstvo moglo doneti obostrano zadovoljstvo, pišite nam na
-            sales@hemingwayleather.com kako bismo porazgovarali o potencijalnoj saradnji.
+            <strong>sales@hemingwayleather.com</strong> kako bismo porazgovarali o potencijalnoj saradnji.
         </p>
     </div>
 @endsection
