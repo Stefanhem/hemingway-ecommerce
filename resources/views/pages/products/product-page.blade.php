@@ -114,22 +114,7 @@
         <h1 class="heading">Predloženi proizvodi</h1>
         <div class="proizvodi-div">
             @if($sameTypeProducts->count() > 0)
-                @foreach($sameTypeProducts as $sameTypeProduct)
-                    <div class="proizvod-div">
-                        <img class="fotka-proizvoda" src="{{asset($sameTypeProduct->mainImage)}}"></img>
-                        <h1 class="naziv-proizvoda-mali-div">{{$sameTypeProduct->name}}</h1>
-                        <div class="cena-dugme">
-                            <div class="text-block-21">{{$sameTypeProduct->price . ' RSD'}}</div>
-                            @if($sameTypeProduct->quantityInStock == 0)
-                                <div class="w-commerce-commerceaddtocartoutofstock">
-                                    <div>This product is out of stock.</div>
-                                </div>
-                            @else
-                                <a href="/products/{{$sameTypeProduct->id}}" class="button-5 w-button add-cart">Detaljnije</a>
-                            @endif
-                        </div>
-                    </div>
-                @endforeach
+                @each('partials.product', $sameTypeProducts, 'product')
             @else
                 <div class="w-dyn-empty">
                     <div>No items found.</div>

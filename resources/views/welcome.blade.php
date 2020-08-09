@@ -31,22 +31,7 @@
     <h1 class="heading">Specijalna ponuda</h1>
     <div class="proizvodi-div">
         @if($specialOfferProducts->count() > 0)
-            @foreach($specialOfferProducts as $specialOfferProduct)
-                <div class="proizvod-div">
-                    <img class="fotka-proizvoda" src="{{asset($specialOfferProduct->mainImage)}}"></img>
-                    <h1 class="naziv-proizvoda-mali-div">{{$specialOfferProduct->name}}</h1>
-                    <div class="cena-dugme">
-                        <div class="text-block-21">{{$specialOfferProduct->price . ' RSD'}}</div>
-                        @if($specialOfferProduct->quantityInStock == 0)
-                            <div class="w-commerce-commerceaddtocartoutofstock">
-                                <div>This product is out of stock.</div>
-                            </div>
-                        @else
-                            <a href="/products/{{$specialOfferProduct->id}}" class="button-5 w-button add-cart">Detaljnije</a>
-                        @endif
-                    </div>
-                </div>
-            @endforeach
+            @each('partials.product', $specialOfferProducts, 'product')
         @else
             <div class="w-dyn-empty">
                 <div>No items found.</div>
@@ -64,22 +49,7 @@
     <h1 class="heading">Bestsellers</h1>
     <div class="proizvodi-div">
         @if($topProducts->count() > 0)
-            @foreach($topProducts as $topProduct)
-                <div class="proizvod-div">
-                    <img class="fotka-proizvoda" src="{{asset($topProduct->mainImage)}}"></img>
-                    <h1 class="naziv-proizvoda-mali-div">{{$topProduct->name}}</h1>
-                    <div class="cena-dugme">
-                        <div class="text-block-21">{{$topProduct->price . ' RSD'}}</div>
-                        @if($topProduct->quantityInStock == 0)
-                            <div class="w-commerce-commerceaddtocartoutofstock">
-                                <div>This product is out of stock.</div>
-                            </div>
-                        @else
-                            <a href="/products/{{$topProduct->id}}" class="button-5 w-button add-cart">Pogledaj proizvod</a>
-                        @endif
-                    </div>
-                </div>
-            @endforeach
+            @each('partials.product', $topProducts, 'product')
         @else
             <div class="w-dyn-empty">
                 <div>No items found.</div>
