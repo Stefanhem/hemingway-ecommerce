@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Leather')
 @section('content')
 <div class="hero-section"><img src="images/Asset-3.svg" alt="" class="image-3">
     <div class="div-central-home">

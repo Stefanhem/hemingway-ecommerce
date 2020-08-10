@@ -37,4 +37,8 @@ $(document).ready(function(){
         document.getElementById('color').value = value;
         $(".fotka").attr("src", image);
     });
+    $(".male-fotke").click(function (){
+        const src = $(this).attr('src');
+        $('.fotka').attr('src', src);
+    });
 });

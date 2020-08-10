@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Garancija, reklamacije i prava potrošača')
 @section('content')
     <div class="contact-section legal-notice">
         <h1 class="heading contact-heading">Garancije i reklamacije</h1>

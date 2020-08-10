@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Način plaćanja i isporuka')
 @section('content')
     <div class="contact-section legal-notice">
         <h1 class="heading contact-heading">Način plaćanja</h1>

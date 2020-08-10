@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'O nama')
 @section('content')
     <div id="O-nama" class="section about-us-div about-us-page">
         <img src="../images/hem.svg" alt="" class="image-4">

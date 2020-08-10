@@ -16,11 +16,11 @@
                     Insert new Products
                 </a>
             </li>
-            <li class="nav-item">
+            {{--<li class="nav-item">
                 <a class="nav-link" href="/admin/color">
                     Insert new Color for the Product
                 </a>
-            </li>
+            </li>--}}
         </ul>
     </div>
 </nav>

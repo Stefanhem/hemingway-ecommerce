@@ -30,8 +30,11 @@ class AdminController extends Controller
      */
     public function announcement()
     {
+        $annon = '';
         $announcement = Config::where('key', Config::CONFIG_ANNOUNCEMENT)->first();
-        return view('admin.pages.announcement', ['announcement' => $announcement->value]);
+        if ($announcement instanceof Config)
+            $annon = $announcement->value;
+        return view('admin.pages.announcement', ['announcement' => $annon]);
     }
 
     /**

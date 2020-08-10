@@ -5,7 +5,7 @@
             <div class="col-md-8 order-md-1">
                 <h4 class="mb-3">{{$product->name}}</h4>
                 {{ Form::open(['url' => '/admin/products/color', 'method' => 'POST', 'class' => 'needs-validation', 'files' => true]) }}
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-md-5 mb-3">
                         <label for="type">Color of this product</label>
                         <select class="custom-select d-block w-100" id="type" name="idColor" required>
@@ -18,7 +18,7 @@
                             Please select a valid type.
                         </div>
                     </div>
-                </div>
+                </div>--}}
                 <input type="hidden" id="idProduct" name="idProduct" value="{{$product->id}}">
                 <div class="row">
                     <div class="col-md-8 order-md-1">

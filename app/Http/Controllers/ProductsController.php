@@ -302,7 +302,6 @@ class ProductsController extends Controller
     {
         $product = Product::find($id);
         $data = $request->all();
-
         if (!empty($data['image'])) {
             $inPublicPath = 'images/products/';
             $image = $request->file('image');
@@ -311,6 +310,9 @@ class ProductsController extends Controller
             $image->move(public_path($inPublicPath), $imageName);
             $data['mainImage'] = $inPublicPath . $imageName;
         }
+        if (!isset($data['isOnSpecialOffer']))
+            $data['isOnSpecialOffer'] = false;
+
         $product->fill($data);
         $product->save();
         return redirect('/products/' . $id);

@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Hemingway Leather')
 @section('content')
     <div class="section-5">
         <div class="form-block w-form">

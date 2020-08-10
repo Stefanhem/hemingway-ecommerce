@@ -35,6 +35,11 @@ class Product extends Model
     protected $hidden = ['created_at', 'updated_at'];
     protected $fillable = ['name', 'idType', 'price', 'quantityInStock', 'mainImage', 'description', 'isOnSpecialOffer', 'priceOnSpecialOffer', 'dimensions', 'code'];
 
+    public function isOnSpecialOffer()
+    {
+        return ($this->isOnSpecialOffer || $this->idType === self::TYPE_SPECIAL_OFFER);
+    }
+
     public function labels()
     {
         return $this->hasMany(ProductLabel::class, 'idProduct');

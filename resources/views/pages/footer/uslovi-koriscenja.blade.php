@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Uslovi korišćenja')
 @section('content')
     <div class="contact-section legal-notice">
         <h1 class="heading contact-heading">Uslovi korišćenja</h1>

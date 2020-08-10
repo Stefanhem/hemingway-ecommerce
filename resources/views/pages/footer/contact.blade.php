@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Kontakt')
 @section('content')
     <div class="section-4">
         <div class="container-2 cc-heading-wrap">

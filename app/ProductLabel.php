@@ -12,4 +12,9 @@ class ProductLabel extends Model
     {
         return $this->belongsTo(Label::class, 'idLabel');
     }
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class, 'idProduct');
+    }
 }

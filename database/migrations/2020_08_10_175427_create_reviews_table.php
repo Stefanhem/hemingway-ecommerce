@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductColorsTable extends Migration
+class CreateReviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateProductColorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_colors', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('idProduct');
-            $table->unsignedBigInteger('idColor')->nullable();
-            $table->string('imagePath');
+            $table->string('name');
+            $table->string('text');
+            $table->boolean('isApproved')->default(false);
+            $table->integer('rating')->default(5);
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateProductColorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_colors');
+        Schema::dropIfExists('reviews');
     }
 }

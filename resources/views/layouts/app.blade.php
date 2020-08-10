@@ -5,8 +5,6 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -14,7 +12,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <meta charset="utf-8">
-    <title>Hemingway</title>
+    <title>Hemingway - @yield('title')</title>
     <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2a6cd15e75630012258308&product=inline-share-buttons' async='async'></script>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="{{asset("css/normalize.css")}}" rel="stylesheet" type="text/css">

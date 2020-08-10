@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Politika privatnosti')
 @section('content')
     <div class="contact-section legal-notice">
         <h1 class="heading contact-heading">Politika privatnosti</h1>

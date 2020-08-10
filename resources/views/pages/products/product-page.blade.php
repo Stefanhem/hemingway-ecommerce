@@ -1,9 +1,10 @@
 @extends('layouts.app')
 @section('content')
-    <div class="proizvod-template">
+    <div class="proizvod-template" style="">
         <div class="proizvod-fotka-div">
             @if($productColors->count() > 0)
-                <div class="div-block-16">
+                <div class="div-block-product">
+                    <img class="male-fotke" src="{{asset($product->mainImage)}}"/>
                     @foreach($productColors as $productColor)
                         <img src="{{asset($productColor->imagePath)}}" class="male-fotke"/>
                     @endforeach
@@ -23,13 +24,13 @@
         </div>
         <div class="opis-proizvoda-div">
             <h1 class="heading proizvod-head page">{{$product->name}}</h1>
-            @if($product->isOnSpecialOffer)
+            @if($product->isOnSpecialOffer())
                 <div class="text-block-18"><strike>{{$product->price . ' RSD' }}</strike></div>
                 <div class="text-block-18" style="margin-top: 10px">{{$product->priceOnSpecialOffer . ' RSD' }}</div>
             @else
                 <div class="text-block-18">{{$product->price . ' RSD' }}</div>
             @endif
-            @if($productColors->count() > 0)
+            {{-- @if($productColors->count() > 0)
                 <div class="text-block-19">Izaberi boju</div>
                 <div class="boje-izbor">
                     @foreach($productColors as $productColor)
@@ -38,7 +39,7 @@
                              data-image="{{asset($productColor->imagePath)}}"></div>
                     @endforeach
                 </div>
-            @endif
+            @endif --}}
 
             {{ Form::open(['url' => '/add-cart/' . $product->id, 'method' => 'POST']) }}
             <input type="hidden" id="color" name="color" value="">
@@ -77,7 +78,7 @@
                 <input type="submit" value="Delete product" class="button-5 w-button" style="margin-bottom: 20px">
                 {{ Form::close() }}
                 <a class="button-5 w-button" href="/admin/products/color/{{$product->id}}" style="margin-bottom: 20px">
-                    Add new Color
+                    Add new Image
                 </a>
 
             @endif

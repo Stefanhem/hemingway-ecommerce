@@ -24,7 +24,7 @@ class ProductColorRequest extends FormRequest
     public function rules()
     {
         return [
-            'idColor' => 'required|exists:colors,id',
+            /*'idColor' => 'required|exists:colors,id',*/
             'idProduct' => 'required|exists:products,id',
             'image' => 'required|file'
         ];

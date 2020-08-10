@@ -20,7 +20,7 @@
                     <div class="col-md-5 mb-3">
                         <label for="code">Product code</label>
                         <input type="text" class="form-control" id="code" name="code" placeholder=""
-                               value="" required>
+                               value="{{$product->code}}" required>
                         <div class="invalid-feedback">
                             Valid code are required.
                         </div>
@@ -31,7 +31,7 @@
                     <div class="col-md-5 mb-3">
                         <label for="dimensions">Product dimensions</label>
                         <input type="text" class="form-control" id="dimensions" name="dimensions" placeholder=""
-                               value="" required>
+                               value="{{$product->dimensions}}" required>
                         <div class="invalid-feedback">
                             Valid dimensions are required.
                         </div>
@@ -42,6 +42,16 @@
                     <div class="col-md-5 mb-3">
                         <label for="price">Price</label>
                         <input type="number" class="form-control" name="price" value="{{$product->price}}" required/>
+                        <div class="invalid-feedback">
+                            Please select a valid price.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <label for="priceOnSpecialOffer">Price on special offer</label>
+                        <input type="number" class="form-control" value="{{$product->priceOnSpecialOffer}}" name="priceOnSpecialOffer"/>
                         <div class="invalid-feedback">
                             Please select a valid price.
                         </div>
