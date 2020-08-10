@@ -5471,6 +5471,7 @@ h2 {
     display: flex;
     width: 50%;
     height: 80%;
+    max-
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -5488,8 +5489,8 @@ h2 {
 
 .male-fotke {
     width: 100%;
-    height: 14vh;
-    margin-bottom: 0px;
+    min-height: 110px;
+    margin-bottom: 10px;
     background-image: url('../images/Asset-12.png');
     background-position: 50% 50%;
     background-size: cover;
@@ -5520,8 +5521,9 @@ h2 {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 15vw;
-    height: 85%;
+    width: 300px;
+    height: 400px;
+    overflow-y: scroll;
     margin-bottom: -15px;
     padding-bottom: 0px;
     -webkit-box-orient: vertical;

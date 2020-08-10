@@ -5,39 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44ab796d-5644-4daa-ab6c-a2070184ceec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css/lightbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/lightbox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ProductColorRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ProductColorRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Label.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Label.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ProductLabel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ProductLabel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_27_185652_create_product_colors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_27_185652_create_product_colors_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/hemingway-f9fff6.webflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/hemingway-f9fff6.webflow.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/hemingway.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/hemingway.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/edit-product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/edit-product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/product-color.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/product-color.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/checkout/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/checkout/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/checkout/page-invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/checkout/page-invoice.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/about-us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/contact.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/legal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/legal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/placanje.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/placanje.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/podaci.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/podaci.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/pokloni.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/pokloni.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/politika-privatnosti.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/politika-privatnosti.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/pomoc.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/pomoc.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/poslovi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/poslovi.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/prava.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/prava.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/predlozi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/predlozi.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/uslovi-koriscenja.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/uslovi-koriscenja.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/products/products-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/products/products-list.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,24 +159,24 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Projekti\hemingway\public\images" />
-      <recent name="C:\Projekti\hemingway\public\images\labels" />
-      <recent name="C:\Projekti\hemingway\resources\views\pages\footer" />
-      <recent name="C:\Projekti\hemingway\app\Http\Requests" />
-      <recent name="C:\Projekti\hemingway\public\images\products" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projekti\hemingway\app\Entities" />
       <recent name="C:\Projekti\hemingway\app" />
       <recent name="C:\Projekti\hemingway\app\Http\Orders" />
       <recent name="C:\Projekti\hemingway\public\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projekti\hemingway\public\css" />
+      <recent name="C:\Projekti\hemingway\public\js" />
+      <recent name="C:\Projekti\hemingway\public\images" />
+      <recent name="C:\Projekti\hemingway\public\images\labels" />
+      <recent name="C:\Projekti\hemingway\resources\views\pages\footer" />
     </key>
   </component>
   <component name="RunManager">
@@ -246,7 +222,7 @@
       <workItem from="1596923136642" duration="1217000" />
       <workItem from="1596975729847" duration="2134000" />
       <workItem from="1597001110994" duration="2306000" />
-      <workItem from="1597074774319" duration="10191000" />
+      <workItem from="1597074774319" duration="15400000" />
     </task>
     <servers />
   </component>
@@ -299,10 +275,10 @@
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
     <state x="584" y="250" key="run.anything.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1596904732217" />
-    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1597088400344">
+    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1597095032802">
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
     <state x="588" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1851.1080@0.0.1851.1080" timestamp="1596215124458" />
-    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1597088400344" />
+    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1597095032802" />
   </component>
 </project>

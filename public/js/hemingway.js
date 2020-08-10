@@ -40,5 +40,6 @@ $(document).ready(function(){
     $(".male-fotke").click(function (){
         const src = $(this).attr('src');
         $('.fotka').attr('src', src);
+        $('#link-image-open').attr('href', src);
     });
 });

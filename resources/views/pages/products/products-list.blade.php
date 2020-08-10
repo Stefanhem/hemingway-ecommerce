@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', $typeName)
 @section('content')
     <div class="proizvodi special-section" style="padding-top: 25vh; min-height: 600px">
         @if (isset($typeName))

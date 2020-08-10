@@ -1,6 +1,16 @@
 @extends('layouts.app')
+@section('title', $product->name)
 @section('content')
-    <div class="proizvod-template" style="">
+    <div class="proizvod-template" style="padding-top: 30vh">
+        <h1 class="heading proizvod-head page"
+            style="margin-bottom: 0 !important; width: 100%;text-align: left">{{$product->name}}</h1>
+    </div>
+    <div class="opis-proizvoda-div" style="width: 100%;padding-left: 15vw; padding-bottom: 10px">
+        <div class="text-block-1" style="margin-bottom: 50px">
+            <span class="text-block-1">{{'#' . $product->code}}</span>
+        </div>
+    </div>
+    <div class="proizvod-template" style="padding-top:0px; align-items: start !important;">
         <div class="proizvod-fotka-div">
             @if($productColors->count() > 0)
                 <div class="div-block-product">
@@ -11,7 +21,8 @@
                 </div>
             @endif
             <div class="fotka-ikonice">
-                <img class="fotka" src="{{asset($product->mainImage)}}"/>
+                <a id="link-image-open" data-lightbox="Product Image" href="{{asset($product->mainImage)}}"><img
+                        class="fotka" src="{{asset($product->mainImage)}}"/></a>
                 <div class="ikonice">
                     @if ($labels->count() > 0)
                         @foreach($labels as $label)
@@ -23,7 +34,7 @@
             </div>
         </div>
         <div class="opis-proizvoda-div">
-            <h1 class="heading proizvod-head page">{{$product->name}}</h1>
+
             @if($product->isOnSpecialOffer())
                 <div class="text-block-18"><strike>{{$product->price . ' RSD' }}</strike></div>
                 <div class="text-block-18" style="margin-top: 10px">{{$product->priceOnSpecialOffer . ' RSD' }}</div>
@@ -48,10 +59,10 @@
             <input type="number" id="quantity" name="quantity" min="1" max="{{$product->quantityInStock}}"
                    style="margin-top:10px !important" class="div-block-17" value="1">
             <div class="text-block-19" style="margin:30px 0 20px 0">Dimenzije: <span
-                    class="text-block-18">{{$product->dimensions}}</span></div>
+                    class="text-block-18" style="font-size: large">{{$product->dimensions}}</span></div>
             @if($product->quantityInStock <= 3 && $product->quantityInStock > 0)
                 <div class="w-commerce-commerceaddtocartoutofstock">
-                    <div>Samo jos {{$product->quantityInStock}} proizvoda na stanju!</div>
+                    <div>Only {{$product->quantityInStock}} left in stock!</div>
                 </div>
             @endif
             @if($product->quantityInStock <= 0)
@@ -60,11 +71,11 @@
                 </div>
             @else
                 <input type="submit" data-loading-text="Adding to cart..." value="Dodaj u korpu"
-                       class="button-4 w-button">
+                       class="button-4 w-button" style="background-color: #2d995b">
             @endif
             {{ Form::close() }}
         <!-- ShareThis BEGIN -->
-            <div style="margin-top:20px" class="sharethis-inline-share-buttons"></div>
+            <div style="margin-top:20px;z-index: 1" class="sharethis-inline-share-buttons"></div>
             <!-- ShareThis END -->
             @if (!empty(Auth::user()))
                 <div class="text-block-19" style="margin-bottom: 20px">Admin Tools</div>
@@ -95,21 +106,26 @@
                 <div class="petar-petrovic">Ime Prezime</div>
                 <p class="paragraph-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
                     in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla,</p><img
-                    src="images/Asset-1.svg" width="23" alt="" class="image-13">
+                    src="{{asset('images/Asset-1.svg')}}" width="23" alt="" class="image-13">
             </div>
             <div class="review-text-div">
                 <div class="petar-petrovic">Petar Petrovic</div>
                 <p class="paragraph-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
                     in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                    commodo diam libero vitae erat.</p><img src="images/Asset-1.svg" width="23" alt="" class="image-13">
+                    commodo diam libero vitae erat.</p><img src="{{asset('images/Asset-1.svg')}}" width="23" alt=""
+                                                            class="image-13">
             </div>
             <div class="review-text-div">
                 <div class="petar-petrovic">Petar Petrovic</div>
                 <p class="paragraph-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
                     in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                    commodo diam libero vitae erat.</p><img src="images/Asset-1.svg" width="23" alt="" class="image-13">
+                    commodo diam libero vitae erat.</p><img src="{{asset('images/Asset-1.svg')}}" width="23" alt=""
+                                                            class="image-13">
             </div>
         </div>
+    </div>
+    <div class="proizvodi">
+
     </div>
     <div class="proizvodi">
         <h1 class="heading">Predloženi proizvodi</h1>
