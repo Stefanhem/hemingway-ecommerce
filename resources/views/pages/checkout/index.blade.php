@@ -73,14 +73,6 @@
                         </div>
                         <div class="block-content">
                             <div class="line-item">
-                                <div>Međuzbir</div>
-                                <div>{{\Illuminate\Support\Facades\Session::get('cartSum')}} RSD</div>
-                            </div>
-                            <div class="line-item">
-                                <div>Poštarina</div>
-                                <div>0 RSD</div>
-                            </div>
-                            <div class="line-item last">
                                 <div>Ukupno</div>
                                 <div>{{\Illuminate\Support\Facades\Session::get('cartSum')}} RSD</div>
                             </div>

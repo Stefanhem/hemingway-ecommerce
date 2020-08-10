@@ -30,6 +30,6 @@ class ContactMailable extends Mailable
      */
     public function build()
     {
-        return $this->to(env('SEND_TO_EMAIL'))->from($this->data['email'])->view('mails.contact-mail');
+        return $this->to('office@hemingwayleather.com')->from($this->data['email'])->view('mails.contact-mail');
     }
 }

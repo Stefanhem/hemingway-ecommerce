@@ -22,9 +22,11 @@
                     <textarea id="field" name="field" placeholder="Enter your message" maxlength="5000" data-name="Field" class="text-field cc-textarea cc-contact-field w-input"></textarea>
                     <input type="submit" value="Submit" data-wait="Please wait..." class="button w-button">
                 {{Form::close()}}
-                <div class="status-message cc-success-message w-form-done">
+                @if (isset($successful))
+                <div class="status-message cc-success-message w-form-done" style="display: none">
                     <div>Thank you! Your submission has been received!</div>
                 </div>
+                @endif
                 <div class="status-message cc-error-message w-form-fail">
                     <div>Oops! Something went wrong while submitting the form.</div>
                 </div>
@@ -33,6 +35,6 @@
     </div>
     <div class="contact-section">
         <h1 class="heading contact-heading">Ili nas kontaktirajte</h1>
-        <p class="paragraph-2 contact">Hemingway leather Serbia<br>ulica i broj, 11000 Belgrade<br>+381 64 2345 524<br>hemingwayleather@gmail.com</p>
+        <p class="paragraph-2 contact">Hemingway leather Serbia<br>+381 60 6363 515<br>office@hemingwayleather.com</p>
     </div>
 @endsection

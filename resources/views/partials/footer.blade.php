@@ -5,11 +5,11 @@
             <a href="https://www.facebook.com/hemingway.leather" target="_blank" class="social-footer w-inline-block">
                 <img src="{{asset('images/face.svg')}}" alt="" class="image-11">
             </a>
-            <a href="https://twitter.com/Hemingway_GS" class="social-footer w-inline-block">
-                <img src="{{asset('images/twitter.svg')}}" target="_blank" alt="" class="image-11">
+            <a href="https://twitter.com/Hemingway_GS" target="_blank"  class="social-footer w-inline-block">
+                <img src="{{asset('images/twitter.svg')}}" alt="" class="image-11">
             </a>
-            <a href="https://www.instagram.com/hemingway_leather" class="social-footer w-inline-block">
-                <img src="{{asset('images/instagram.svg')}}" target="_blank" alt="" class="image-11">
+            <a href="https://www.instagram.com/hemingway_leather" target="_blank"  class="social-footer w-inline-block">
+                <img src="{{asset('images/instagram.svg')}}" alt="" class="image-11">
             </a>
         </div>
     </div>
@@ -34,9 +34,9 @@
         </div>
         <div class="div-block-13">
             <h1 class="footer-heading">Kontakt</h1>
-            <a href="#" class="link-3">Br. Tel.</a>
-            <a href="#" class="link-3">info@hemingwayleather.com</a>
+            <a href="#" class="link-3">060/6363515</a>
             <a href="#" class="link-3">office@hemingwayleather.com</a>
+            <a href="#" class="link-3">info@hemingwayleather.com</a>
         </div>
     </div>
     <div class="footer-bottom-div">

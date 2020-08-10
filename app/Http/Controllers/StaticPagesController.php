@@ -71,6 +71,6 @@ class StaticPagesController extends Controller
     public function contactFormEmail(Request $request)
     {
         Mail::send(new ContactMailable($request->all()));
-        return redirect('/');
+        return back()->with('successful', true);
     }
 }

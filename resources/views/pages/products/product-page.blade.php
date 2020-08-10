@@ -54,8 +54,8 @@
                 </div>
             @endif
             @if($product->quantityInStock <= 0)
-                <div class="w-commerce-commerceaddtocartoutofstock">
-                    <div>Trenutno nema proizvoda na stanju.</div>
+                <div class="w-commerce-commerceaddtocartoutofstock" style="text-align: center">
+                    <div style="color:red"><strong>STOCK OUT</strong></div>
                 </div>
             @else
                 <input type="submit" data-loading-text="Adding to cart..." value="Dodaj u korpu"

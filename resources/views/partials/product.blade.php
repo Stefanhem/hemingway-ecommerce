@@ -1,5 +1,5 @@
 <div class="proizvod-div">
-    <img class="fotka-proizvoda" src="{{asset($product->mainImage)}}"></img>
+    <a href="/products/{{$product->id}}"><img class="fotka-proizvoda" src="{{asset($product->mainImage)}}"></a>
     <h1 class="naziv-proizvoda-mali-div">{{$product->name}}</h1>
     <div class="cena-dugme">
         <div class="text-block-21">
