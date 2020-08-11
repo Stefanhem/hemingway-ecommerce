@@ -10,7 +10,7 @@
         <p class="paragraph-2 legal-paragraph">U galeriji ispod su primeri, ali ne moramo se držati toga - uvek možemo otići korak dalje i napraviti praktično
             sve što smatrate savršenim poklonom, onim koji će Vašu kompaniju predstavljati na pravi način.
             Kontaktirajte nas i zajedno ćemo pronaći pravi poklon za datu priliku, sa logom Vaše kompanije na sebi i
-            posebnim cenama za ovakav vid saradnje
+            posebnim cenama za ovakav vid saradnje.
         </p>
     </div>
 @endsection
