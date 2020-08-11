@@ -17,7 +17,8 @@
                             <label for="name">Ime i prezime*</label>
                             <input type="text" class="text-field-3 w-input" maxlength="256" name="name" id="name" required="" value="Vladimir Plavsic">
                             <label for="phoneNumber">Broj telefona*</label>
-                            <input type="tel" class="text-field-3 w-input" maxlength="256" name="phoneNumber" id="phoneNumber" required="" value="0644558107"></div>
+                            <input type="tel" class="text-field-3 w-input" maxlength="256" name="phoneNumber" id="phoneNumber" required="" value="0644558107">
+                        </div>
                     </div>
                     <div class="customer-info-div">
                         <div class="block-header">
@@ -25,6 +26,10 @@
                             <div>* Obavezno polje</div>
                         </div>
                         <div class="block-content">
+                            <label for="deliveryName">Ime i prezime*</label>
+                            <input type="text" class="text-field-3 w-input" maxlength="256" name="deliveryName" id="deliveryName" required="" value="Vladimir Plavsic">
+                            <label for="deliveryPhone">Broj telefona*</label>
+                            <input type="tel" class="text-field-3 w-input" maxlength="256" name="deliveryPhone" id="deliveryPhone" required="" value="0644558107">
                             <label for="address">Adresa*</label>
                             <input type="text" class="text-field-3 w-input" maxlength="256" name="address" id="address" required="" value="Brace Jovanovic 27">
                             <label for="country">Država*</label>

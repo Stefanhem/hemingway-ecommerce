@@ -33,8 +33,8 @@
             <!--<a href="/obavestenja" class="link-3">Obaveštenja</a>-->
         </div>
         <div class="div-block-13">
-            <h1 class="footer-heading">Kontakt</h1>
-            <a href="#" class="link-3">060/6363515</a>
+            <a href="/contact" class="link-3"><h1 class="footer-heading" style="margin-bottom: 0px">Kontakt</h1></a>
+            <a href="#" class="link-3" style="margin-top: 3vh">060/6363515</a>
             <a href="#" class="link-3">office@hemingwayleather.com</a>
             <a href="#" class="link-3">info@hemingwayleather.com</a>
         </div>

@@ -10,7 +10,7 @@ class Order extends Model
     protected $idPaymentMethodType;
     protected $table = 'orders';
     protected $hidden = ['created_at', 'updated_at'];
-    protected $fillable = ['email', 'name', 'phoneNumber', 'address', 'country', 'city', 'zipCode', 'price', 'idPaymentMethod'];
+    protected $fillable = ['email', 'name', 'phoneNumber', 'address', 'country', 'city', 'zipCode', 'price', 'idPaymentMethod', 'deliveryName', 'deliveryPhone'];
 
     const
         STATUS_PENDING = 1,

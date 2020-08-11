@@ -52,7 +52,9 @@ class OrderController extends Controller
                 'address' => $order->address . ', ' . $order->city . ' ' . $order->zipCode . ', ' . $order->country,
                 'products' => $orderProducts,
                 'sum' => $order->price,
-                'status' => $order->status
+                'status' => $order->status,
+                'deliveryName' => $order->deliveryName,
+                'deliveryPhone' => $order->deliveryPhone
             ]
         ]);
     }
@@ -105,7 +107,9 @@ class OrderController extends Controller
             'idPaymentMethod' => $newOrder->idPaymentMethod,
             'address' => $newOrder->address . ', ' . $newOrder->city . ' ' . $newOrder->zipCode . ', ' . $newOrder->country,
             'products' => $products,
-            'sum' => $newOrder->price
+            'sum' => $newOrder->price,
+            'deliveryName' => $newOrder->deliveryName,
+            'deliveryPhone' => $newOrder->deliveryPhone
         ];
         //Mail::send(new OrderCreateCustomerMailable($data));
 

@@ -34,7 +34,6 @@
             </div>
         </div>
         <div class="opis-proizvoda-div">
-
             @if($product->isOnSpecialOffer())
                 <div class="text-block-18"><strike>{{$product->price . ' RSD' }}</strike></div>
                 <div class="text-block-18" style="margin-top: 10px">{{$product->priceOnSpecialOffer . ' RSD' }}</div>
@@ -95,38 +94,40 @@
             @endif
         </div>
     </div>
-    <div class="opis-proizvoda">
+    <div class="opis-proizvoda" style="margin-top: 50px">
         <h1 class="heading opis-proizvoda">Opis proizvoda</h1>
         <p class="paragraph-3">{{$product->description}}</p>
     </div>
     <div class="review">
-        <h1 class="heading heading-review">Drugi o ovom proizvodu</h1>
-        <div class="review-div">
-            <div class="review-text-div">
-                <div class="petar-petrovic">Ime Prezime</div>
-                <p class="paragraph-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
-                    in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla,</p><img
-                    src="{{asset('images/Asset-1.svg')}}" width="23" alt="" class="image-13">
+        @if($reviews->count() > 0)
+            <h1 class="heading heading-review">Drugi o ovom proizvodu</h1>
+            <div class="review-div">
+                @foreach($reviews as $review)
+                    <div class="review-text-div">
+                        <div class="petar-petrovic">{{$review->name}}</div>
+                        <p class="paragraph-4">{{$review->text}}</p>
+                        <img src="{{asset('images/Asset-1.svg')}}" width="23" alt="" class="image-13">
+                    </div>
+                @endforeach
             </div>
-            <div class="review-text-div">
-                <div class="petar-petrovic">Petar Petrovic</div>
-                <p class="paragraph-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
-                    in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                    commodo diam libero vitae erat.</p><img src="{{asset('images/Asset-1.svg')}}" width="23" alt=""
-                                                            class="image-13">
-            </div>
-            <div class="review-text-div">
-                <div class="petar-petrovic">Petar Petrovic</div>
-                <p class="paragraph-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
-                    in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                    commodo diam libero vitae erat.</p><img src="{{asset('images/Asset-1.svg')}}" width="23" alt=""
-                                                            class="image-13">
+        @endif
+        {{ Form::open(['url' => '/review/' . $product->id, 'method' => 'POST', 'style' => 'width:40%']) }}
+        <h1 style="color: white">Prenesite nam vaše mišljenje</h1>
+        <div class="credentials-inputs-wrap">
+            <div class="contact-name-field-wrap" style="width: 100%">
+                <label for="name" class="contact-field-label" style="color:white">Ime</label>
+                <input type="text" class="text-field cc-contact-field w-input" maxlength="256" name="name"
+                       data-name="Name" placeholder="Unesite vaše ime" id="Name">
             </div>
         </div>
+        <label class="contact-field-label" style="color:white">Message</label>
+        <textarea id="field" name="text" placeholder="Unesite vaše mišljene" maxlength="5000" data-name="Field"
+                  class="text-field cc-textarea cc-contact-field w-input"></textarea>
+        <input type="hidden" name="idProduct" value="{{$product->id}}"/>
+        <input type="submit" value="Submit" data-wait="Please wait..." class="button w-button">
+        {{ Form::close() }}
     </div>
-    <div class="proizvodi">
 
-    </div>
     <div class="proizvodi">
         <h1 class="heading">Predloženi proizvodi</h1>
         <div class="proizvodi-div">

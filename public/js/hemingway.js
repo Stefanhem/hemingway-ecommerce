@@ -10,6 +10,7 @@ $(document).ready(function(){
         const cartItemId = $(this).parent().parent().attr('id');
         const id = cartItemId.replace('cart-product-', '');
         $('#' + cartItemId).hide();
+        console.log(123);
         $.post('/remove-cart-item/' + id, {}, function (data, error) {
             console.log(data);
             if (data.amount || data.amount === 0) {

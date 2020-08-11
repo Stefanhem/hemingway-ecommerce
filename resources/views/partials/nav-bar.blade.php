@@ -1,9 +1,11 @@
 @if(\App\Config::isSetAnnouncement())
     <div class="nav" style="background-color: #ddd !important;height: 3%; color: black; text-align: center">
-        <p style="width: 100%; text-align: center; margin: 0 auto;"><strong>{{\App\Config::getAnnouncement()}}</strong></p>
+        <p style="width: 100%; text-align: center; margin: 0 auto;"><strong>{{\App\Config::getAnnouncement()}}</strong>
+        </p>
     </div>
 @endif
-<div data-w-id="5f4f9947-30e8-ea30-25f1-fb4b88672c5a" class="nav" style="top:{{\App\Config::isSetAnnouncement() ? '3%' : '0%'}}">
+<div data-w-id="5f4f9947-30e8-ea30-25f1-fb4b88672c5a" class="nav"
+     style="top:{{\App\Config::isSetAnnouncement() ? '3%' : '0%'}}">
     <a href="/" aria-current="page" class="home-link w-inline-block w--current">
         <img src="{{asset("images/Hemingway.svg")}}" width="64.5" alt="" class="image">
     </a>
@@ -63,7 +65,25 @@
                                         id="wf-template-71136eaa-6d80-8362-d58b-0c82ac714b1e"></script>
                                 <div class="order-items">
                                     @if(!empty(\Illuminate\Support\Facades\Session::get('products')) && count(\Illuminate\Support\Facades\Session::get('products')) > 0)
-                                        @each('partials.cart-product', \Illuminate\Support\Facades\Session::get('products'), 'cartProduct')
+                                        @foreach(\Illuminate\Support\Facades\Session::get('products') as $cartProduct)
+                                            <div id="cart-product-{{$cartProduct['id']}}" class="order-item"
+                                                 style="color: black">
+                                                <img src="{{asset($cartProduct['product']->mainImage)}}" width="80"
+                                                     alt="">
+                                                <div class="div-block-19">
+                                                    <div class="text-block-23">{{$cartProduct['product']->name}}</div>
+                                                    <div>Količina: {{$cartProduct['quantity']}} </div>
+                                                    @if(isset($cartProduct['color']))
+                                                        <div>Boja: {{$cartProduct['color']}}</div>
+                                                    @endif
+                                                </div>
+                                                <div style="min-width: 75px">
+                                                    <p>{{$cartProduct['price']}} RSD </p>
+                                                    <a href="#" class="remove-cart-product">Obrisi</a>
+                                                </div>
+                                            </div>
+
+                                        @endforeach
                                     @endif
                                 </div>
                                 @if(!empty(\Illuminate\Support\Facades\Session::get('cartSum')))

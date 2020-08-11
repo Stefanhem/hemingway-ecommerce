@@ -2757,7 +2757,8 @@ h2 {
 }
 
 .text-block {
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
+
     color: #fff;
     font-size: 2vh;
     font-weight: 400;
@@ -3027,7 +3028,6 @@ h2 {
 }
 
 .body-paragraph {
-    font-family: 'Didot lt std', sans-serif;
     font-size: 2.5vh;
     line-height: 4vh;
     font-weight: 400;
@@ -3097,7 +3097,7 @@ h2 {
     position: static;
     padding-right: 0px;
     padding-left: 0px;
-    font-family: 'Didot lt std', sans-serif;
+    font-family: 'Didot', sans-serif;
     color: #fff;
     font-size: 7vh;
     line-height: 10vh;
@@ -3223,7 +3223,7 @@ h2 {
 .heading {
     margin-top: 55px;
     margin-bottom: 43px;
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
     font-size: 7vh;
     line-height: 9vh;
     font-weight: 700;
@@ -3349,7 +3349,7 @@ h2 {
 
 .product-name {
     margin-bottom: 15px;
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
     font-size: 3vh;
     line-height: 25px;
     font-style: italic;
@@ -3575,7 +3575,7 @@ h2 {
 }
 
 .text-block-7 {
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
     font-size: 3vh;
     font-style: italic;
     text-align: center;
@@ -3627,7 +3627,8 @@ h2 {
     -ms-flex-align: center;
     align-items: center;
     background-color: #1a1a1a;
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
+
     color: #000;
     font-size: 4vh;
     text-decoration: none;
@@ -3688,11 +3689,13 @@ h2 {
 }
 
 .heading-2 {
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
+
 }
 
 .text-block-8 {
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
+
     font-style: normal;
     font-weight: 400;
 }
@@ -3865,7 +3868,8 @@ h2 {
 }
 
 .dropdown-link:hover {
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
+
 }
 
 .dropdown-link-2 {
@@ -3875,12 +3879,14 @@ h2 {
 }
 
 .dropdown-link-2:hover {
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
+
     font-weight: 400;
 }
 
 .dropdown-link-3 {
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
+
     color: #fff;
     cursor: pointer;
 }
@@ -4103,7 +4109,8 @@ h2 {
 
 .product-detail-name {
     margin-bottom: 0px;
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
+
     font-size: 4.5vh;
     line-height: 5vh;
 }
@@ -4941,7 +4948,8 @@ h2 {
 }
 
 .link-4 {
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
+
     color: #fff;
     font-size: 5vh;
     line-height: normal;
@@ -5245,6 +5253,7 @@ h2 {
     width: 30%;
     height: auto;
     padding: 5vh;
+    margin: 0 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -5265,7 +5274,8 @@ h2 {
 
 .petar-petrovic {
     margin-bottom: 5vh;
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
+
     color: #fff;
     font-size: 3vh;
 }
@@ -5785,7 +5795,8 @@ h2 {
 
 .heading-5 {
     margin-top: 0px;
-    font-family: 'Didot lt std', sans-serif;
+    font-family: Didot, sans-serif;
+
     font-size: 4vh;
     font-style: italic;
     font-weight: 400;
@@ -5980,6 +5991,8 @@ h2 {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
 }
 
 .div-block-19 {
@@ -6015,6 +6028,7 @@ h2 {
 
 .order-items {
     margin-bottom: -20px;
+    padding-bottom: 5px;
 }
 
 .line-item {

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Kontakt')
 @section('content')
-    <div class="section-4">
+    <div class="section-4" style="margin-top: 100px">
         <div class="container-2 cc-heading-wrap">
             <h1 class="heading">Pošaljite nam poruku</h1>
             <div class="paragraph-bigger cc-bigger-light">Hey there, fill out this form</div>
@@ -23,12 +23,13 @@
                     <textarea id="field" name="field" placeholder="Enter your message" maxlength="5000" data-name="Field" class="text-field cc-textarea cc-contact-field w-input"></textarea>
                     <input type="submit" value="Submit" data-wait="Please wait..." class="button w-button">
                 {{Form::close()}}
+
                 @if (isset($successful))
-                <div class="status-message cc-success-message w-form-done" style="display: none">
+                <div class="status-message cc-success-message w-form-done">
                     <div>Thank you! Your submission has been received!</div>
                 </div>
                 @endif
-                <div class="status-message cc-error-message w-form-fail">
+                <div class="status-message cc-error-message w-form-fail">+
                     <div>Oops! Something went wrong while submitting the form.</div>
                 </div>
             </div>
@@ -36,6 +37,6 @@
     </div>
     <div class="contact-section">
         <h1 class="heading contact-heading">Ili nas kontaktirajte</h1>
-        <p class="paragraph-2 contact">Hemingway leather Serbia<br>+381 60 6363 515<br>office@hemingwayleather.com</p>
+        <p class="paragraph-2 contact">Hemingway Gentleman Supply<br>+381 60 6363 515<br>office@hemingwayleather.com</p>
     </div>
 @endsection

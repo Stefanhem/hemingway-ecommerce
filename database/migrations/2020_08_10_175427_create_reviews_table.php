@@ -18,8 +18,10 @@ class CreateReviewsTable extends Migration
             $table->string('name');
             $table->string('text');
             $table->boolean('isApproved')->default(false);
+            $table->unsignedBigInteger('idProduct');
             $table->integer('rating')->default(5);
             $table->timestamps();
+            $table->foreign('idProduct')->references('id')->on('products');
         });
     }
 

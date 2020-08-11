@@ -41,7 +41,7 @@ Route::post('/order', 'OrderController@store');
 Route::post('/remove-cart-item/{id}', 'ProductsController@removeFromCart');
 Route::post('/contact-form', 'StaticPagesController@contactFormEmail');
 Route::get('/search', 'ProductsController@search');
-
+Route::post('/review/{id}', 'ProductsController@reviewProduct');
 /* ADMIN DASHBOARD ROUTES */
 Route::get('/home', 'AdminController@home')->middleware('auth');
 Route::get('/orders/{id}', 'OrderController@show')->middleware('auth');

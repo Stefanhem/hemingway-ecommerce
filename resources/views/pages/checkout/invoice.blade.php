@@ -59,6 +59,26 @@
                             </div>
                         </div>
                     </div>
+                    <div class="w-commerce-commercecheckoutrow">
+                        <div class="w-commerce-commercecheckoutcolumn">
+                            <div class="w-commerce-commercecheckoutsummaryitem"><label
+                                    class="w-commerce-commercecheckoutsummarylabel">Ime i prezime na adresi</label>
+                                <div class="w-commerce-commercecheckoutsummaryflexboxdiv">
+                                    <div class="w-commerce-commercecheckoutsummarytextspacingondiv"></div>
+                                    <div class="w-commerce-commercecheckoutsummarytextspacingondiv"></div>
+                                </div>
+                                <div class="w-commerce-commercecheckoutsummaryflexboxdiv">
+                                    <div> {{$data['deliveryName']}} </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-commerce-commercecheckoutcolumn">
+                            <div class="w-commerce-commercecheckoutsummaryitem">
+                                <label class="w-commerce-commercecheckoutsummarylabel">Broj telefona na adresi</label>
+                                <div>{{$data['deliveryPhone']}}</div>
+                            </div>
+                        </div>
+                    </div>
                 </fieldset>
             </div>
             <div class="w-commerce-commercecheckoutorderitemswrapper">
