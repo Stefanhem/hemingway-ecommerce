@@ -95,10 +95,10 @@
                                                 RSD
                                             </div>
                                         </div>
-                                        <div><a href="/checkout" value="Continue to Checkout"
+                                        <div><a href="/checkout" value="Završi kupovinu"
                                                 data-node-type="cart-checkout-button"
                                                 class="w-commerce-commercecartcheckoutbutton"
-                                                data-loading-text="Hang Tight...">Continue to Checkout</a></div>
+                                                data-loading-text="Hang Tight...">Završi kupovinu</a></div>
                                     </div>
                                 @endif
                             </form>

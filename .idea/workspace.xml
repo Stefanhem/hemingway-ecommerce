@@ -5,27 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44ab796d-5644-4daa-ab6c-a2070184ceec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/labels/handmade.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/labels/special-offer.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StaticPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StaticPagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Review.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_141051_update_order_and_product_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_141051_update_order_and_product_tables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_10_175427_create_reviews_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_10_175427_create_reviews_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/hemingway-f9fff6.webflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/hemingway-f9fff6.webflow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/hemingway.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/hemingway.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/checkout/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/checkout/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/checkout/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/checkout/invoice.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/about-us.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/cart-product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/cart-product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +222,7 @@
       <workItem from="1596975729847" duration="2134000" />
       <workItem from="1597001110994" duration="2306000" />
       <workItem from="1597074774319" duration="15400000" />
-      <workItem from="1597169068220" duration="7736000" />
+      <workItem from="1597169068220" duration="11738000" />
     </task>
     <servers />
   </component>
@@ -289,14 +275,14 @@
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
     <state x="41" y="0" width="1441" height="1067" key="dock-window-1/0.0.1855.1080@0.0.1855.1080" timestamp="1596892723416" />
-    <state x="584" y="250" key="run.anything.popup" timestamp="1597178707065">
+    <state x="584" y="250" key="run.anything.popup" timestamp="1597180053923">
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
-    <state x="584" y="250" key="run.anything.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1597178707065" />
-    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1597179647589">
+    <state x="584" y="250" key="run.anything.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1597180053923" />
+    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1597183176309">
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
     <state x="588" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1851.1080@0.0.1851.1080" timestamp="1596215124458" />
-    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1597179647589" />
+    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1597183176309" />
   </component>
 </project>

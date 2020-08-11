@@ -54,7 +54,7 @@
             {{ Form::open(['url' => '/add-cart/' . $product->id, 'method' => 'POST']) }}
             <input type="hidden" id="color" name="color" value="">
             <input type="hidden" id="idProduct" name="idProduct" value="{{$product->id}}">
-            <label for="quantity" class="field-label-5" style="margin-top:15px">Kolicina</label>
+            <label for="quantity" class="field-label-5" style="margin-top:15px">Količina</label>
             <input type="number" id="quantity" name="quantity" min="1" max="{{$product->quantityInStock}}"
                    style="margin-top:10px !important" class="div-block-17" value="1">
             <div class="text-block-19" style="margin:30px 0 20px 0">Dimenzije: <span
@@ -112,16 +112,16 @@
             </div>
         @endif
         {{ Form::open(['url' => '/review/' . $product->id, 'method' => 'POST', 'style' => 'width:40%']) }}
-        <h1 style="color: white">Prenesite nam vaše mišljenje</h1>
+        <h1 style="color: white">Prenesite nam Vaše mišljenje</h1>
         <div class="credentials-inputs-wrap">
             <div class="contact-name-field-wrap" style="width: 100%">
                 <label for="name" class="contact-field-label" style="color:white">Ime</label>
                 <input type="text" class="text-field cc-contact-field w-input" maxlength="256" name="name"
-                       data-name="Name" placeholder="Unesite vaše ime" id="Name">
+                       data-name="Name" placeholder="Unesite Vaše ime" id="Name">
             </div>
         </div>
         <label class="contact-field-label" style="color:white">Message</label>
-        <textarea id="field" name="text" placeholder="Unesite vaše mišljene" maxlength="5000" data-name="Field"
+        <textarea id="field" name="text" placeholder="Unesite Vaše mišljene" maxlength="5000" data-name="Field"
                   class="text-field cc-textarea cc-contact-field w-input"></textarea>
         <input type="hidden" name="idProduct" value="{{$product->id}}"/>
         <input type="submit" value="Submit" data-wait="Please wait..." class="button w-button">

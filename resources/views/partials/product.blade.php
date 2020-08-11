@@ -4,6 +4,7 @@
     <div class="cena-dugme">
         <div class="text-block-21">
             @if($product->isOnSpecialOffer)
+                <strike>{{$product->price . ' RSD' }}</strike><br/>
                 {{$product->priceOnSpecialOffer . ' RSD'}}
             @else
                 {{$product->price . ' RSD'}}

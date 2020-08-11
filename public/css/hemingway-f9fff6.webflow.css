@@ -757,7 +757,7 @@
     border-bottom-width: 0px;
     border-left-width: 0px;
     border-right-width: 0px;
-    border-top-width: 0px;
+    border-top-width: 0;
     color: #fff;
     cursor: pointer;
     padding-top: 0px;
@@ -2757,7 +2757,7 @@ h2 {
 }
 
 .text-block {
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
 
     color: #fff;
     font-size: 2vh;
@@ -2912,7 +2912,7 @@ h2 {
 
 .search-button {
     background-color: transparent;
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
     color: #fff;
     cursor: pointer;
 }
@@ -3031,6 +3031,7 @@ h2 {
     font-size: 2.5vh;
     line-height: 4vh;
     font-weight: 400;
+    font-family: 'Markpro book', sans-serif;
 }
 
 .section-2 {
@@ -3097,7 +3098,7 @@ h2 {
     position: static;
     padding-right: 0px;
     padding-left: 0px;
-    font-family: 'Didot', sans-serif;
+     font-family: 'Markpro book', sans-serif;
     color: #fff;
     font-size: 7vh;
     line-height: 10vh;
@@ -3154,7 +3155,7 @@ h2 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
     color: #fff;
     font-size: 16px;
     font-style: italic;
@@ -3209,7 +3210,7 @@ h2 {
 }
 
 .link {
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
     color: #fff;
     font-size: 4vh;
     text-decoration: none;
@@ -3223,7 +3224,7 @@ h2 {
 .heading {
     margin-top: 55px;
     margin-bottom: 43px;
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
     font-size: 7vh;
     line-height: 9vh;
     font-weight: 700;
@@ -3349,7 +3350,7 @@ h2 {
 
 .product-name {
     margin-bottom: 15px;
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
     font-size: 3vh;
     line-height: 25px;
     font-style: italic;
@@ -3575,7 +3576,7 @@ h2 {
 }
 
 .text-block-7 {
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
     font-size: 3vh;
     font-style: italic;
     text-align: center;
@@ -3627,7 +3628,7 @@ h2 {
     -ms-flex-align: center;
     align-items: center;
     background-color: #1a1a1a;
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
 
     color: #000;
     font-size: 4vh;
@@ -3689,12 +3690,12 @@ h2 {
 }
 
 .heading-2 {
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
 
 }
 
 .text-block-8 {
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
 
     font-style: normal;
     font-weight: 400;
@@ -3862,30 +3863,30 @@ h2 {
 }
 
 .dropdown-link {
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
     color: #fff;
     cursor: pointer;
 }
 
 .dropdown-link:hover {
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
 
 }
 
 .dropdown-link-2 {
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
     color: #fff;
     cursor: pointer;
 }
 
 .dropdown-link-2:hover {
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
 
     font-weight: 400;
 }
 
 .dropdown-link-3 {
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
 
     color: #fff;
     cursor: pointer;
@@ -3942,6 +3943,13 @@ h2 {
 }
 
 .paragraph-2.legal-paragraph {
+    font-family: 'Markpro book', sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.paragraph-222.legal-paragraph {
+    font-family: 'Markpro book', sans-serif;
     font-size: 14px;
     line-height: 30px;
 }
@@ -4109,7 +4117,7 @@ h2 {
 
 .product-detail-name {
     margin-bottom: 0px;
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
 
     font-size: 4.5vh;
     line-height: 5vh;
@@ -4948,7 +4956,7 @@ h2 {
 }
 
 .link-4 {
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
 
     color: #fff;
     font-size: 5vh;
@@ -5274,7 +5282,7 @@ h2 {
 
 .petar-petrovic {
     margin-bottom: 5vh;
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
 
     color: #fff;
     font-size: 3vh;
@@ -5481,7 +5489,6 @@ h2 {
     display: flex;
     width: 50%;
     height: 80%;
-    max-
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -5501,7 +5508,6 @@ h2 {
     width: 100%;
     min-height: 110px;
     margin-bottom: 10px;
-    background-image: url('../images/Asset-12.png');
     background-position: 50% 50%;
     background-size: cover;
 }
@@ -5551,7 +5557,6 @@ h2 {
     width: 50vw;
     height: 50vh;
     margin-left: 25px;
-    background-image: url('../images/Asset-12.png');
     background-position: 50% 50%;
     background-size: cover;
 }
@@ -5563,6 +5568,7 @@ h2 {
     display: flex;
     width: 50%;
     height: 80%;
+    padding: 0px 43px 88px 100px;
     padding: 0px 43px 88px 100px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5729,16 +5735,14 @@ h2 {
     width: 100%;
     height: 60%;
     border-radius: 20px;
-    background-image: url('../images/Asset-12.png');
     background-position: 50% 50%;
     background-size: cover;
 }
 
 .naziv-proizvoda-mali-div {
-    font-family: 'Didot lt std', sans-serif;
+    font-family: 'Markpro book', sans-serif;
     font-size: 26px;
     line-height: 32px;
-    font-style: italic;
     font-weight: 400;
     text-align: center;
 }
@@ -5795,7 +5799,7 @@ h2 {
 
 .heading-5 {
     margin-top: 0px;
-    font-family: Didot, sans-serif;
+    font-family: 'Markpro book', sans-serif;
 
     font-size: 4vh;
     font-style: italic;
@@ -5835,7 +5839,6 @@ h2 {
 .fotka {
     width: 100%;
     height: 100%;
-    background-image: url('../images/Asset-12.png');
     background-position: 50% 50%;
     background-size: cover;
 }

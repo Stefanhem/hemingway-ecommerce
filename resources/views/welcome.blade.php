@@ -25,7 +25,7 @@
 </div>
 <div class="tri-bloka">
     <div class="blokovi-sekcija-tri-bloka"><a href="#" class="link-4">O nama</a><a href="/about-us" class="link-tri-bloka w-inline-block"></a></div>
-    <div class="blokovi-sekcija-tri-bloka"><a href="#" class="link-4">Korporativni pokloni</a><a href="/pokloni" class="link-tri-bloka w-inline-block"></a></div>
+    <div class="blokovi-sekcija-tri-bloka"><a href="#" class="link-4">Korporativni<br/> pokloni</a><a href="/pokloni" class="link-tri-bloka w-inline-block"></a></div>
     <div class="blokovi-sekcija-tri-bloka"><a href="#" class="link-4">Kontakt</a><a href="/contact" class="link-tri-bloka w-inline-block"></a></div>
 </div>
 <div class="proizvodi special-section">
