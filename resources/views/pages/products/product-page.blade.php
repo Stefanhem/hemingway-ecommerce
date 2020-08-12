@@ -99,7 +99,7 @@
         <p class="paragraph-3">{{$product->description}}</p>
     </div>
     <div class="review">
-        @if($reviews->count() > 0)
+        @if(isset($reviews) && $reviews->count() > 0)
             <h1 class="heading heading-review">Drugi o ovom proizvodu</h1>
             <div class="review-div">
                 @foreach($reviews as $review)
