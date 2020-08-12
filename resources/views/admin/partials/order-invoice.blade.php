@@ -5,6 +5,12 @@
                 {{ Form::open(['url' => '/admin/order/'. $data['id'] .'/status', 'method' => 'POST', 'class' => "w-commerce-commercecheckoutcolumn"]) }}
                 <input type="hidden" name="status" value="{{\App\Order::STATUS_CONFIRMED}}">
                 <button type="submit" class="btn btn-success">Confirm Order</button>
+                <div class="row">
+                    <div class="col-md-5 mb-3" style="padding-left: 35px">
+                        <input type="checkbox" class="form-check-input" name="free-delivery" value="1"/>
+                        <label class="form-check-label" for="labels">Besplatna Dostava</label>
+                    </div>
+                </div>
                 {{ Form::close() }}
 
                 {{ Form::open(['url' => '/admin/order/'. $data['id'] .'/status', 'method' => 'POST', 'class' => "w-commerce-commercecheckoutcolumn"]) }}

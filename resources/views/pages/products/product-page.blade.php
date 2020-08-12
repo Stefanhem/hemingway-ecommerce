@@ -57,8 +57,10 @@
             <label for="quantity" class="field-label-5" style="margin-top:15px">Količina</label>
             <input type="number" id="quantity" name="quantity" min="1" max="{{$product->quantityInStock}}"
                    style="margin-top:10px !important" class="div-block-17" value="1">
-            <div class="text-block-19" style="margin:30px 0 20px 0">Dimenzije: <span
-                    class="text-block-18" style="font-size: large">{{$product->dimensions}}</span></div>
+            @if(!empty($product->dimensions))
+                <div class="text-block-19" style="margin:30px 0 20px 0">Dimenzije: <span
+                        class="text-block-18" style="font-size: large">{{$product->dimensions}}</span></div>
+            @endif
             @if($product->quantityInStock <= 3 && $product->quantityInStock > 0)
                 <div class="w-commerce-commerceaddtocartoutofstock">
                     <div>Only {{$product->quantityInStock}} left in stock!</div>
@@ -78,17 +80,24 @@
             <!-- ShareThis END -->
             @if (!empty(Auth::user()))
                 <div class="text-block-19" style="margin-bottom: 20px">Admin Tools</div>
-                <a class="button-5 w-button" href="/admin/products/update/{{$product->id}}" style="margin-bottom: 20px">
+                <a class="button-5 w-button" href="/admin/products/update/{{$product->id}}"
+                   style="margin-bottom: 20px">
                     Edit Product
                 </a>
-                <a class="button-5 w-button" href="/admin/products/{{$product->id}}/labels" style="margin-bottom: 20px">
+                <a class="button-5 w-button" href="/admin/products/{{$product->id}}/labels"
+                   style="margin-bottom: 20px">
                     Edit Labels
                 </a>
                 {{ Form::open(['url' => '/admin/products/delete/' . $product->id, 'method' => 'DELETE']) }}
                 <input type="submit" value="Delete product" class="button-5 w-button" style="margin-bottom: 20px">
                 {{ Form::close() }}
-                <a class="button-5 w-button" href="/admin/products/color/{{$product->id}}" style="margin-bottom: 20px">
+                <a class="button-5 w-button" href="/admin/products/color/{{$product->id}}"
+                   style="margin-bottom: 20px">
                     Add new Image
+                </a>
+                <a class="button-5 w-button" href="/admin/products/{{$product->id}}/images"
+                   style="margin-bottom: 20px">
+                    Delete Image
                 </a>
 
             @endif

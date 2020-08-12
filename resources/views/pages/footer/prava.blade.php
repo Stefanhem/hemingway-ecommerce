@@ -12,7 +12,7 @@
             Međutim, kako nam je zadovoljstvo kupaca najveći prioritet, obezbedili smo Vam dodatnu zaštitu od bilo kakvih
             eventualnih nedostataka, i u tom cilju ističemo sledeće:
         </p>
-        <ul>
+        <ul style="font-family: 'Markpro book', sans-serif">
             <li>
                 E-mail adresa za reklamacije i žalbe koje se odnose na proizvode je:
                 <strong>reklamacije@hemingwayleather.com</strong>, i ukoliko imate bilo kakve zamerke na naše proizvode,

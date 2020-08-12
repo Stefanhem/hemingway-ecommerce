@@ -5,10 +5,10 @@
             <a href="https://www.facebook.com/hemingway.leather" target="_blank" class="social-footer w-inline-block">
                 <img src="{{asset('images/face.svg')}}" alt="" class="image-11">
             </a>
-            <a href="https://twitter.com/Hemingway_GS" target="_blank"  class="social-footer w-inline-block">
+            <a href="https://twitter.com/Hemingway_GS" target="_blank" class="social-footer w-inline-block">
                 <img src="{{asset('images/twitter.svg')}}" alt="" class="image-11">
             </a>
-            <a href="https://www.instagram.com/hemingway_leather" target="_blank"  class="social-footer w-inline-block">
+            <a href="https://www.instagram.com/hemingway_leather" target="_blank" class="social-footer w-inline-block">
                 <img src="{{asset('images/instagram.svg')}}" alt="" class="image-11">
             </a>
         </div>
@@ -21,14 +21,14 @@
             <a href="/pokloni" class="link-3">Korporativni pokloni</a>
             <!--<a href="#" class="link-3">Blog</a>-->
             <a href="/poslovi" class="link-3">Poslovi i saradnja</a>
-            <a href="/predlozi" class="link-3">Predloži proizvod</a>
+            <!--<a href="/predlozi" class="link-3">Predloži proizvod</a>-->
         </div>
         <div class="div-block-13">
             <h1 class="footer-heading">Korisnički Servis</h1>
             <a href="/podaci" class="link-3">Poslovni podaci</a>
             <a href="/pomoc" class="link-3">Pomoć i najčešća pitanja</a>
-            <a href="/porucivanje" class="link-3">Kako poručiti Hemingway proizvode</a>
-            <a href="/placanje" class="link-3">Načini plaćanja i isporuke</a>
+            <!--<a href="/porucivanje" class="link-3">Kako naručiti Hemingway proizvode</a>-->
+            <a href="/placanje" class="link-3">Načini plaćanja i isporuka</a>
             <a href="/prava-potrosaca" class="link-3">Garancija, reklamacije i prava potrošača</a>
             <!--<a href="/obavestenja" class="link-3">Obaveštenja</a>-->
         </div>

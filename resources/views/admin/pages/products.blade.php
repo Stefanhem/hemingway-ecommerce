@@ -30,7 +30,7 @@
                     <div class="col-md-5 mb-3">
                         <label for="dimensions">Product dimensions</label>
                         <input type="text" class="form-control" id="dimensions" name="dimensions" placeholder=""
-                               value="" required>
+                               value="">
                         <div class="invalid-feedback">
                             Valid dimensions are required.
                         </div>

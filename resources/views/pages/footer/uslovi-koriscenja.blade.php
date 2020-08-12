@@ -24,7 +24,7 @@
             Kada koristite naš internet sajt nije dozvoljeno da:
         </p>
 
-        <ul>
+        <ul style="font-family: 'Markpro book', sans-serif">
             <li>Ometate ili onemogućavate bilo koje funkcije povezane sa sigurnošću na sajtu ili funkcije koje
             sprečavaju ili ograničavaju upotrebu ili kopiranje dostupnog sadržaja</li>
             <li>Objavljujete ili prenosite na internet sajt svaki materijal koji je preteći, klevetnički, nepristojan, uvredljiv,

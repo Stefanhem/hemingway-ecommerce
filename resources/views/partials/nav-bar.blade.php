@@ -133,13 +133,13 @@
                 </div>
                 <nav class="dropdown-list w-dropdown-list">
                     <a href="/products/types?type=1" class="dropdown-link-2 w-dropdown-link">
-                        <strong>Novčanici</strong>
+                        Novčanici
                     </a>
                     <a href="/products/types?type=2" class="dropdown-link w-dropdown-link">
-                        <span>Torbe</span>
+                        Torbe
                     </a>
                     <a href="/products/types?type=3" class="dropdown-link w-dropdown-link">
-                        <span><strong>Wellness</strong></span>
+                        Wellness
                     </a>
                     <a href="/products/types?type=4" class="dropdown-link w-dropdown-link">
                         Office
@@ -148,7 +148,7 @@
                         Moto Oprema
                     </a>
                     <a href="/products/types?type=6" class="dropdown-link-3 w-dropdown-link">
-                        <strong>Sve ostalo</strong>
+                        Sve ostalo
                     </a>
                 </nav>
             </div>

@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44ab796d-5644-4daa-ab6c-a2070184ceec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/edit-product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/edit-product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/products.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/order-invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/order-invoice.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mails/order-create-customer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mails/order-create-customer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/prava.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/prava.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/uslovi-koriscenja.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/uslovi-koriscenja.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/products/product-page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav-bar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
