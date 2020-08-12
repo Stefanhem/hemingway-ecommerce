@@ -17,6 +17,18 @@ class Order extends Model
         STATUS_CONFIRMED = 2,
         STATUS_DENIED = 3;
 
+    public static function getStatusText(int $status): string
+    {
+        switch ($status) {
+            case self::STATUS_PENDING:
+                return 'Pending';
+            case self::STATUS_CONFIRMED:
+                return 'Confirmed';
+            case self::STATUS_DENIED:
+                return 'Denied';
+        }
+    }
+
     public function products()
     {
         return $this->hasMany(OrderProduct::class, 'idOrder');

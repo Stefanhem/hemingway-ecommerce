@@ -13,6 +13,8 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset('css/dashboard.css')}}" rel="stylesheet">
+    <link href="{{asset("css/webflow.css")}}" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 @include('admin.partials.navbar')

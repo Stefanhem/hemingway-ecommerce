@@ -61,6 +61,26 @@
                             </div>
                         </div>
                     </div>
+                    <div class="w-commerce-commercecheckoutrow">
+                        <div class="w-commerce-commercecheckoutcolumn">
+                            <div class="w-commerce-commercecheckoutsummaryitem"><label
+                                    class="w-commerce-commercecheckoutsummarylabel">Ime i prezime na adresi</label>
+                                <div class="w-commerce-commercecheckoutsummaryflexboxdiv">
+                                    <div class="w-commerce-commercecheckoutsummarytextspacingondiv"></div>
+                                    <div class="w-commerce-commercecheckoutsummarytextspacingondiv"></div>
+                                </div>
+                                <div class="w-commerce-commercecheckoutsummaryflexboxdiv">
+                                    <div> {{$data['deliveryName']}} </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-commerce-commercecheckoutcolumn">
+                            <div class="w-commerce-commercecheckoutsummaryitem">
+                                <label class="w-commerce-commercecheckoutsummarylabel">Broj telefona na adresi</label>
+                                <div>{{$data['deliveryPhone']}}</div>
+                            </div>
+                        </div>
+                    </div>
                 </fieldset>
             </div>
             <div class="w-commerce-commercecheckoutpaymentsummarywrapper">
@@ -90,20 +110,6 @@
                     <h4>Order Summary</h4>
                 </div>
                 <fieldset class="w-commerce-commercecheckoutblockcontent">
-                    <div class="w-commerce-commercecheckoutsummarylineitem">
-                        <div>Subtotal</div>
-                        <div>{{$data['sum']}} RSD</div>
-                    </div>
-                    <script type="text/x-wf-template"
-                            id="wf-template-5f083a9f233b5f765850315000000000006b">%3Cdiv%20class%3D%22w-commerce-commercecheckoutordersummaryextraitemslistitem%22%3E%3Cdiv%3E%3C%2Fdiv%3E%3Cdiv%3E%3C%2Fdiv%3E%3C%2Fdiv%3E</script>
-                    <div class="w-commerce-commercecheckoutordersummaryextraitemslist"
-                         data-wf-collection="database.commerceOrder.extraItems"
-                         data-wf-template-id="wf-template-5f083a9f233b5f765850315000000000006b">
-                        <div class="w-commerce-commercecheckoutordersummaryextraitemslistitem">
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
                     <div class="w-commerce-commercecheckoutsummarylineitem">
                         <div>Total</div>
                         <div class="w-commerce-commercecheckoutsummarytotal">{{$data['sum']}} RSD</div>

@@ -24,7 +24,10 @@
                     <th>Email</th>
                     <th>Broj Telefona</th>
                     <th>Adresa</th>
+                    <th>Datum</th>
+                    <th>Vreme</th>
                     <th>Ukupna cena</th>
+                    <th>Status</th>
                     <th>Porudžbina</th>
                 </tr>
                 </thead>
@@ -36,7 +39,10 @@
                         <td>{{$order->email}}</td>
                         <td>{{$order->phoneNumber}}</td>
                         <td>{{$order->address . ' ' . $order->city . ' ' . $order->zipCode}}</td>
+                        <td>{{(new DateTime($order->created_at))->format('d.m.Y.')}}</td>
+                        <td>{{(new DateTime($order->created_at))->format('H:m:i')}}</td>
                         <td>{{$order->price}}</td>
+                        <th>{{ \App\Order::getStatusText($order->status) }}</th>
                         <td><a href="/orders/{{$order->id}}">Pogledaj porudžbinu</a></td>
                     </tr>
                 @endforeach
