@@ -3902,7 +3902,6 @@ h2 {
 
 .dropdown-list.w--open {
     top: 50.7188px;
-    left: 3%;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -6628,6 +6627,21 @@ h2 {
 }
 
 @media screen and (max-width: 479px) {
+    .male-fotke {
+        width: 100px;
+        min-height: 100px;
+        margin-right: 5px;
+    }
+    .fotka {
+        margin-top: 10px
+    }
+    .div-block-product {
+        height: 100px;
+    }
+
+    .dropdown-list.w--open {
+        left: 3%;
+    }
     .hero-section {
         height: 130vh;
     }
