@@ -27,7 +27,7 @@
             <h1 class="footer-heading">Korisnički Servis</h1>
             <a href="/podaci" class="link-3">Poslovni podaci</a>
             <a href="/pomoc" class="link-3">Pomoć i najčešća pitanja</a>
-            <!--<a href="/porucivanje" class="link-3">Kako naručiti Hemingway proizvode</a>-->
+            <a href="/porucivanje" class="link-3">Kako naručiti Hemingway proizvode</a>
             <a href="/placanje" class="link-3">Načini plaćanja i isporuka</a>
             <a href="/prava-potrosaca" class="link-3">Garancija, reklamacije i prava potrošača</a>
             <!--<a href="/obavestenja" class="link-3">Obaveštenja</a>-->

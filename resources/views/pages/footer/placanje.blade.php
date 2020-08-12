@@ -32,7 +32,7 @@
         </p>
 
         <h1 class="heading contact-heading">Isporuka</h1>
-        <ul>
+        <ul style="font-family: 'Markpro book', sans-serif">
             <li>PR Hemingway sarađuje sa kurirskim službama koje vrše isporuku na navedenu adresu kupca.</li>
             <li>Prema Zakonu o elektronskoj trgovini (‘’Sl. glasnik RS’’, br. 41/2009, 95/2013 i 52/2019) kada se roba
             prodaje preko interneta prodavac mora da izda račun koji sadrži: naziv ili poslovno ime, adresu i
