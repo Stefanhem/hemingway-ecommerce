@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@show');
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 /* STATIC PAGES */
 Route::get('/about-us', 'StaticPagesController@about');
@@ -56,7 +56,8 @@ Route::post('/admin/products/color', 'ProductsController@storeProductColor')->mi
 Route::get('/admin/products/color/{id}', 'ProductsController@productColor')->middleware('auth');
 Route::get('/admin/products/{id}/labels', 'AdminController@labels')->middleware('auth');
 Route::post('/admin/products/{id}/labels', 'AdminController@storeLabels')->middleware('auth');
-
+Route::get('/admin/products/{id}/images', 'ProductsController@deleteProductImage')->middleware('auth');
+Route::post('/admin/products/images/{id}', 'ProductsController@removeImage')->middleware('auth');
 Route::get('/admin/color', 'ProductsController@colors')->middleware('auth');
 Route::post('/admin/color', 'ProductsController@storeNewColor')->middleware('auth');
 
