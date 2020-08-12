@@ -2434,6 +2434,10 @@
         font-size: 16px;
     }
 
+    .about-picture{
+        display: none;
+    }
+
     .w-commerce-commercecartcontainerwrapper--cartType-modal {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -6188,6 +6192,10 @@ h2 {
     background-color: #727272;
 }
 
+.review-form {
+    width: 40%;
+}
+
 @media screen and (max-width: 991px) {
     .button {
         -webkit-box-pack: center;
@@ -6622,6 +6630,13 @@ h2 {
 @media screen and (max-width: 479px) {
     .hero-section {
         height: 130vh;
+    }
+    .about-text {
+        width: 100%;
+    }
+
+    .review-form{
+        width: 100%;
     }
 
     .nav {

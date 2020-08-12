@@ -111,7 +111,7 @@
                 @endforeach
             </div>
         @endif
-        {{ Form::open(['url' => '/review/' . $product->id, 'method' => 'POST', 'style' => 'width:40%']) }}
+        {{ Form::open(['url' => '/review/' . $product->id, 'method' => 'POST', 'class' => 'review-form']) }}
         <h1 style="color: white">Prenesite nam Vaše mišljenje</h1>
         <div class="credentials-inputs-wrap">
             <div class="contact-name-field-wrap" style="width: 100%">
