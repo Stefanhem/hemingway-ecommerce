@@ -2,7 +2,7 @@
 @section('title', 'Garancija, reklamacije i prava potrošača')
 @section('content')
     <div class="contact-section legal-notice">
-        <h1 class="heading contact-heading">Garancije i reklamacije</h1>
+        <h1 class="heading contact-heading">Garancija i reklamacije</h1>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             Hemingway posvećuje veliku pažnju kvalitetu svojih proizvoda, te se u procesu proizvodnje koriste samo
             najkvalitetnije sirovine, materijali i alati. Svaki proizvod je više puta pregledan i testiran, a finalna provera vrši
@@ -15,20 +15,20 @@
         <ul>
             <li>
                 E-mail adresa za reklamacije i žalbe koje se odnose na proizvode je:
-                reklamacije@hemingwayleather.com, i ukoliko imate bilo kakve zamerke na naše proizvode,
+                <strong>reklamacije@hemingwayleather.com</strong>, i ukoliko imate bilo kakve zamerke na naše proizvode,
                 pozivamo Vas da nam se uvek, bez ustručavanja, obratite. Vaše mišljenje nam je bitno!
             </li>
             <li>
                 Molimo Vas da prilikom prijema robe detaljno pregledate sve proizvode i ukoliko uočite bilo kakve
                 nedostatke, greške ili nefunkcionalnosti, odmah nas kontaktirate putem telefona ili e-mail adrese
-                reklamacije@hemingwayleather.com. Rok je 48 sati od trenutka prijema narudžbine, a mi se
+                reklamacije@hemingwayleather.com. <strong>Rok je 48 sati od trenutka prijema narudžbine</strong>, a mi se
                 obavezujemo da ćemo u najkraćem mogućem periodu otkloniti nedostatke, zameniti proizvod ili
                 povratiti novac.
             </li>
             <li>
                 Personalizovani proizvodi podležu reklamaciji samo u slučaju proizvodne greške ili defekta, pa Vas
-                molimo da proverite tekst za utiskivanje, kako ne bi došlo do eventualnih pravopisnih ili drugih
-                grešaka.
+                molimo da <strong>proverite tekst za utiskivanje, kako ne bi došlo do eventualnih pravopisnih ili drugih
+                grešaka.</strong>
             </li>
             <li>
                 Prilikom preuzimanja pošiljke potrebno je da vizuelno pregledate paket, i ukoliko primetite da je
@@ -36,7 +36,7 @@
                 pravo da odbijete prijem pošte o čemu je potrebno da nas što pre obavestite.
             </li>
             <li>
-                Svi proizvodi podležu garanciji u trajanju od 2 godine, i u tom periodu Hemingway se obavezuje da
+                <strong>Svi proizvodi podležu garanciji u trajanju od 2 godine</strong>, i u tom periodu Hemingway se obavezuje da
                 će, bez ikakve dodatne naplate, ispraviti sve eventualne nedostatke nastale uobičajenim koršćenjem
                 proizvoda (oštećenje kože/tkanine ili vezivnih delova, defekt dugmića, alki, drikera itd.) ili zameniti
                 proizvod za novi. Oštećenja i defekti nastali neadekvatnom upotrebom proizvoda, kao što su: fizička
@@ -47,8 +47,8 @@
                 pravno-finansijske regulative nalažu drugačije
             </li>
             <li>
-                Kako biste ostvarili navedena prava, potrebno je da sačuvate račun i isti, uz proizvod, priložite
-                prilikom reklamacije.
+                <strong>Kako biste ostvarili navedena prava, potrebno je da sačuvate račun i isti, uz proizvod, priložite
+                prilikom reklamacije.</strong>
             </li>
         </ul>
 
@@ -56,7 +56,7 @@
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
 
             Prava potrošača su regulisana Zakonom o zaštiti potrošača. Kompletan Zakon možete naći na sledećem
-            <a href="https://www.paragraf.rs/propisi/zakon_o_zastiti_potrosaca.html"> linku</a>
+            <a href="https://www.paragraf.rs/propisi/zakon_o_zastiti_potrosaca.html"> linku.</a>
         </p>
 
     </div>
