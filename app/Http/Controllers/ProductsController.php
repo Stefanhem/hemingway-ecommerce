@@ -336,11 +336,35 @@ class ProductsController extends Controller
         return redirect('/home');
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function reviewProduct(Request $request)
     {
         $data = $request->all();
-
         Review::create($data);
         return back();
+    }
+
+    /**
+     * @param int $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function deleteProductImage(int $id)
+    {
+        $images = ProductColor::where('idProduct', $id)->get();
+        return view('admin.pages.delete-product-image', ['images' => $images, 'idProduct' => $id]);
+    }
+
+    /**
+     * @param int $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function removeImage(int $id)
+    {
+        ProductColor::find($id)->delete();
+        $images = ProductColor::where('idProduct', $id)->get();
+        return view('admin.pages.delete-product-image', ['images' => $images, 'idProduct' => $id]);
     }
 }

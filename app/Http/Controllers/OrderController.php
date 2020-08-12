@@ -13,19 +13,33 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
+/**
+ * Class OrderController
+ * @package App\Http\Controllers
+ */
 class OrderController extends Controller
 {
+    /**
+     *
+     */
     const PAYMENT_METHOD_TEXT = [
         PaymentMethod::ON_DELIVERY => 'Plaćanje pouzećem',
         PaymentMethod::POST_PAYMENT => 'Plaćanje uplatnicom'
     ];
 
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function checkout()
     {
         $products = Session::get('products');
         return view('pages.checkout.index', !empty($products) ? $products : []);
     }
 
+    /**
+     * @param int $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function show(int $id)
     {
         $order = Order::where('id', $id)->first();
@@ -59,6 +73,10 @@ class OrderController extends Controller
         ]);
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function store(Request $request)
     {
         switch ($request->get('action')) {
@@ -74,6 +92,11 @@ class OrderController extends Controller
         ]);
     }
 
+    /**
+     * @param Request $request
+     * @param Order $model
+     * @return array|\Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function createOrder(Request $request, Order $model)
     {
         $order = $request->all();
@@ -111,7 +134,13 @@ class OrderController extends Controller
             'deliveryName' => $newOrder->deliveryName,
             'deliveryPhone' => $newOrder->deliveryPhone
         ];
-        //Mail::send(new OrderCreateCustomerMailable($data));
+        if ($newOrder->idPaymentMethod === PaymentMethod::POST_PAYMENT) {
+            try{
+                Mail::send(new OrderCreateCustomerMailable($data));
+            } catch (\Exception $exception) {
+
+            }
+        }
 
         Session::remove('products');
         Session::remove('cartSum');
@@ -119,11 +148,23 @@ class OrderController extends Controller
         return $data;
     }
 
+    /**
+     * @param int $id
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function setOrderStatus(int $id, Request $request)
     {
         $status = $request->get('status');
-        Order::where('id', $id)->update(['status' => $status]);
-
+        $order = Order::find($id);
+        $order->status = $status;
+        if ($status == Order::STATUS_DENIED) {
+            foreach ($order->products as $orderProduct) {
+                $orderProduct->product->quantityInStock += $orderProduct->quantity;
+                $orderProduct->product->save();
+            }
+        }
+        $order->save();
         return $this->show($id);
     }
 }
