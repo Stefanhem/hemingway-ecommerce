@@ -36,7 +36,7 @@
             firme ili organizacije</li>
             <li>Bavite se bilo kojim nezakonitim ili protivpravnim ponašanjem</li>
             <li>Modifikujete, ometate, presrećete ili hakujete internet sajt u cilju njihovog onesposobljavanja</li>
-            <li>Koristite specijalizovane programe radi preuzimanja sadržaja sa sajta
+            <li>Koristite specijalizovane programe radi preuzimanja sadržaja sa sajta<br/>
             Ako prekršite bilo koji od ovih Uslova mi Vas možemo sprečiti da koristite ovaj internet sajt na stalnom ili
             privremenom nivou. Mi možemo preduzeti i druge mere, uključujući ali ne ograničavajući se na to da Vas
             prijavimo nadležnim državnim organima, pošaljemo upozorenje ili podnesemo tužbu</li>
