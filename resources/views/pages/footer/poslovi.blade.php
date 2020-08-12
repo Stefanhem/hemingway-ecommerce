@@ -7,7 +7,7 @@
             Naši planovi su veliki, i na putu ka njihovom ostvarenju kvalitetni ljudi i ideje su uvek dobrodošli. Ukoliko imate
             želju da postanete deo tima kroz stalno ili honorarno zaposlenje, bilo da ste dizajner, kreator, vešti sa kožom ili
             imate bilo kakvu ideju koju mislite da ćemo prepoznati, ohrabrujemo Vas da nas kontaktirate kako bismo se
-            bolje upoznali.
+            bolje upoznali.<br/>
         </p>
         <p>
             <strong>poslovi@hemingwayleather.com</strong>
