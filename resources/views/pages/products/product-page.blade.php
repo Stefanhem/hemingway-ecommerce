@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', $product->name)
 @section('content')
-    <div class="proizvod-template" style="padding-top: 30vh">
+    <div class="proizvod-template naslov">
         <h1 class="heading proizvod-head page"
             style="margin-bottom: 0 !important; width: 100%;text-align: left">{{$product->name}}</h1>
     </div>

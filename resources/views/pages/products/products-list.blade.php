@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', $typeName)
 @section('content')
-    <div class="proizvodi special-section" style="padding-top: 25vh; min-height: 600px">
+    <div class="proizvodi special-section" style="padding-top:10px;min-height: 600px">
         @if (isset($typeName))
             <h1 class="heading">{{$typeName}}</h1>
         @endif

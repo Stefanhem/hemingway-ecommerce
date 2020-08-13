@@ -2,7 +2,31 @@ $(document).ready(function(){
     $(".menu").css("top", $(".announcement").css('height'));
     $(window).resize(function () {
         $(".menu").css("top", $(".announcement").css('height'));
+
+        let menu = $(".menu").css('height');
+        let announcement = $(".announcement").css('height');
+
+        const menuSize = menu.replace('px', '');
+        const announcementSize = announcement.replace('px', '');
+
+        const size = parseInt(menuSize) + parseInt(announcementSize);
+        $(".naslov").css("margin-top", size + "px");
+        $(".contact-section.legal-notice").css("margin-top", size + "px");
+        $(".special-section").css("margin-top", size + "px");
     });
+    $(".menu").css("top", $(".announcement").css('height'));
+
+    let menu = $(".menu").css('height');
+    let announcement = $(".announcement").css('height');
+
+    const menuSize = menu.replace('px', '');
+    const announcementSize = announcement.replace('px', '');
+
+    const size = parseInt(menuSize) + parseInt(announcementSize);
+    $(".naslov").css("margin-top", size + "px");
+    $(".contact-section.legal-notice").css("margin-top", size + "px");
+    $(".special-section").css("margin-top", size + "px");
+
     $(".cart-button").click(function() {
         $(".cart-wrapper").css({opacity: 1, display: "block"});
     });

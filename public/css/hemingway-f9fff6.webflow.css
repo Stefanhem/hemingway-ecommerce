@@ -3936,7 +3936,6 @@ h2 {
 
 .contact-section.legal-notice {
     height: auto;
-    padding-top: 18vh;
     padding-bottom: 10vh;
 }
 
@@ -6483,6 +6482,7 @@ h2 {
     .proizvod-template {
         height: auto;
         padding-left: 10vw;
+        padding-top: 10vh;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
@@ -6814,6 +6814,7 @@ h2 {
     }
 
     .proizvod-template {
+        padding-top: 10vh;
         height: auto;
     }
 
