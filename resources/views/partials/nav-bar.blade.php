@@ -1,11 +1,10 @@
 @if(\App\Config::isSetAnnouncement())
-    <div class="nav" style="background-color: #ddd !important;height: 3%; color: black; text-align: center">
+    <div class="nav announcement" style="background-color: #ddd !important;height: auto; color: black; text-align: center">
         <p style="width: 100%; text-align: center; margin: 0 auto;"><strong>{{\App\Config::getAnnouncement()}}</strong>
         </p>
     </div>
 @endif
-<div data-w-id="5f4f9947-30e8-ea30-25f1-fb4b88672c5a" class="nav"
-     style="top:{{\App\Config::isSetAnnouncement() ? '3%' : '0%'}}">
+<div data-w-id="5f4f9947-30e8-ea30-25f1-fb4b88672c5a" class="nav menu">
     <a href="/" aria-current="page" class="home-link w-inline-block w--current">
         <img src="{{asset("images/Hemingway.svg")}}" width="64.5" alt="" class="image">
     </a>

@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    $(".menu").css("top", $(".announcement").css('height'));
+    $(window).resize(function () {
+        $(".menu").css("top", $(".announcement").css('height'));
+    });
     $(".cart-button").click(function() {
         $(".cart-wrapper").css({opacity: 1, display: "block"});
     });
