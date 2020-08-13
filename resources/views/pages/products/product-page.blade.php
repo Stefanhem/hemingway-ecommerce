@@ -89,7 +89,7 @@
                     Edit Labels
                 </a>
                 {{ Form::open(['url' => '/admin/products/delete/' . $product->id, 'method' => 'DELETE']) }}
-                <input type="submit" value="Delete product" class="button-5 w-button" style="margin-bottom: 20px">
+                <input type="submit" value="Delete product" class="button-5 w-button" style="background-color:red;color:white;margin-bottom: 20px">
                 {{ Form::close() }}
                 <a class="button-5 w-button" href="/admin/products/color/{{$product->id}}"
                    style="margin-bottom: 20px">
@@ -121,7 +121,7 @@
             </div>
         @endif
         {{ Form::open(['url' => '/review/' . $product->id, 'method' => 'POST', 'class' => 'review-form']) }}
-        <h1 style="color: white">Prenesite nam Vaše mišljenje</h1>
+        <h1 style="color: white">Ostavite Vaš komentar</h1>
         <div class="credentials-inputs-wrap">
             <div class="contact-name-field-wrap" style="width: 100%">
                 <label for="name" class="contact-field-label" style="color:white">Ime</label>

@@ -79,7 +79,7 @@ class AdminController extends Controller
 
             $idToBeDeletedLabels = array_diff($idLabels, $idNewLabels);
 
-            ProductLabel::whereIn('idLabel', $idToBeDeletedLabels)->delete();
+            ProductLabel::whereIn('idLabel', $idToBeDeletedLabels)->where('idProduct', $id)->delete();
 
             foreach($idNewLabels as $idNewLabel) {
                 $label = [
