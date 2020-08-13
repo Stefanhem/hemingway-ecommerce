@@ -26,14 +26,13 @@ class OrderCreateCustomerMailable extends Mailable
     /**
      * Build the message.
      *
-     * @return $this
+     * @return $$this->;
      */
     public function build()
     {
         return $this->subject('Narudžbina uspešno kreirana')
             ->to($this->data['email'])
             ->from('sales@hemingwayleather.com')
-            ->attach(asset('/images/uplatnica.jpg'))
             ->view('mails.order-create-customer', $this->data);
     }
 }
