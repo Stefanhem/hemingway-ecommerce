@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Entities\Orders\OnDeliveryOrder;
 use App\Entities\Orders\PostPaymentOrder;
 use App\Entities\Payments\PaymentMethod;
+use App\Mail\ConfirmOrderMailable;
 use App\Mail\OrderCreateCustomerMailable;
 use App\Order;
 use App\OrderProduct;
 use App\Product;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
@@ -138,7 +140,7 @@ class OrderController extends Controller
             try{
                 Mail::send(new OrderCreateCustomerMailable($data));
             } catch (\Exception $exception) {
-
+                info('MAIL ERROR: ' . $exception->getMessage());
             }
         }
 
@@ -158,6 +160,11 @@ class OrderController extends Controller
         $status = $request->get('status');
         $order = Order::find($id);
         $order->status = $status;
+        
+        if ($request->has('free-delivery')) {
+            $isFreeDelivery = true;
+        }
+
         if ($status == Order::STATUS_DENIED) {
             foreach ($order->products as $orderProduct) {
                 $orderProduct->product->quantityInStock += $orderProduct->quantity;
@@ -165,6 +172,34 @@ class OrderController extends Controller
             }
         }
         $order->save();
+
+        try {
+            $products = [];
+            foreach ($order->products as $orderProduct) {
+                $products[] = [
+                    'quantity' => $orderProduct->quantity,
+                    'price' => $orderProduct->product->price * $orderProduct->quantity,
+                    'product' => $orderProduct->product
+                ];
+            }
+            $data = [
+                'id' => $order->id,
+                'date' => (new \DateTime())->format('d.m.Y'),
+                'name' => $order->name,
+                'email' => $order->email,
+                'paymentMethod' => self::PAYMENT_METHOD_TEXT[$order->idPaymentMethod],
+                'idPaymentMethod' => $order->idPaymentMethod,
+                'address' => $order->address . ', ' . $order->city . ' ' . $order->zipCode . ', ' . $order->country,
+                'products' => $products,
+                'sum' => $order->price,
+                'deliveryName' => $order->deliveryName,
+                'deliveryPhone' => $order->deliveryPhone
+            ];
+            Mail::send(new ConfirmOrderMailable($data, (isset($isFreeDelivery) ? $isFreeDelivery : null)));
+        } catch (\Exception $exception) {
+            info('MAIL ERROR: ' . $exception->getMessage());
+        }
+
         return $this->show($id);
     }
 }
