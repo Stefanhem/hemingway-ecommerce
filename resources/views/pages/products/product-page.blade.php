@@ -105,7 +105,7 @@
     </div>
     <div class="opis-proizvoda" style="margin-top: 50px">
         <h1 class="heading opis-proizvoda">Opis proizvoda</h1>
-        <p class="paragraph-3">{{$product->description}}</p>
+        <p class="paragraph-3">{!!$product->description!!}</p>
     </div>
     <div class="review">
         @if(isset($reviews) && $reviews->count() > 0)
