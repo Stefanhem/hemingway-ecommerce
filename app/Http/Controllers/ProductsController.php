@@ -145,7 +145,7 @@ class ProductsController extends Controller
     public function show(Product $product)
     {
         $colors = ProductColor::with('color')->where('idProduct', $product->id)->get();
-        $sameTypeProducts = Product::whereIn('idType', Product::$SIMMILAR_PRODUCTS[$product->idType])->take(3)->get();
+        $sameTypeProducts = Product::whereIn('idType', Product::$SIMMILAR_PRODUCTS[$product->idType])->where('id', '<>', $product->id)->take(3)->get();
         $reviews = Review::where('idProduct', $product->id)->take(3)->get();
         return view('pages.products.product-page', [
             'product' => $product,
