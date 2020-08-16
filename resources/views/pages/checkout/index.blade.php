@@ -77,10 +77,10 @@
                         <div class="block-header">
                             <h4 class="heading-6">Za uplatu</h4>
                         </div>
-                        <div class="block-content">
+                        <div class="block-content" style="width: auto">
                             <div class="line-item">
-                                <div>Ukupno</div>
-                                <div>{{\Illuminate\Support\Facades\Session::get('cartSum')}} RSD</div>
+                                <div class="before-div" style="display: block; width: 50px; height: auto">Ukupno: </div>
+                                <div class="after-div" style="display: block;float:left">{{\Illuminate\Support\Facades\Session::get('cartSum')}} RSD</div>
                             </div>
                         </div>
                         <!--<div class="block-content"><label class="w-commerce-commercecheckoutdiscountslabel">PROMO Kod</label>

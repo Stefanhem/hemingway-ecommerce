@@ -123,7 +123,7 @@
                         </div>
                     </div>
                     <div class="w-commerce-commercecheckoutsummarylineitem">
-                        <div>Ukupno</div>
+                        <div>Ukupno: </div>
                         <div class="w-commerce-commercecheckoutsummarytotal">{{$data['sum']}} RSD</div>
                     </div>
                 </fieldset>

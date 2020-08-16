@@ -5,7 +5,7 @@
     <h1 class="heading proizvod-head page" style="margin-bottom: 0 !important; width: 100%;text-align: left">{{$product->name}}</h1>
 </div>
 <div class="opis-proizvoda-div" style="width: 100%;padding-left: 15vw; padding-bottom: 10px">
-    <div class="text-block-1 code-class" style="margin-bottom: 50px">
+    <div class="text-block-1 code-class" style="">
         <span class="text-block-1">{{'#' . $product->code}}</span>
     </div>
 </div>
@@ -32,10 +32,10 @@
     </div>
     <div class="opis-proizvoda-div">
         @if($product->isOnSpecialOffer())
-        <div class="text-block-18"><strike>{{$product->price . ' RSD' }}</strike></div>
-        <div class="text-block-18" style="margin-top: 10px">{{$product->priceOnSpecialOffer . ' RSD' }}</div>
+        <div class="text-block-price"><strike>{{$product->price . ' RSD' }}</strike></div>
+        <div class="text-block-price" style="margin-top: 10px">{{$product->priceOnSpecialOffer . ' RSD' }}</div>
         @else
-        <div class="text-block-18">{{$product->price . ' RSD' }}</div>
+        <div class="text-block-price">{{$product->price . ' RSD' }}</div>
         @endif
         {{-- @if($productColors->count() > 0)
                 <div class="text-block-19">Izaberi boju</div>

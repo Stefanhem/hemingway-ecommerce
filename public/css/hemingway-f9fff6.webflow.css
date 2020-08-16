@@ -2406,6 +2406,10 @@
 }
 
 @media screen and (max-width: 767px) {
+    .after-div::before {
+        content: "\A";
+        white-space: pre;
+    }
     .w-commerce-commercelayoutcontainer {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -2433,6 +2437,10 @@
 }
 
 @media screen and (max-width: 479px) {
+    .after-div::before {
+        content: "\A";
+        white-space: pre;
+    }
     .w-commerce-commerceaddtocartquantityinput {
         font-size: 16px;
     }
@@ -5250,8 +5258,8 @@ h2 {
     -ms-flex-align: center;
     align-items: center;
     background-color: #f2f2f2;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('../images/Asset-4-100.jpg');
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Asset-4-100.jpg');
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('../images/komentari.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/komentari.jpg');
     background-position: 0px 0px, 50% 50%;
     background-size: auto, cover;
 }
@@ -5607,6 +5615,12 @@ h2 {
 }
 
 .text-block-18 {
+    font-family: 'Markpro book', sans-serif;
+    color: #888;
+    font-size: 3vh;
+}
+
+.text-block-price {
     font-family: 'Markpro book', sans-serif;
     color: #888;
     font-size: 3vh;
@@ -6185,6 +6199,9 @@ h2 {
     align-items: center;
 }
 
+.code-class{
+    margin-bottom: 50px
+}
 .div-block-21 {
     position: fixed;
     left: 0%;
@@ -6213,6 +6230,24 @@ h2 {
 }
 
 @media screen and (max-width: 991px) {
+    .text-block-price {
+        font-size: 5vh;
+    }
+    .text-block-18 {
+        font-size: 3vh !important;
+    }
+    .code-class{
+        margin-bottom: 0;
+    }
+    .male-fotke {
+        width: 100px;
+        min-height: 100px;
+        margin-right: 5px;
+    }
+    .div-block-product {
+        width: 100%;
+        height: auto;
+    }
     .fotka-proizvoda {
         width: 60%;
         display: block;
@@ -6338,8 +6373,14 @@ h2 {
         flex-direction: column;
     }
 }
+.before-div::after {
+    clear:both;
+}
 
 @media screen and (max-width: 767px) {
+    .code-class{
+        margin-bottom: 0;
+    }
     .hero-section {
         height: 120vh;
     }
@@ -6537,7 +6578,9 @@ h2 {
     }
 
     .male-fotke {
-        height: 100%;
+        width: 100px;
+        min-height: 100px;
+        margin-right: 5px;
     }
 
     .male-fotke.srednji-div-mob {
@@ -6657,6 +6700,9 @@ h2 {
 }
 
 @media screen and (max-width: 479px) {
+    .code-class{
+        margin-bottom: 0;
+    }
     .fotka-proizvoda {
         width: 100%;
     }
@@ -6664,7 +6710,6 @@ h2 {
         margin-bottom: 0px;
         border-style: solid;
         height: auto;
-        width: auto;
         border-width: 1px;
         border-color: #fff;
         border-radius: 20px;
