@@ -15,7 +15,7 @@
                 <a href="https://twitter.com/Hemingway_GS" target="_blank" class="w-inline-block">
                     <img src="{{asset("images/twitter.svg")}}" alt="" class="image-5">
                 </a>
-                <a href="https://www.instagram.com/hemingway_leather" target="_blank"h class="w-inline-block">
+                <a href="https://www.instagram.com/hemingway_leather" target="_blank" h class="w-inline-block">
                     <img src="{{asset("images/instagram.svg")}}" alt="" class="image-5">
                 </a>
             </div>
@@ -24,19 +24,19 @@
     </div>
 </div>
 <div class="tri-bloka">
-    <div class="blokovi-sekcija-tri-bloka"><a href="#" class="link-4">O nama</a><a href="/about-us" class="link-tri-bloka w-inline-block"></a></div>
-    <div class="blokovi-sekcija-tri-bloka"><a href="#" class="link-4">Korporativni<br/> pokloni</a><a href="/pokloni" class="link-tri-bloka w-inline-block"></a></div>
-    <div class="blokovi-sekcija-tri-bloka"><a href="#" class="link-4">Kontakt</a><a href="/contact" class="link-tri-bloka w-inline-block"></a></div>
+    <div class="blokovi-sekcija-tri-bloka about-us"><a href="#" class="link-4">O nama</a><a href="/about-us" class="link-tri-bloka w-inline-block"></a></div>
+    <div class="blokovi-sekcija-tri-bloka corporate-gifts"><a href="#" class="link-4">Korporativni<br /> pokloni</a><a href="/pokloni" class="link-tri-bloka w-inline-block"></a></div>
+    <div class="blokovi-sekcija-tri-bloka contact"><a href="#" class="link-4">Kontakt</a><a href="/contact" class="link-tri-bloka w-inline-block"></a></div>
 </div>
 <div class="proizvodi special-section">
     <h1 class="heading">Specijalna ponuda</h1>
     <div class="proizvodi-div">
         @if($specialOfferProducts->count() > 0)
-            @each('partials.product', $specialOfferProducts, 'product')
+        @each('partials.product', $specialOfferProducts, 'product')
         @else
-            <div class="w-dyn-empty">
-                <div>No items found.</div>
-            </div>
+        <div class="w-dyn-empty">
+            <div>No items found.</div>
+        </div>
         @endif
     </div>
 </div>
@@ -50,11 +50,11 @@
     <h1 class="heading">Bestsellers</h1>
     <div class="proizvodi-div">
         @if($topProducts->count() > 0)
-            @each('partials.product', $topProducts, 'product')
+        @each('partials.product', $topProducts, 'product')
         @else
-            <div class="w-dyn-empty">
-                <div>No items found.</div>
-            </div>
+        <div class="w-dyn-empty">
+            <div>No items found.</div>
+        </div>
         @endif
     </div>
 </div>

@@ -26,7 +26,7 @@ class OrderController extends Controller
      */
     const PAYMENT_METHOD_TEXT = [
         PaymentMethod::ON_DELIVERY => 'Plaćanje pouzećem',
-        PaymentMethod::POST_PAYMENT => 'Plaćanje uplatnicom'
+        PaymentMethod::POST_PAYMENT => 'Uplata na žiro račun'
     ];
 
     /**

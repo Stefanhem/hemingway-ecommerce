@@ -2627,8 +2627,8 @@ h2 {
     -ms-flex-align: center;
     align-items: center;
     background-color: transparent;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url('../images/Asset-4-100.jpg');
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/Asset-4-100.jpg');
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url('../images/home1.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/home1.jpg');
     background-position: 0px 0px, 50% 0%;
     background-size: auto, cover;
     background-attachment: scroll, fixed;
@@ -3000,7 +3000,7 @@ h2 {
     height: 50vh;
     margin-right: 2vw;
     border-radius: 50px;
-    background-image: url('../images/Slika2-100.jpg');
+    background-image: url('../images/about-us.jpg');
     background-position: 0% 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -4951,13 +4951,28 @@ h2 {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+}
+.about-us {
     background-color: rgba(0, 0, 0, 0.86);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url('../images/Asset-4-100.jpg');
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/Asset-4-100.jpg');
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url('../images/about-us.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/about-us.jpg');
     background-position: 0px 0px, 50% 50%;
     background-size: auto, cover;
 }
-
+.corporate-gifts {
+    background-color: rgba(0, 0, 0, 0.86);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url('../images/corporate-gifts.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/corporate-gifts.jpg');
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
+}
+.contact {
+    background-color: rgba(0, 0, 0, 0.86);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url('../images/contact.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/contact.jpg');
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
+}
 .link-4 {
     font-family: 'Markpro book', sans-serif;
 
@@ -5472,7 +5487,7 @@ h2 {
     display: -ms-flexbox;
     display: flex;
     height: auto;
-    padding-top: 20vh;
+    padding-top: 10vh;
     padding-right: 10vw;
     padding-left: 15vw;
     -webkit-box-pack: justify;
@@ -6195,6 +6210,18 @@ h2 {
 }
 
 @media screen and (max-width: 991px) {
+    .fotka-proizvoda {
+        width: 60%;
+        display: block;
+        margin: auto;
+    }
+    .text-block {
+        font-size: 3vh;
+    }
+    .search-input {
+        width: 100px;
+        height: 20px;
+    }
     .button {
         -webkit-box-pack: center;
         -webkit-justify-content: center;
@@ -6499,7 +6526,6 @@ h2 {
         top: 40px;
         width: 100%;
         height: auto;
-        margin-top: 40px;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
@@ -6593,7 +6619,8 @@ h2 {
     .proizvod-div {
         display: block;
         width: 80%;
-        height: 60vh;
+        height: auto;
+        margin: auto;
         margin-bottom: 43px;
     }
 
@@ -6627,6 +6654,22 @@ h2 {
 }
 
 @media screen and (max-width: 479px) {
+    .fotka-proizvoda {
+        width: 100%;
+    }
+    .search-input {
+        margin-bottom: 0px;
+        border-style: solid;
+        height: auto;
+        width: auto;
+        border-width: 1px;
+        border-color: #fff;
+        border-radius: 20px;
+        background-color: transparent;
+    }
+    .text-block {
+        font-size: 2vh;
+    }
     .male-fotke {
         width: 100px;
         min-height: 100px;
