@@ -19,7 +19,7 @@
         @if($count > 1)
             <div class="pagination">
                 @for($i=0; $i <= $count; $i++)
-                    <a href="/products/types?page={{$i + 1}}&type=1">{{$i + 1}}</a>
+                    <a href="/products/types?page={{$i + 1}}&type={{$type}}">{{$i + 1}}</a>
                 @endfor
             </div>
         @endif
