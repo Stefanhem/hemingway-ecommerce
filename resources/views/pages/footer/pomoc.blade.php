@@ -72,7 +72,7 @@
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>12. Želim da obradujem nekoga i pošaljem mu poklon direktno na kućnu adresu. Da li je to moguće,
             i na koji način?</strong><br/>
-            -Moguće je, a u ovakvo situaciji je najbolje da nas kontaktirate kako bismo sve organizovali.
+            -Moguće je, a u ovakvoj situaciji je najbolje da nas kontaktirate kako bismo sve organizovali.
         </p>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>13. U procesu naručivanja greškom sam uneo pogrešne podatke. Na koji način mogu to da
