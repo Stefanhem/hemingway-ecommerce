@@ -2,7 +2,7 @@
 @section('title', 'Načini plaćanja i isporuka')
 @section('content')
     <div class="contact-section legal-notice">
-        <h1 class="heading contact-heading">Način plaćanja</h1>
+        <h1 class="heading contact-heading">Načini plaćanja</h1>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             Za narudžbine sa teritorije Republike Srbije, trenutno su u opticaju dva načina plaćanja:
         </p>
