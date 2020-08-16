@@ -21,7 +21,6 @@
             evidentiranju uplate. NAPOMENA: Dostava se, ukoliko nije besplatna, plaća gotovinski kuriru prilikom isporuke.
             Ukoliko plaćate kao pravno lice, kontaktirajte nas za instrukcije.
         </p>
-        </p>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
         Iz inostranstva trenutno je omogućena devizna uplata na račun, a u pripremi je još metoda plaćanja.
         </p>

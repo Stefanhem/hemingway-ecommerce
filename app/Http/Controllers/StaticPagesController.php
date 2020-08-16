@@ -68,6 +68,11 @@ class StaticPagesController extends Controller
         return view('pages.footer.uslovi-koriscenja');
     }
 
+    public function narucivanje()
+    {
+        return view('pages.footer.narucivanje');
+    }
+
     public function contactFormEmail(Request $request)
     {
         Mail::send(new ContactMailable($request->all()));

@@ -30,6 +30,7 @@ Route::get('/placanje', 'StaticPagesController@placanje');
 Route::get('/prava-potrosaca', 'StaticPagesController@prava');
 Route::get('/politika-privatnosti', 'StaticPagesController@politika');
 Route::get('/uslovi-koriscenja', 'StaticPagesController@uslovi');
+Route::get('/porucivanje', 'StaticPagesController@narucivanje');
 
 /* ECOMMERCE ROUTES */
 Route::get('/products/special-offer', 'ProductsController@getSpecialOfferProducts');

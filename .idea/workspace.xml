@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44ab796d-5644-4daa-ab6c-a2070184ceec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/footer/narucivanje.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StaticPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StaticPagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/hemingway-f9fff6.webflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/hemingway-f9fff6.webflow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/home1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/home1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/hemingway-f9fff6.webflow.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/webflow.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/footer/placanje.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/footer/placanje.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,19 +166,19 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projekti\hemingway\public\images" />
+      <recent name="C:\Projekti\hemingway\public\images\labels" />
+      <recent name="C:\Projekti\hemingway\app\Entities" />
+      <recent name="C:\Projekti\hemingway\app" />
+      <recent name="C:\Projekti\hemingway\app\Http\Orders" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Projekti\hemingway\public\css" />
       <recent name="C:\Projekti\hemingway\public\js" />
       <recent name="C:\Projekti\hemingway\public\images" />
       <recent name="C:\Projekti\hemingway\public\images\labels" />
       <recent name="C:\Projekti\hemingway\resources\views\pages\footer" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Projekti\hemingway\public\images\labels" />
-      <recent name="C:\Projekti\hemingway\app\Entities" />
-      <recent name="C:\Projekti\hemingway\app" />
-      <recent name="C:\Projekti\hemingway\app\Http\Orders" />
-      <recent name="C:\Projekti\hemingway\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -221,6 +228,7 @@
       <workItem from="1597169068220" duration="11738000" />
       <workItem from="1597228531604" duration="2424000" />
       <workItem from="1597248513064" duration="2535000" />
+      <workItem from="1597570067704" duration="3096000" />
     </task>
     <servers />
   </component>
@@ -277,10 +285,10 @@
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
     <state x="584" y="250" key="run.anything.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1597180053923" />
-    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1597269817105">
+    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1597571935819">
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
     <state x="588" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1851.1080@0.0.1851.1080" timestamp="1596215124458" />
-    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1597269817105" />
+    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1597571935819" />
   </component>
 </project>
