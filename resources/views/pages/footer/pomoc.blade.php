@@ -46,7 +46,7 @@
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>7. Kako da znam da sam uspešno poručio željene proizvode?</strong><br/>
             -Nakon kupovine na našem veb sajtu, na e-mail adresu koju ostavite će Vam stići potvrda da je narudžbina
-            uspešno obavljena. Zato je jako bitno da unesete ispravnu e-mail adresu<br/>
+            uspešno obavljena. Zato je jako bitno da unesete ispravnu e-mail adresu.<br/>
         </p>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>8. Da li je moguće lično preuzimanje proizvoda?</strong><br/>
@@ -67,7 +67,7 @@
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>11. Ukoliko sam greškom naručio proizvod, da li mogu da otkažem narudžbinu?<br/></strong>
             -Možete, potrebno je da to učinite najkasnije 30 minuta od slanja narudžbine, i to slanjem email-a sa
-            oabeveštenjem o otkazu. Ukoliko niste u mogućnosti da odmah pošaljete e-mail, pozovite nas za instrukcije.
+            obaveštenjem o otkazu. Ukoliko niste u mogućnosti da odmah pošaljete e-mail, pozovite nas za instrukcije.
         </p>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>12. Želim da obradujem nekoga i pošaljem mu poklon direktno na kućnu adresu. Da li je to moguće,
