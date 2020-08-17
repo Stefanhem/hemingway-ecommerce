@@ -22,7 +22,7 @@
                 i stvaralačkih dana, putevi od skice do gotovog proizvoda i osećaj zadovoljstva u tom procesu. Ljudi
                 koji su
                 prepoznali moju ideju, osetili je, i prihvatili kao svoju.<br/><br/>
-                I bilo da Vas koža asocira na krda bizona u Severno-američkim stepama, jaknu Jamesa Dean-a, rukavice na
+                I bilo da Vas koža asocira na krda bizona u Severno-američkim stepama, jaknu James Dean-a, rukavice na
                 volanu kabrioleta, mračnu zanatsku radionicu ili prosto način života, mi smo ti koji izvlače najbolje iz
                 nje, i
                 donose Vam je u najlepšem mogućem obliku.
