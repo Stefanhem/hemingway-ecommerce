@@ -12,5 +12,16 @@
             Kontaktirajte nas i zajedno ćemo pronaći pravi poklon za datu priliku, sa logom Vaše kompanije na sebi i
             posebnim cenama za ovakav vid saradnje.
         </p>
+        <div class="gallery">
+            <a href="images/pokloni/podmetaci-za-case.jpg" data-lightbox="roadtrip"><img class="fotka" src="images/pokloni/podmetaci-za-case.jpg"/></a>
+            <a href="images/pokloni/pokloni-za-muskarce.jpg" data-lightbox="roadtrip"><img class="fotka" src="images/pokloni/pokloni-za-muskarce.jpg"/></a>
+            <a href="images/pokloni/leather-wallet.jpg" data-lightbox="roadtrip"><img class="fotka" src="images/pokloni/leather-wallet.jpg"/></a>
+            <a href="images/pokloni/muski-poklon.jpg" data-lightbox="roadtrip"><img class="fotka" src="images/pokloni/muski-poklon.jpg"/></a>
+            <a href="images/pokloni/leather-case.jpg" data-lightbox="roadtrip"><img class="fotka" src="images/pokloni/leather-case.jpg"/></a>
+            <a href="images/pokloni/futrola-za-kartice.jpg" data-lightbox="roadtrip"><img class="fotka" src="images/pokloni/futrola-za-kartice.jpg"/></a>
+            <a href="images/pokloni/elegantni-poklon.jpg" data-lightbox="roadtrip"><img class="fotka" src="images/pokloni/elegantni-poklon.jpg"/></a>
+            <a href="images/pokloni/futrola-naocare-glavna.jpg" data-lightbox="roadtrip"><img class="fotka" src="images/pokloni/futrola-naocare-glavna.jpg"/></a>
+            <a href="images/pokloni/business.jpg" data-lightbox="roadtrip"><img class="fotka" src="images/pokloni/business.jpg"/></a>
+        </div>
     </div>
 @endsection

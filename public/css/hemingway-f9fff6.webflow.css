@@ -5236,7 +5236,16 @@ h2 {
 .option-list-home-page {
     display: none;
 }
-
+.gallery{
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.gallery img {
+    width: 30%;
+    margin-bottom: 10px;
+}
 .review {
     display: -webkit-box;
     display: -webkit-flex;
@@ -6230,6 +6239,9 @@ h2 {
 }
 
 @media screen and (max-width: 991px) {
+    .gallery img {
+        width: 45%;
+    }
     .text-block-price {
         font-size: 5vh;
     }
@@ -6378,6 +6390,9 @@ h2 {
 }
 
 @media screen and (max-width: 767px) {
+    .gallery img {
+        width: 100%;
+    }
     .code-class{
         margin-bottom: 0;
     }

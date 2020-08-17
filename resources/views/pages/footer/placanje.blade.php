@@ -28,9 +28,9 @@
             <strong>DEVIZNA UPLATA IZ INOSTRANSTVA</strong><br/>
             Ukoliko koristite ovaj metod plaćanja, potrebno je da nas kontaktirate kako bismo Vam poslali instrukcije.<br/>
         </p>
-        </p>
 
         <h1 class="heading contact-heading">Isporuka</h1>
+        <h3>Srbija</h3>
         <ul style="font-family: 'Markpro book', sans-serif">
             <li>PR Hemingway sarađuje sa kurirskim službama koje vrše isporuku na navedenu adresu kupca.</li>
             <li>Prema Zakonu o elektronskoj trgovini (‘’Sl. glasnik RS’’, br. 41/2009, 95/2013 i 52/2019) kada se roba
@@ -48,5 +48,10 @@
             transportna kutija eventualno značajno oštećena i posumnjate da je proizvod možda oštećen, imate
             pravo da odbijete prijem pošte o čemu je potrebno da nas što pre obavestite.</li>
         </ul>
+        <h3>Inostranstvo</h3>
+        <p class="paragraph-222 legal-paragraph" style="width: 100%">
+            Zbog trenutne epidemiološke situacije u svetu i nemogućnosti određivanja bilo kakvih rokova
+            dostave, slanje paketa u inostranstvo u ovom trenutku nije nam omogućeno.
+        </p>
     </div>
 @endsection
