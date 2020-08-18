@@ -9,6 +9,6 @@
     </div>
     <div style="min-width: 75px">
         <p>{{$cartProduct['price']}} RSD </p>
-        <a href="#" class="remove-checkout-product">Obrisi</a>
+        <a href="#" class="remove-checkout-product">Obriši</a>
     </div>
 </div>

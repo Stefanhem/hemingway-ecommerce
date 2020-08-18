@@ -2405,7 +2405,10 @@
     margin-bottom: 20px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
+    .about-text {
+        width: 100%;
+    }
     .after-div::before {
         content: "\A";
         white-space: pre;
@@ -5525,7 +5528,7 @@ h2 {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 50%;
+    width: 60%;
     height: 80%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -5604,7 +5607,7 @@ h2 {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 50%;
+    width: 40%;
     height: 80%;
     padding: 0px 43px 88px 100px;
     padding: 0px 43px 88px 100px;
@@ -6238,15 +6241,56 @@ h2 {
     width: 40%;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1030px) {
+    .paragraph {
+        text-align: center;
+        font-size: 4vh;
+        line-height: 6vh;
+    }
+    .about-text {
+        width: 100%;
+    }
+    .about-picture{
+        display: none;
+    }
+    .tri-bloka {
+        height: 100vh;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .blokovi-sekcija-tri-bloka {
+        width: 60%;
+        height: 30vh;
+    }
+    .review-form {
+        width: 60%;
+    }
+    .footer-novi {
+        padding-right: 0vw;
+        padding-left: 0vw;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .logo-footer {
+        width: 30vw;
+    }
+
+    .linkovi-stranice-footer {
+        width: 100%;
+        padding-top: 5vh;
+        padding-right: 27px;
+        padding-left: 27px;
+    }
     .gallery img {
         width: 45%;
-    }
-    .text-block-price {
-        font-size: 5vh;
-    }
-    .text-block-18 {
-        font-size: 3vh !important;
     }
     .code-class{
         margin-bottom: 0;
@@ -6258,7 +6302,6 @@ h2 {
     }
     .div-block-product {
         width: 100%;
-        height: auto;
     }
     .fotka-proizvoda {
         width: 60%;
@@ -6266,7 +6309,8 @@ h2 {
         margin: auto;
     }
     .text-block {
-        font-size: 3vh;
+        font-size: 2vh;
+        line-height: normal;
     }
     .search-input {
         width: 100px;
@@ -6389,7 +6433,10 @@ h2 {
     clear:both;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
+    .about-picture{
+        display: none;
+    }
     .gallery img {
         width: 100%;
     }
@@ -6406,6 +6453,7 @@ h2 {
 
     .paragraph {
         text-align: center;
+        font-size: 4vh;
     }
 
     .social-div {
@@ -6796,6 +6844,7 @@ h2 {
 
     .paragraph {
         line-height: 8vh;
+        font-size: 4vh;
     }
 
     .div-block-4 {
