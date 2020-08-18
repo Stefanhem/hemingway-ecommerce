@@ -6,7 +6,8 @@
         <div class="div-block-2">
             <div class="text-block-3">-   Established 2020   -</div>
             <div class="div-block-3">
-                <p class="paragraph"><i>''Being a true Gentleman never goes out of style.</i></p>
+                <p class="paragraph"><i>''Being a true Gentleman</br> 
+                never goes out of style.</i></p>
             </div>
             <div class="social-div">
                 <a href="https://www.facebook.com/hemingway.leather" target="_blank" class="w-inline-block">
