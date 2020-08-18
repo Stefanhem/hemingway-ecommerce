@@ -5082,7 +5082,7 @@ h2 {
     display: -ms-flexbox;
     display: flex;
     width: auto;
-    margin-left: 5vw;
+    margin-left: 3vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -6299,13 +6299,12 @@ h2 {
         margin-bottom: 0;
     }
     .male-fotke {
-        width: 100px;
+        width: 100%;
         min-height: 100px;
         margin-right: 5px;
     }
     .div-block-product {
-        width: 100%;
-        height: 100%;
+        width: 40%;
     }
     .fotka-proizvoda {
         width: 60%;
@@ -6668,6 +6667,8 @@ h2 {
     }
 
     .div-block-product {
+        width: 100%;
+        height: 100%;
         margin-top: 21px;
         margin-bottom: 0px;
         -webkit-box-orient: horizontal;
