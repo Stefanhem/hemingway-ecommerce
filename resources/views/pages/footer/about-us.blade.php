@@ -11,7 +11,7 @@
                 mogao bi biti taj zvaničan odgovor na pitanje ‘’Kako je nastao Hemingway?’’. Ali kao što svaki film ima
                 sate i
                 sate snimanja koje na kraju niko nikada ne vidi, tako i u ovoj priči postoji još nešto.<br/><br/>
-                A to nešto su sati, dani i noći, šivenja, učenja, crtanja, čitanja, vežbanja... Kilometri potrošenog
+                A to nešto su sati, dani i noći šivenja, učenja, crtanja, čitanja, vežbanja... Kilometri potrošenog
                 konca, rolne
                 pogrešno iskrojene kože, gomila istupljenog alata, desetine slomljenih igala, stotine bačenih nitni... I
                 jedan par
