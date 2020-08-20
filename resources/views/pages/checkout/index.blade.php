@@ -37,7 +37,7 @@
                         <div class="row">
                             <div class="collumn">
                                 <label for="city">Grad*</label>
-                                <input type="tel" class="text-field-3 w-input" maxlength="256" name="city" id="city" required="">
+                                <input type="text" class="text-field-3 w-input" maxlength="256" name="city" id="city" required="">
                             </div>
                             <div class="collumn">
                                 <label for="zipCode">Poštanski broj*</label>
@@ -88,7 +88,7 @@
                         </div>-->
                 </div>
                 <button type="submit" name='action' value='on-delivery' class="button-6 w-button" style="margin-bottom: 10px;">Plaćanje pouzećem</button>
-                <button type="submit" name='action' value='post-payment' class="button-6 w-button" style="background-color: red">Plaćanje uplatnicom</button>
+                <button type="submit" name='action' value='post-payment' class="button-6 w-button" style="background-color: rgba(0, 0, 0, 0.7)">Plaćanje uplatnicom</button>
             </div>
         </div>
         {{ Form::close() }}

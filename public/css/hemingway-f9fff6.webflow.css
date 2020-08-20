@@ -2799,6 +2799,7 @@ h2 {
     align-items: center;
     font-family: 'Didot htf l24';
     color: #fff;
+    z-index: 1;
 }
 
 .text-block-2 {
@@ -6437,6 +6438,12 @@ h2 {
 }
 
 @media screen and (max-width: 770px) {
+    .text-block-price {
+        font-size: 5vh;
+    }
+    .text-block-18 {
+        font-size: 3vh !important;
+    }
     .about-picture{
         display: none;
     }
@@ -6769,6 +6776,9 @@ h2 {
 }
 
 @media screen and (max-width: 479px) {
+    .social-div {
+        display: none;
+    }
     .code-class{
         margin-bottom: 0;
     }

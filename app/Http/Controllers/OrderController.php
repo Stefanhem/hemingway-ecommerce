@@ -137,11 +137,11 @@ class OrderController extends Controller
             'deliveryPhone' => $newOrder->deliveryPhone
         ];
         if ($newOrder->idPaymentMethod === PaymentMethod::POST_PAYMENT) {
-            try{
+            /*try{
                 Mail::send(new OrderCreateCustomerMailable($data));
             } catch (\Exception $exception) {
                 info('MAIL ERROR: ' . $exception->getMessage());
-            }
+            }*/
         }
 
         Session::remove('products');
@@ -195,7 +195,7 @@ class OrderController extends Controller
                 'deliveryName' => $order->deliveryName,
                 'deliveryPhone' => $order->deliveryPhone
             ];
-            Mail::send(new ConfirmOrderMailable($data, (isset($isFreeDelivery) ? $isFreeDelivery : null)));
+            //Mail::send(new ConfirmOrderMailable($data, (isset($isFreeDelivery) ? $isFreeDelivery : null)));
         } catch (\Exception $exception) {
             info('MAIL ERROR: ' . $exception->getMessage());
         }
