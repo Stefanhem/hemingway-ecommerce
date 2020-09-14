@@ -72,7 +72,7 @@ class ProductsController extends Controller
         $productsCount = $model->count();
 
         $products = $this->paginateQuery($model, $request);
-        return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => ceil($productsCount / self::PRODUCTS_PER_PAGE), 'typeName' => 'Specijalna ponuda']);
+        return view('pages.products.products-special-offer', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => ceil($productsCount / self::PRODUCTS_PER_PAGE), 'typeName' => 'Specijalna ponuda']);
     }
 
     /**
