@@ -58,7 +58,7 @@ class ProductsController extends Controller
             $productsCount = $model->count();
             $products = $this->paginateQuery($model, $request);
         }
-        return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => (int)$productsCount / self::PRODUCTS_PER_PAGE, 'type' => $type, 'typeName' => !empty($typeModel) ? $typeModel->name : '']);
+        return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => ceil($productsCount / self::PRODUCTS_PER_PAGE), 'type' => $type, 'typeName' => !empty($typeModel) ? $typeModel->name : '']);
     }
 
     /**
@@ -72,7 +72,7 @@ class ProductsController extends Controller
         $productsCount = $model->count();
 
         $products = $this->paginateQuery($model, $request);
-        return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => (int)$productsCount / self::PRODUCTS_PER_PAGE, 'typeName' => 'Specijalna ponuda']);
+        return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => ceil($productsCount / self::PRODUCTS_PER_PAGE), 'typeName' => 'Specijalna ponuda']);
     }
 
     /**
@@ -90,7 +90,12 @@ class ProductsController extends Controller
         $productsCount = $model->count();
         $products = $this->paginateQuery($model, $request);
 
-        return view('pages.products.products-list', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => (int)$productsCount / self::PRODUCTS_PER_PAGE, 'typeName' => !empty($typeModel) ? $typeModel->name : '']);
+        return view('pages.products.product-search-list', [
+            'chunks' => !empty($products) ? $products->chunk(3) : collect([]),
+            'count' => ceil($productsCount / self::PRODUCTS_PER_PAGE),
+            'typeName' => !empty($typeModel) ? $typeModel->name : '',
+            'name'  => $name
+        ]);
     }
 
     /**
