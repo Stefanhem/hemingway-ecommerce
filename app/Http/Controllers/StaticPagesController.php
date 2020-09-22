@@ -75,7 +75,14 @@ class StaticPagesController extends Controller
 
     public function contactFormEmail(Request $request)
     {
-        Mail::send(new ContactMailable($request->all()));
+        //Mail::send(new ContactMailable($request->all()));
+        $data = $request->all();
+        try {
+            mail('office@hemingwayleather.com', 'Contact Form', $data['field'], 'From: ' . $data['email'] . ', Name: ' . $data['name']);
+        } catch (\Exception $exception) {
+            info($exception->getMessage());
+            return view('pages.footer.contact', ['successful' => false]);
+        }
         return view('pages.footer.contact', ['successful' => true]);
     }
 }
