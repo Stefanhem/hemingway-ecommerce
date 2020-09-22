@@ -166,12 +166,12 @@ class ProductsController extends Controller
      *
      * @param int $id
      * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\RepdirectResponse
      */
     public function addCart(int $id, Request $request)
     {
         $product = Product::find($id);
-        $price = $request->get('quantity') * $product->price;
+        $price = $request->get('quantity') * $product->getPrice();
 
         Session::push('products', [
             'id' => !empty(Session::get('products')) ? count(Session::get('products')) : 0,
@@ -184,7 +184,7 @@ class ProductsController extends Controller
         $cartProducts = Session::get('products');
 
         $cartSum = array_sum(array_map(function ($cartProduct) {
-            return $cartProduct['product']->price * $cartProduct['quantity'];
+            return $cartProduct['product']->getPrice() * $cartProduct['quantity'];
         }, $cartProducts));
 
         Session::put('cartSum', $cartSum);
@@ -212,7 +212,7 @@ class ProductsController extends Controller
         Session::put('products', $products);
         // calculate the new sum
         $cartSum = array_sum(array_map(function ($cartProduct) {
-            return $cartProduct['product']->price * $cartProduct['quantity'];
+            return $cartProduct['product']->getPrice() * $cartProduct['quantity'];
         }, $products));
         // put it in the new session
         Session::put('cartSum', $cartSum);

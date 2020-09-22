@@ -40,6 +40,13 @@ class Product extends Model
         return ($this->isOnSpecialOffer || $this->idType === self::TYPE_SPECIAL_OFFER);
     }
 
+    public function getPrice()
+    {
+        if ($this->isOnSpecialOffer())
+            return $this->priceOnSpecialOffer;
+        return $this->price;
+    }
+
     public function labels()
     {
         return $this->hasMany(ProductLabel::class, 'idProduct');
