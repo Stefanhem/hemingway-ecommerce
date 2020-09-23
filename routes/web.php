@@ -33,6 +33,7 @@ Route::get('/uslovi-koriscenja', 'StaticPagesController@uslovi');
 Route::get('/porucivanje', 'StaticPagesController@narucivanje');
 
 /* ECOMMERCE ROUTES */
+Route::get('/pokloni-za-muskarce', 'ProductsController@index');
 Route::get('/products/special-offer', 'ProductsController@getSpecialOfferProducts');
 Route::get('/products/types', 'ProductsController@getProductsByType');
 Route::resource('products', 'ProductsController');

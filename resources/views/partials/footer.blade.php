@@ -19,6 +19,7 @@
             ><a href="/about-us" class="link-3">O nama</a>
             <!--<a href="/contact" class="link-3">Personalizacija</a>-->
             <a href="/pokloni" class="link-3">Korporativni pokloni</a>
+            <a href="/pokloni-za-muskarce" class="link-3">Pokloni za muskarce</a>
             <!--<a href="#" class="link-3">Blog</a>-->
             <a href="/poslovi" class="link-3">Poslovi i saradnja</a>
             <!--<a href="/predlozi" class="link-3">Predloži proizvod</a>-->

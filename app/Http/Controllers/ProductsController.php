@@ -28,11 +28,17 @@ class ProductsController extends Controller
     /**
      * Display top 3 products on the front page
      *
-     * @return Product[]|\Illuminate\Database\Eloquent\Collection
+     * @param Product $model
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index()
+    public function index(Product $model, Request $request)
     {
-        return Product::take(3)->get();
+        $model = $model->distinct('name');
+        $productsCount = $model->count();
+        $products = $this->paginateQuery($model, $request);
+
+        return view('pages.products.products', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => ceil($productsCount / self::PRODUCTS_PER_PAGE), 'typeName' => 'Pokloni za muškarce']);
     }
 
     /**
@@ -94,7 +100,7 @@ class ProductsController extends Controller
             'chunks' => !empty($products) ? $products->chunk(3) : collect([]),
             'count' => ceil($productsCount / self::PRODUCTS_PER_PAGE),
             'typeName' => !empty($typeModel) ? $typeModel->name : '',
-            'name'  => $name
+            'name' => $name
         ]);
     }
 
