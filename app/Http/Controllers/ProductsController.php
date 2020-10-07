@@ -34,10 +34,14 @@ class ProductsController extends Controller
      */
     public function index(Product $model, Request $request)
     {
-        $model = $model->distinct('name');
-        $productsCount = $model->count();
-        $products = $this->paginateQuery($model, $request);
+        $products = $model->all();
+        $products = $products->unique('name');
+        $productsCount = $products->count();
 
+        if ($request->has('page') && $request->get('page') > 1) {
+            $products = $products->skip(self::PRODUCTS_PER_PAGE * ((int)$request->get('page') - 1));
+        }
+        $products = $products->take(self::PRODUCTS_PER_PAGE);
         return view('pages.products.products', ['chunks' => !empty($products) ? $products->chunk(3) : collect([]), 'count' => ceil($productsCount / self::PRODUCTS_PER_PAGE), 'typeName' => 'Pokloni za muškarce']);
     }
 
