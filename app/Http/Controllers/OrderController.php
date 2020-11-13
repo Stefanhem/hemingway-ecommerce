@@ -136,13 +136,13 @@ class OrderController extends Controller
             'deliveryName' => $newOrder->deliveryName,
             'deliveryPhone' => $newOrder->deliveryPhone
         ];
-        if ($newOrder->idPaymentMethod === PaymentMethod::POST_PAYMENT) {
-            /*try{
+        /*if ($newOrder->idPaymentMethod === PaymentMethod::POST_PAYMENT) {
+            try{
                 Mail::send(new OrderCreateCustomerMailable($data));
             } catch (\Exception $exception) {
                 info('MAIL ERROR: ' . $exception->getMessage());
-            }*/
-        }
+            }
+        }*/
 
         Session::remove('products');
         Session::remove('cartSum');
@@ -160,10 +160,10 @@ class OrderController extends Controller
         $status = $request->get('status');
         $order = Order::find($id);
         $order->status = $status;
-        
-        if ($request->has('free-delivery')) {
+
+        /*if ($request->has('free-delivery')) {
             $isFreeDelivery = true;
-        }
+        }*/
 
         if ($status == Order::STATUS_DENIED) {
             foreach ($order->products as $orderProduct) {
@@ -173,7 +173,7 @@ class OrderController extends Controller
         }
         $order->save();
 
-        try {
+        /*try {
             $products = [];
             foreach ($order->products as $orderProduct) {
                 $products[] = [
@@ -198,7 +198,7 @@ class OrderController extends Controller
             //Mail::send(new ConfirmOrderMailable($data, (isset($isFreeDelivery) ? $isFreeDelivery : null)));
         } catch (\Exception $exception) {
             info('MAIL ERROR: ' . $exception->getMessage());
-        }
+        }*/
 
         return $this->show($id);
     }

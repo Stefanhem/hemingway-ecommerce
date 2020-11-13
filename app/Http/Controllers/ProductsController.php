@@ -10,8 +10,10 @@ use App\Http\Requests\ProductUpdateRequest;
 use App\Product;
 use App\ProductColor;
 use App\ProductType;
+use App\ProductTypeMiddle;
 use App\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Session;
 
 /**
@@ -55,16 +57,17 @@ class ProductsController extends Controller
     public function getProductsByType(Product $model, Request $request)
     {
         $type = null;
+        $products = [];
         $typeModel = null;
+        $productsCount = 0;
         if ($request->has('type')) {
             $type = $request->get('type');
             $typeModel = ProductType::where('id', $type)->first();
-            $model = $model->where('idType', $type);
         }
-        if (empty($typeModel) && !empty($type)) {
-            $products = [];
-            $productsCount = 0;
-        } else {
+        if (!empty($typeModel) && !empty($type)) {
+            $model = $model->select('products.*')->join('product_type_middles', function ($join) {
+                $join->on('product_type_middles.idProduct', '=', 'products.id');
+            })->where('product_type_middles.idProductType', $typeModel->id);
             $productsCount = $model->count();
             $products = $this->paginateQuery($model, $request);
         }
@@ -78,7 +81,10 @@ class ProductsController extends Controller
      */
     public function getSpecialOfferProducts(Product $model, Request $request)
     {
-        $model = $model->where('isOnSpecialOffer', 1)->orWhere('idType', Product::TYPE_SPECIAL_OFFER);
+        $model = $model->select('products.*')->join('product_type_middles', function ($join) {
+            $join->on('product_type_middles.idProduct', '=', 'products.id');
+        })->where('products.isOnSpecialOffer', 1)->orWhere('product_type_middles.idProductType', Product::TYPE_SPECIAL_OFFER);
+
         $productsCount = $model->count();
 
         $products = $this->paginateQuery($model, $request);
@@ -139,6 +145,17 @@ class ProductsController extends Controller
 
         $data['mainImage'] = $inPublicPath . $imageName;
         $product = Product::create($data);
+
+        $productTypes = Arr::get($data, 'productTypes');
+
+        if (!empty($productTypes)) {
+            foreach ($productTypes as $productTypeId) {
+                ProductTypeMiddle::create([
+                    'idProduct' => $product->id,
+                    'idProductType' => $productTypeId
+                ]);
+            }
+        }
         return redirect('/products/' . $product->id);
     }
 
@@ -159,15 +176,24 @@ class ProductsController extends Controller
      */
     public function show(Product $product)
     {
+        $sameTypeProducts = collect();
         $colors = ProductColor::with('color')->where('idProduct', $product->id)->get();
-        $sameTypeProducts = Product::whereIn('idType', Product::$SIMMILAR_PRODUCTS[$product->idType])->where('id', '<>', $product->id)->take(3)->get();
-        $reviews = Review::where('idProduct', $product->id)->take(3)->get();
+        $productType = $product->productTypes->first();
+
+        if (!empty($productType)) {
+            $sameTypeProducts = Product::join('product_type_middles', function ($join) {
+                $join->on('product_type_middles.idProduct', '=', 'products.id');
+            })->whereIn('product_type_middles.idProductType', Product::$SIMMILAR_PRODUCTS[$productType->idProductType])
+                ->where('products.id', '<>', $product->id)
+                ->inRandomOrder()->take(3)->get();
+        }
+
         return view('pages.products.product-page', [
             'product' => $product,
             'productColors' => $colors,
             'sameTypeProducts' => $sameTypeProducts,
             'labels' => isset($product->labels) ? $product->labels : collect(),
-            'reviews' => $reviews
+            'reviews' => $product->reviews
         ]);
     }
 
@@ -311,9 +337,9 @@ class ProductsController extends Controller
      */
     public function adminEditProduct(int $id)
     {
-        $product = Product::find($id);
+        $product = Product::with('productTypes')->where('id', $id)->first();
         $types = ProductType::all();
-        return view('admin.pages.edit-product', ['product' => $product, 'types' => $types]);
+        return view('admin.pages.edit-product', ['product' => $product, 'types' => $types, 'checkedTypes' => $product->productTypes()->pluck('idProductType')->toArray()]);
     }
 
     /**
@@ -325,6 +351,7 @@ class ProductsController extends Controller
     {
         $product = Product::find($id);
         $data = $request->all();
+
         if (!empty($data['image'])) {
             $inPublicPath = 'images/products/';
             $image = $request->file('image');
@@ -333,8 +360,22 @@ class ProductsController extends Controller
             $image->move(public_path($inPublicPath), $imageName);
             $data['mainImage'] = $inPublicPath . $imageName;
         }
-        if (!isset($data['isOnSpecialOffer']))
+        if (!isset($data['isOnSpecialOffer'])) {
             $data['isOnSpecialOffer'] = false;
+        }
+        $productTypes = Arr::get($data, 'productTypes');
+
+        if (!empty($productTypes)) {
+            foreach ($productTypes as $productTypeId) {
+                ProductTypeMiddle::updateOrCreate([
+                    'idProduct' => $product->id,
+                    'idProductType' => $productTypeId
+                ], [
+                    'idProduct' => $product->id,
+                    'idProductType' => $productTypeId
+                ]);
+            }
+        }
 
         $product->fill($data);
         $product->save();

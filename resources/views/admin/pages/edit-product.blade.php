@@ -80,28 +80,15 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-5 mb-3">
-                        <label for="type">Type of product</label>
-                        <select class="custom-select d-block w-100" id="type" name="idType" required>
-                            <option value="">Choose...</option>
-                            @foreach($types as $type)
-                                <option
-                                    value="{{$type->id}}" {{($type->id == $product->idType) ? 'selected' : ''}}>{{$type->name}}</option>
-                            @endforeach
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a valid type.
+                <label for="description" style="margin-bottom: 20px">Product Types</label>
+                @foreach($types as $type)
+                    <div class="row">
+                        <div class="col-md-5 mb-3" style="padding-left: 35px">
+                            <input type="checkbox" class="form-check-input" name="productTypes[]" value="{{$type->id}}" {{(in_array($type->id, $checkedTypes) ? 'checked' : '')}}/>
+                            <label class="form-check-label" for="labels">{{$type->name}}</label>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-5 mb-3">
-                        <input type="checkbox" id="isOnSpecialOffer" name="isOnSpecialOffer"
-                               value="1" {{ ($product->isOnSpecialOffer) ? 'checked' : '' }}>
-                        <label for="isOnSpecialOffer">Is on special offer</label>
-                    </div>
-                </div>
+                @endforeach
 
                 <div class="row">
                     <div class="col-md-8 order-md-1">
@@ -112,6 +99,14 @@
                                 <label class="custom-file-label" for="customFile">Choose file</label>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <input type="checkbox" id="isOnSpecialOffer" name="isOnSpecialOffer"
+                               value="1" {{ ($product->isOnSpecialOffer) ? 'checked' : '' }}>
+                        <label for="isOnSpecialOffer">Is on special offer</label>
                     </div>
                 </div>
                 <hr class="mb-4">

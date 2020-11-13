@@ -77,20 +77,15 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-5 mb-3">
-                        <label for="type">Type of product</label>
-                        <select class="custom-select d-block w-100" id="type" name="idType" required>
-                            <option value="">Choose...</option>
-                            @foreach($data['types'] as $type)
-                                <option value="{{$type->id}}">{{$type->name}}</option>
-                            @endforeach
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a valid type.
+                <label for="description" style="margin-bottom: 20px">Product Types</label>
+                @foreach($data['types'] as $type)
+                    <div class="row">
+                        <div class="col-md-5 mb-3" style="padding-left: 35px">
+                            <input type="checkbox" class="form-check-input" name="productTypes[]" value="{{$type->id}}"/>
+                            <label class="form-check-label" for="labels">{{$type->name}}</label>
                         </div>
                     </div>
-                </div>
+                @endforeach
 
                 <div class="row">
                     <div class="col-md-8 order-md-1">

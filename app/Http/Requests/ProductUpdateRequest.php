@@ -29,8 +29,7 @@ class ProductUpdateRequest extends FormRequest
             'quantityInStock' => 'required|integer',
             'isOnSpecialOffer' => 'boolean',
             'description' => 'required',
-            'image' => 'file',
-            'idType' => 'required|exists:product_types,id'
+            'image' => 'file'
         ];
     }
 }

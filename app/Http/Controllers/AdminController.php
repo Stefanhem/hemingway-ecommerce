@@ -21,7 +21,7 @@ class AdminController extends Controller
      */
     public function home()
     {
-        $orders = Order::orderBy('id', 'desc')->take(10)->get();
+        $orders = Order::orderBy('id', 'desc')->take(30)->get();
         return view('admin.pages.home', ['orders' => $orders]);
     }
 

@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44ab796d-5644-4daa-ab6c-a2070184ceec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/products/products.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ProductRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ProductRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ProductUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ProductUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/edit-product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/edit-product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/products.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +158,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -159,6 +167,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -230,6 +239,9 @@
       <workItem from="1600610210346" duration="1084000" />
       <workItem from="1600803355790" duration="1379000" />
       <workItem from="1600879398442" duration="3806000" />
+      <workItem from="1604165463730" duration="2443000" />
+      <workItem from="1604530549176" duration="596000" />
+      <workItem from="1604766482471" duration="7147000" />
     </task>
     <servers />
   </component>
@@ -248,10 +260,11 @@
       <screen x="0" y="0" width="1851" height="1080" />
     </state>
     <state x="707" y="343" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1851.1080@0.0.1851.1080" timestamp="1596229388365" />
-    <state x="732" y="257" key="#com.intellij.ide.util.MemberChooser" timestamp="1597083587283">
-      <screen x="0" y="0" width="1855" height="1080" />
+    <state x="732" y="257" key="#com.intellij.ide.util.MemberChooser" timestamp="1604772240066">
+      <screen x="0" y="0" width="1854" height="1080" />
     </state>
     <state x="730" y="257" key="#com.intellij.ide.util.MemberChooser/0.0.1851.1080@0.0.1851.1080" timestamp="1596397210291" />
+    <state x="732" y="257" key="#com.intellij.ide.util.MemberChooser/0.0.1854.1080@0.0.1854.1080" timestamp="1604772240066" />
     <state x="732" y="257" key="#com.intellij.ide.util.MemberChooser/0.0.1855.1080@0.0.1855.1080" timestamp="1597083587283" />
     <state x="606" y="277" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1596818524378">
       <screen x="0" y="0" width="1855" height="1080" />
@@ -266,10 +279,10 @@
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
     <state x="550" y="108" key="CommitChangelistDialog2/0.0.1855.1080@0.0.1855.1080" timestamp="1597178419536" />
-    <state x="705" y="296" key="FileChooserDialogImpl" timestamp="1595626479787">
-      <screen x="0" y="0" width="1851" height="1080" />
+    <state x="707" y="295" key="FileChooserDialogImpl" timestamp="1604530581386">
+      <screen x="0" y="0" width="1854" height="1080" />
     </state>
-    <state x="705" y="296" key="FileChooserDialogImpl/0.0.1851.1080@0.0.1851.1080" timestamp="1595626479787" />
+    <state x="707" y="295" key="FileChooserDialogImpl/0.0.1854.1080@0.0.1854.1080" timestamp="1604530581386" />
     <state x="728" y="263" key="NewPhpClassDialog" timestamp="1597083387363">
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
@@ -282,15 +295,16 @@
       <screen x="0" y="0" width="1855" height="1080" />
     </state>
     <state x="41" y="0" width="1441" height="1067" key="dock-window-1/0.0.1855.1080@0.0.1855.1080" timestamp="1596892723416" />
-    <state x="584" y="250" key="run.anything.popup" timestamp="1597180053923">
-      <screen x="0" y="0" width="1855" height="1080" />
+    <state x="584" y="250" key="run.anything.popup" timestamp="1604173941523">
+      <screen x="0" y="0" width="1854" height="1080" />
     </state>
+    <state x="584" y="250" key="run.anything.popup/0.0.1854.1080@0.0.1854.1080" timestamp="1604173941523" />
     <state x="584" y="250" key="run.anything.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1597180053923" />
-    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1600879465996">
+    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup" timestamp="1604769471938">
       <screen x="0" y="0" width="1854" height="1080" />
     </state>
     <state x="588" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1851.1080@0.0.1851.1080" timestamp="1596215124458" />
-    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup/0.0.1854.1080@0.0.1854.1080" timestamp="1600879465996" />
+    <state x="589" y="235" width="674" height="678" key="search.everywhere.popup/0.0.1854.1080@0.0.1854.1080" timestamp="1604769471938" />
     <state x="589" y="235" width="674" height="678" key="search.everywhere.popup/0.0.1855.1080@0.0.1855.1080" timestamp="1600120510544" />
   </component>
 </project>

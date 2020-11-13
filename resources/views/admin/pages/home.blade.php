@@ -40,7 +40,7 @@
                         <td>{{$order->phoneNumber}}</td>
                         <td>{{$order->address . ' ' . $order->city . ' ' . $order->zipCode}}</td>
                         <td>{{(new DateTime($order->created_at))->format('d.m.Y.')}}</td>
-                        <td>{{(new DateTime($order->created_at))->format('H:m:i')}}</td>
+                        <td>{{(new DateTime($order->created_at))->format('H:i')}}</td>
                         <td>{{$order->price}}</td>
                         <th>{{ \App\Order::getStatusText($order->status) }}</th>
                         <td><a href="/orders/{{$order->id}}">Pogledaj porudžbinu</a></td>

@@ -35,20 +35,46 @@ class Product extends Model
     protected $hidden = ['created_at', 'updated_at'];
     protected $fillable = ['name', 'idType', 'price', 'quantityInStock', 'mainImage', 'description', 'isOnSpecialOffer', 'priceOnSpecialOffer', 'dimensions', 'code'];
 
+    /**
+     * @return bool
+     */
     public function isOnSpecialOffer()
     {
-        return ($this->isOnSpecialOffer || $this->idType === self::TYPE_SPECIAL_OFFER);
+        return ($this->isOnSpecialOffer || count($this->productTypes->where('idProductType', self::TYPE_SPECIAL_OFFER)) > 0);
     }
 
+    /**
+     * @return mixed
+     */
     public function getPrice()
     {
-        if ($this->isOnSpecialOffer())
+        if ($this->isOnSpecialOffer()) {
             return $this->priceOnSpecialOffer;
+        }
         return $this->price;
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function labels()
     {
         return $this->hasMany(ProductLabel::class, 'idProduct');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reviews()
+    {
+        return $this->hasMany(Review::class, 'idProduct');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function productTypes()
+    {
+        return $this->hasMany(ProductTypeMiddle::class, 'idProduct')->inRandomOrder()->take(3);
     }
 }
