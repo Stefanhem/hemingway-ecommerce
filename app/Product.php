@@ -33,7 +33,7 @@ class Product extends Model
     ];
 
     protected $hidden = ['created_at', 'updated_at'];
-    protected $fillable = ['name', 'idType', 'price', 'quantityInStock', 'mainImage', 'description', 'isOnSpecialOffer', 'priceOnSpecialOffer', 'dimensions', 'code', 'isPersonalisationEnabled'];
+    protected $fillable = ['name', 'idType', 'price', 'quantityInStock', 'mainImage', 'description', 'isOnSpecialOffer', 'priceOnSpecialOffer', 'dimensions', 'code', 'isPersonalisationEnabled', 'order'];
 
     /**
      * @return bool
@@ -76,5 +76,10 @@ class Product extends Model
     public function productTypes()
     {
         return $this->hasMany(ProductTypeMiddle::class, 'idProduct')->inRandomOrder()->take(3);
+    }
+
+    public function productTypesMiddle()
+    {
+        return $this->hasMany(ProductTypeMiddle::class, 'idProduct');
     }
 }

@@ -67,7 +67,8 @@ class ProductsController extends Controller
         if (!empty($typeModel) && !empty($type)) {
             $model = $model->select('products.*')->join('product_type_middles', function ($join) {
                 $join->on('product_type_middles.idProduct', '=', 'products.id');
-            })->where('product_type_middles.idProductType', $typeModel->id);
+            })->where('product_type_middles.idProductType', $typeModel->id)
+                ->orderBy('products.order', 'desc');
             $productsCount = $model->count();
             $products = $this->paginateQuery($model, $request);
         }
@@ -83,7 +84,9 @@ class ProductsController extends Controller
     {
         $model = $model->select('products.*')->join('product_type_middles', function ($join) {
             $join->on('product_type_middles.idProduct', '=', 'products.id');
-        })->where('products.isOnSpecialOffer', 1)->orWhere('product_type_middles.idProductType', Product::TYPE_SPECIAL_OFFER);
+        })->where('products.isOnSpecialOffer', 1)
+            ->orWhere('product_type_middles.idProductType', Product::TYPE_SPECIAL_OFFER)
+            ->orderBy('products.order', 'desc');
 
         $productsCount = $model->count();
 
@@ -102,7 +105,7 @@ class ProductsController extends Controller
             return view('pages.products.products-list', ['chunks' => collect([]), 'count' => 0, 'typeName' => 'No results for your search']);
         }
         $name = $request->get('name');
-        $model = $model->where('name', 'like', '%' . $name . '%');
+        $model = $model->where('name', 'like', '%' . $name . '%')->orderBy('order', 'desc');
         $productsCount = $model->count();
         $products = $this->paginateQuery($model, $request);
 
@@ -342,7 +345,7 @@ class ProductsController extends Controller
     {
         $product = Product::with('productTypes')->where('id', $id)->first();
         $types = ProductType::all();
-        return view('admin.pages.edit-product', ['product' => $product, 'types' => $types, 'checkedTypes' => $product->productTypes()->pluck('idProductType')->toArray()]);
+        return view('admin.pages.edit-product', ['product' => $product, 'types' => $types, 'checkedTypes' => $product->productTypesMiddle()->pluck('idProductType')->toArray()]);
     }
 
     /**

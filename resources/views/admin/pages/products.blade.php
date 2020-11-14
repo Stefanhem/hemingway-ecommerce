@@ -69,6 +69,17 @@
 
                 <div class="row">
                     <div class="col-md-5 mb-3">
+                        <label for="quantityInStock">Order</label>
+                        <input type="text" class="form-control" id="order" name="order" placeholder=""
+                               value="1000">
+                        <div class="invalid-feedback">
+                            Please select a valid string.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 mb-3">
                         <label for="description">Description</label>
                         <textarea class="form-control" id="description" name="description" rows="3"></textarea>
                         <div class="invalid-feedback">
@@ -81,7 +92,8 @@
                 @foreach($data['types'] as $type)
                     <div class="row">
                         <div class="col-md-5 mb-3" style="padding-left: 35px">
-                            <input type="checkbox" class="form-check-input" name="productTypes[]" value="{{$type->id}}"/>
+                            <input type="checkbox" class="form-check-input" name="productTypes[]"
+                                   value="{{$type->id}}"/>
                             <label class="form-check-label" for="labels">{{$type->name}}</label>
                         </div>
                     </div>

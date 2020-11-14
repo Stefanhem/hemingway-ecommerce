@@ -72,6 +72,17 @@
 
                 <div class="row">
                     <div class="col-md-5 mb-3">
+                        <label for="quantityInStock">Order</label>
+                        <input type="text" class="form-control" id="order" name="order" placeholder=""
+                               value="{{$product->order}}">
+                        <div class="invalid-feedback">
+                            Please select a valid string.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 mb-3">
                         <label for="description">Description</label>
                         <textarea class="form-control" id="description" name="description"
                                   rows="3">{{$product->description}}</textarea>
@@ -82,6 +93,7 @@
                 </div>
 
                 <label for="description" style="margin-bottom: 20px">Product Types</label>
+
                 @foreach($types as $type)
                     <div class="row">
                         <div class="col-md-5 mb-3" style="padding-left: 35px">
