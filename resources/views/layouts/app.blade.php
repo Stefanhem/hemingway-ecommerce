@@ -3,6 +3,7 @@
 
 <head>
     <!-- Google Tag Manager -->
+    @if (\Illuminate\Support\Facades\App::environment('production'))
     <script>
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
@@ -19,6 +20,7 @@
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-KKRL5KN');
     </script>
+    @endif
     <!-- End Google Tag Manager -->
 
     <!-- CSRF Token -->

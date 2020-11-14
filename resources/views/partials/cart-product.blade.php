@@ -3,8 +3,11 @@
     <div class="div-block-19">
         <div class="text-block-23">{{$cartProduct['product']->name}}</div>
         <div>Količina: {{$cartProduct['quantity']}} </div>
+        @if (!empty($cartProduct['personalisation']))
+            <div>Personalizacija: {{$cartProduct['personalisation']}}</div>
+        @endif
         @if(isset($cartProduct['color']))
-        <div>Boja: {{$cartProduct['color']}}</div>
+            <div>Boja: {{$cartProduct['color']}}</div>
         @endif
     </div>
     <div style="min-width: 75px">

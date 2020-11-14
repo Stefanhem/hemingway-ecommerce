@@ -51,7 +51,8 @@
                 <div class="row">
                     <div class="col-md-5 mb-3">
                         <label for="priceOnSpecialOffer">Price on special offer</label>
-                        <input type="number" class="form-control" value="{{$product->priceOnSpecialOffer}}" name="priceOnSpecialOffer"/>
+                        <input type="number" class="form-control" value="{{$product->priceOnSpecialOffer}}"
+                               name="priceOnSpecialOffer"/>
                         <div class="invalid-feedback">
                             Please select a valid price.
                         </div>
@@ -84,7 +85,8 @@
                 @foreach($types as $type)
                     <div class="row">
                         <div class="col-md-5 mb-3" style="padding-left: 35px">
-                            <input type="checkbox" class="form-check-input" name="productTypes[]" value="{{$type->id}}" {{(in_array($type->id, $checkedTypes) ? 'checked' : '')}}/>
+                            <input type="checkbox" class="form-check-input" name="productTypes[]"
+                                   value="{{$type->id}}" {{(in_array($type->id, $checkedTypes) ? 'checked' : '')}}/>
                             <label class="form-check-label" for="labels">{{$type->name}}</label>
                         </div>
                     </div>
@@ -107,6 +109,13 @@
                         <input type="checkbox" id="isOnSpecialOffer" name="isOnSpecialOffer"
                                value="1" {{ ($product->isOnSpecialOffer) ? 'checked' : '' }}>
                         <label for="isOnSpecialOffer">Is on special offer</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <input type="checkbox" id="isPersonalisationEnabled" name="isPersonalisationEnabled"
+                               value="1" {{ ($product->isPersonalisationEnabled) ? 'checked' : '' }}>
+                        <label for="isOnSpecialOffer">Enable personalisation</label>
                     </div>
                 </div>
                 <hr class="mb-4">

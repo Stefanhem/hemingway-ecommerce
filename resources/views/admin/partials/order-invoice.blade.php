@@ -91,6 +91,15 @@
             </div>
             <div class="w-commerce-commercecheckoutpaymentsummarywrapper">
                 <div class="w-commerce-commercecheckoutsummaryblockheader">
+                    <h4>Note</h4>
+                </div>
+                <fieldset class="w-commerce-commercecheckoutblockcontent">
+                    <div>{{$data['note']}}</div>
+                </fieldset>
+            </div>
+
+            <div class="w-commerce-commercecheckoutpaymentsummarywrapper">
+                <div class="w-commerce-commercecheckoutsummaryblockheader">
                     <h4>Items in Order</h4>
                 </div>
                 <fieldset class="w-commerce-commercecheckoutblockcontent">
@@ -102,6 +111,9 @@
                                     <div class="text-block-23">{{$cartProduct['product']->name}}</div>
                                     <div>Količina: {{$cartProduct['quantity']}} </div>
                                     <div>Boja: {{$cartProduct['color']}}</div>
+                                    @if (!empty($cartProduct['personalisation']))
+                                        <div>Personalizacija: {{$cartProduct['personalisation']}}</div>
+                                    @endif
                                 </div>
                                 <div>
                                     <p>{{$cartProduct['price']}} RSD </p>

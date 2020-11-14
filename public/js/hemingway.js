@@ -72,3 +72,18 @@ $(document).ready(function(){
         $('#link-image-open').attr('href', src);
     });
 });
+
+function validatePersonalisation() {
+    let personalisation = document.getElementsByName("personalisation")[0].value;
+    let form = document.getElementById('add-cart-form');
+
+    if (personalisation.length === 0) {
+        form.submit();
+    }
+    personalisation = personalisation.replace(/\s/g, "");
+    if (personalisation.length > 10) {
+        document.getElementById('personalisation-error').style.display = 'block';
+    } else {
+        form.submit();
+    }
+}

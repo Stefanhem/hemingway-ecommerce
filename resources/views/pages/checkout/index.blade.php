@@ -48,6 +48,14 @@
                 </div>
                 <div class="customer-info-div">
                     <div class="block-header">
+                        <h4 class="heading-6">Napomena</h4>
+                    </div>
+                    <div class="block-content">
+                        <textarea id="note" name="note" placeholder="Enter your message" maxlength="256" data-name="note" class="text-field cc-textarea cc-contact-field w-input"></textarea>
+                    </div>
+                </div>
+                <div class="customer-info-div">
+                    <div class="block-header">
                         <h4 class="heading-6">Poručeni proizvodi</h4>
                     </div>
                     <div class="block-content">
@@ -59,7 +67,9 @@
                                 <div class="div-block-19">
                                     <div class="text-block-23">{{$cartProduct['product']->name}}</div>
                                     <div>Količina: {{$cartProduct['quantity']}} </div>
-                                    <div>Boja: Braon</div>
+                                    @if (!empty($cartProduct['personalisation']))
+                                        <div>Personalizacija: {{$cartProduct['personalisation']}}</div>
+                                    @endif
                                 </div>
                                 <div>
                                     <p>{{$cartProduct['price']}} RSD </p>

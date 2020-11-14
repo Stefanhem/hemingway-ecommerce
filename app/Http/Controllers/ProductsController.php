@@ -185,7 +185,9 @@ class ProductsController extends Controller
                 $join->on('product_type_middles.idProduct', '=', 'products.id');
             })->whereIn('product_type_middles.idProductType', Product::$SIMMILAR_PRODUCTS[$productType->idProductType])
                 ->where('products.id', '<>', $product->id)
-                ->inRandomOrder()->take(3)->get();
+                ->inRandomOrder()
+                ->take(3)
+                ->get();
         }
 
         return view('pages.products.product-page', [
@@ -202,7 +204,7 @@ class ProductsController extends Controller
      *
      * @param int $id
      * @param Request $request
-     * @return \Illuminate\Http\RepdirectResponse
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function addCart(int $id, Request $request)
     {
@@ -214,7 +216,8 @@ class ProductsController extends Controller
             'product' => $product,
             'quantity' => $request->get('quantity'),
             'price' => $price,
-            'color' => $request->get('color')
+            'color' => $request->get('color'),
+            'personalisation' => $request->get('personalisation')
         ]);
 
         $cartProducts = Session::get('products');
@@ -362,6 +365,9 @@ class ProductsController extends Controller
         }
         if (!isset($data['isOnSpecialOffer'])) {
             $data['isOnSpecialOffer'] = false;
+        }
+        if (!isset($data['isPersonalisationEnabled'])) {
+            $data['isPersonalisationEnabled'] = false;
         }
         $productTypes = Arr::get($data, 'productTypes');
 

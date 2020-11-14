@@ -55,7 +55,8 @@ class OrderController extends Controller
                 'quantity' => $product->quantity,
                 'price' => $product->quantity * $prod->price,
                 'color' => $product->color,
-                'product' => $prod
+                'product' => $prod,
+                'personalisation' => $product->personalisation
             ];
         }
 
@@ -70,7 +71,8 @@ class OrderController extends Controller
                 'sum' => $order->price,
                 'status' => $order->status,
                 'deliveryName' => $order->deliveryName,
-                'deliveryPhone' => $order->deliveryPhone
+                'deliveryPhone' => $order->deliveryPhone,
+                'note' => $order->note
             ]
         ]);
     }
@@ -102,6 +104,7 @@ class OrderController extends Controller
     public function createOrder(Request $request, Order $model)
     {
         $order = $request->all();
+
         if (!Session::has('products')) {
             return redirect('/');
         }
@@ -116,7 +119,8 @@ class OrderController extends Controller
                 'idOrder' => $newOrder->id,
                 'idProduct' => $product['product']->id,
                 'quantity' => $product['quantity'],
-                'color' => $product['color']
+                'color' => $product['color'],
+                'personalisation' => $product['personalisation']
             ];
             $product['product']->quantityInStock = $product['product']->quantityInStock - $product['quantity'];
             $product['product']->save();
@@ -134,7 +138,8 @@ class OrderController extends Controller
             'products' => $products,
             'sum' => $newOrder->price,
             'deliveryName' => $newOrder->deliveryName,
-            'deliveryPhone' => $newOrder->deliveryPhone
+            'deliveryPhone' => $newOrder->deliveryPhone,
+            'note' => $newOrder->note
         ];
         /*if ($newOrder->idPaymentMethod === PaymentMethod::POST_PAYMENT) {
             try{
