@@ -86,7 +86,8 @@ class ProductsController extends Controller
             $join->on('product_type_middles.idProduct', '=', 'products.id');
         })->where('products.isOnSpecialOffer', 1)
             ->orWhere('product_type_middles.idProductType', Product::TYPE_SPECIAL_OFFER)
-            ->orderBy('products.order', 'desc');
+            ->orderBy('products.order', 'desc')
+            ->distinct('products.id');
 
         $productsCount = $model->count();
 
