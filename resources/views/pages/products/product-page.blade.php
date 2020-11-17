@@ -69,10 +69,10 @@
                 </div>
             @endif
             @if ($product->isPersonalisationEnabled)
-                <label for="quantity" class="field-label-5" style="margin-top:15px">Personalizacija</label>
+                <label for="quantity" class="field-label-5" style="margin-top:15px">Besplatna personalizacija</label>
                 <input name="personalisation" class="text-field w-input" type="text"
-                       placeholder="Personalizujte vas proizvod" pattern="\s*(\S\s*){10,}">
-                <label id='personalisation-error' style="color: red; display: none">Najvise 10 karaktera ne računajući razmak!</label>
+                       placeholder="Inicijali/ime za utiskivanje" pattern="\s*(\S\s*){10,}">
+                <label id='personalisation-error' style="color: red; display: none">Najvise 10 karaktera!</label>
             @endif
             @if($product->quantityInStock <= 0)
                 <div class="w-commerce-commerceaddtocartoutofstock" style="text-align: center">
