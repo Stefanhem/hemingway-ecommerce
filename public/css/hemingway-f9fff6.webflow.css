@@ -1,3 +1,19 @@
+.black-friday {
+    padding: 10px;
+    color: black !important;
+    background-color: goldenrod;
+    border-radius: 20px;
+    text-align: center
+}
+
+.black-friday-image {
+    width:300px;
+    height: 200px;
+    position: fixed;
+    z-index: 999999;
+    bottom: 0;
+    left: 0;
+}
 .narucivanje li{
     margin-bottom: 10px;
 }
@@ -2406,6 +2422,13 @@
 }
 
 @media screen and (max-width: 770px) {
+    .black-friday {
+        padding: 4px;
+    }
+    .black-friday-image {
+        width: 150px;
+        height: 100px;
+    }
     .about-text {
         width: 100%;
     }
@@ -2440,6 +2463,13 @@
 }
 
 @media screen and (max-width: 479px) {
+    .black-friday {
+        padding: 4px;
+    }
+    .black-friday-image {
+        width: 100px;
+        height: 70px;
+    }
     .after-div::before {
         content: "\A";
         white-space: pre;
@@ -6250,6 +6280,10 @@ h2 {
         text-align: center;
         font-size: 4vh;
         line-height: 6vh;
+    }
+    .black-friday-image {
+        width: 160px;
+        height: 100px;
     }
     .about-text {
         width: 100%;
