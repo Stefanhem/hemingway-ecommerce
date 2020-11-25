@@ -9,7 +9,7 @@
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>1. POUZEĆE</strong><br/>
             Nakon potvrde narudžbine roba će Vam biti poslata kurirskom službom, a Vi ćete je platiti kuriru pri
-            preuzimanju. Za narudžbine vrednosti 3.990,00 dinara i veće, ili u slučaju posebne napomene kod pojedinih
+            preuzimanju. Za narudžbine vrednosti veće od 4.000,00 dinara ili u slučaju posebne napomene kod pojedinih
             proizvoda, Hemingway Vam pruža besplatnu isporuku robe na teritoriji cele Srbije. U svim ostalim slučajevima
             Kupac plaća dostavu kuriru pri preuzimanju, prema važećem cenovniku kurirske službe.
         </p>
@@ -41,7 +41,7 @@
             <li>Sva naručena roba će biti poslata maksimalno do 5 radnih dana od potvrde narudžbine, <strong>a uobičajeni
             rok za isporuku je 3 radna dana</strong>, ukoliko je plaćanje pouzećem. Za plaćanje na račun (uplatnica ili
             nalog za prenos), ovaj rok teče od momenta evidentiranja uplate.</li>
-            <li>Za sve narudžbine minimalne vrednosti 3.990,00 dinara ili veće, kao i za robu sa naznakom ‘’besplatna dostava’’
+            <li>Za sve narudžbine vrednosti veće od 4.000,00 dinara kao i za robu sa naznakom ‘’besplatna dostava’’
             kupac ne plaća troškove dostave. U svim ostalim slučajevima dostavu plaća kupac, i to gotovinski
             kuriru u trenutku isporuke.</li>
             <li>Prilikom preuzimanja pošiljke potrebno je da vizuelno pregledate paket, i ukoliko primetite da je
