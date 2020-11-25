@@ -27,11 +27,11 @@
         </p>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
             <strong>4. Ko plaća troškove dostave?</strong><br/>
-            -Ukoliko je adresa isporuke u Srbiji, dostava je besplatna za sve narudžbine ukupne vrednosti od 3990,00 dinara
+            -Ukoliko je adresa isporuke u Srbiji, dostava je besplatna za sve narudžbine ukupne vrednosti veće od 4.000,00 dinara
              ili za proizvode kod kojih stoji posebna naznaka ‘’Besplatna dostava’’. U svim ostalim
             slučajevima kupac plaća troškove dostave kuriru, gotovinski, u trenutku isporuke.
             -Ako je adresa isporuke u inostranstvu, dostava je besplatna za sve narudžbine ukupne vrednosti veće od
-            80,00 evra. U svim ostalim slučajevima troškove dostave plaća kupac i to prilikom naručivanja proizvoda (iznos
+            100,00 evra. U svim ostalim slučajevima troškove dostave plaća kupac i to prilikom naručivanja proizvoda (iznos
             će biti iskazan tokom procesa kupovine).<br/>
         </p>
         <p class="paragraph-222 legal-paragraph" style="width: 100%">
