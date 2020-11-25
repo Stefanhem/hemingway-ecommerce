@@ -9,7 +9,7 @@
 .black-friday-image {
     width:300px;
     height: 200px;
-    position: fixed;
+    position: absolute;
     z-index: 999999;
     bottom: 0;
     left: 0;
@@ -6512,6 +6512,8 @@ h2 {
 
     .heading.proizvod-head.page {
         margin-bottom: 20px;
+        font-size: 3vh;
+        line-height: 4vh;
     }
 
     .proizvodi {
