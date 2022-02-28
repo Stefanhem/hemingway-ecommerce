@@ -38,7 +38,7 @@
             </tr>
             <tr>
                 <td>Adresa izdvojenog objekta:</td>
-                <td>Dragoslava Popovića 15L, Palilula - Beograd</td>
+                <td>Marina Držića 28 - Niš</td>
             </tr>
         </table>
     </div>
